@@ -1,5 +1,3 @@
-![equation](http://www.sciweavers.org/tex2img.php?eq=1%2Bsin%28mc%5E2%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
-
 # Relationale Algebra
 
 **Kreuzprodukt A x B**: Menge aller Tupel (a,b), wobei das erste Element des Tupels aus A und das zweite aus B stammt, d.h. $A \times B = {(a,b) | a \in A \wedge b \in B}$
