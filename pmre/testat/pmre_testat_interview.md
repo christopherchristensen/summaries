@@ -7,17 +7,17 @@
 ## Interviewfragen
 
 1. Wie haben Sie für dieses Projekt die Anforderungen definiert?
-2. Wie haben Sie die Anforderungen gemanaged
+2. Wie haben Sie die Anforderungen gemanaged?
 3. Haben sich die Anforderungen im Verlauf des Projekts geändert?
-4. Wie sind Sie vorgegangen beim definieren der Anforderungen?
+4. Wie sind Sie vorgegangen beim Definieren der Anforderungen?
 5. Haben Sie das Requirements Development in die vier "bekannten" Schritte Elicitation, Analysis, Specification und Validation aufgeteilt?
-6. Wie sieht die Struktur betreffend den Kommunikationsrollen in Ihrem Projekt?
+6. Wie sieht die Struktur betreffend den Kommunikationsrollen in Ihrem Projekt aus?
 7. Hatten Sie einen Business Analyst?
-8. Was waren die Rollen von eurem Business Analyst?
+8. Was waren die Rollen von Ihrem Business Analyst?
 9. Was verstehen Sie unter einem Ziel?
 10. Wo entstanden für Sie im Verlauf dieses Projektes Zielkonflikte?
 11. Könnten Sie uns einige Ziele der Mitarbeiter und einige Ziele der Kunden aufzählen?
-12. Nach welcher Struktur arbeiten Sie um Ihre Ziele schlussendlich dokumentieren zu können? (Zielfindung)
+12. Nach welcher Struktur arbeiten Sie um Ihre Ziele schlussendlich dokumentieren zu können?
 13. Verwenden Sie Zielschablonen?
 14. Welche Strategien verwenden Sie bei der Suche nach Zielen und Anforderungen?
 15. Welche Stakeholder gab es in Ihren Projekt?
