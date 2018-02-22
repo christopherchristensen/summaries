@@ -19,7 +19,6 @@ Die Webseite steht gratis zur Verfügung. Einkommensquelle sind Sponsoren, welch
 
 **Internal:**
 
-
 * Entwickler (Softwarearchitekt)
 * Administratoren (Datenverwalter,Systemadministrator)
 * Management (Geschäftsleiter, Marketingmanager)
