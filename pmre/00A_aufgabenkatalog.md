@@ -113,7 +113,7 @@ Anwendung zur Unterstützung der Prüfungsanmeldungen für Studenten. Dazu so
 **Lösung** <br>
 Eine mögliche Lösung. Im Unterricht wurde eine andere Notation verwendet und das Hauptsystem wurde als Prüfungsverwaltung definiert.
 
-<img src="img/Kontextdiagramm.png" style="width:300px">
+<img src="img/kontextdiagramm.png" style="width:300px">
 
 Man soll sich immer auch noch fragen, ob ein Dokument zum eigenen System gehört oder von einem anderen System verwaltet wird.
 
