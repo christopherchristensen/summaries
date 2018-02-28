@@ -17,3 +17,17 @@
 ### Andere Sharing-Systeme
 
 * GanzSharing: https://www.ganzsharing.ch/ganz-sharing
+* Airbnb: https://www.airbnb.com/
+
+## Erste Ideen für Features
+
+### Sicht Suchende
+* Man erkennt beim Start direkt die Location und gibt nur noch an wohin man gehen will (Current Location $\to$ _________ )
+
+### Sicht Fahrende
+* Kann Preise bestimmen
+* Bekommt Preisvorschläge
+* Bekommt Punkte (Öko, etc.)
+
+### Sicht Beide
+* Man kann Ratings vergeben
