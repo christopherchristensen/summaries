@@ -1,12 +1,22 @@
 # Interview PMRE Testat 2018
 
-| Interviewt von | Interviewt wurde | Datum des Interviews |
-|----------------|------------------|----------------------|
-| Lukas Arnold, Christopher Christensen, Melvin Werthmüller | Patrick Bucher |  |
+| Interviewt von | Interviewt wurde | Rolle des Interviewten | Datum des Interviews |
+|----------------|------------------|------------------------|----------------------|
+| Lukas Arnold, Christopher Christensen, Melvin Werthmüller | Patrick Bucher | Vereinsleiter | |
 
 ## Interviewfragen
 
-1. Wie haben Sie für dieses Projekt die Anforderungen definiert?
+1. Könnten Sie sich uns zuerst vorstellen und anschliessend erklären inwiefern Sie in Zusammenhang mit diesem Projekt stehen
+2. Wo sehen Sie Ihre Rolle im Zusammenhang mit diesem Projekt?
+3. Wie nehmen Sie Einfluss auf dieses Projekt?
+4. Welchen Grundnutzen ziehen Sie aus dem Endprodukt?
+5. Was sind somit aus Ihrer Sicht die Hauptanforderungen an das Projekt?
+6. Über welche zusätzlichen Funktionen würden Sie sich freuen?
+7. Wo sehen Sie Interessenskonflikte in Bezug auf Ihre Anforderungen und Anforderungen anderer Stakeholder?
+
+> ALTE FRAGEN:
+> 
+>1. Wie haben Sie für dieses Projekt die Anforderungen definiert?
 2. Wie haben Sie die Anforderungen gemanaged?
 3. Haben sich die Anforderungen im Verlauf des Projekts geändert?
 4. Wie sind Sie vorgegangen beim Definieren der Anforderungen?
