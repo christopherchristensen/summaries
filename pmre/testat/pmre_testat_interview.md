@@ -4,6 +4,11 @@
 |----------------|------------------|------------------------|----------------------|
 | Lukas Arnold, Christopher Christensen, Melvin Werthmüller | Patrick Bucher | Vereinsleiter | |
 
+> NOTIZEN:
+> 
+> - Für das Testat 3 müssen wir 7 Anforderungen in Form einer Satzschablone anhand des geführten Interviews aufstellen.
+> - Deswegen auch geziehlt nach 7 Anforderungen suchen und die Fragen dementsprechend anpassen
+
 ## Interviewfragen
 
 1. Könnten Sie sich uns zuerst vorstellen und anschliessend erklären inwiefern Sie in Zusammenhang mit diesem Projekt stehen
