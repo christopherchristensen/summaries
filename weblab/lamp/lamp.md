@@ -31,6 +31,9 @@
 **Status** MySQL Server: <br>
 `sudo service mysqld status`
 
+**Connect To MySQL Server**: <br>
+`mysql -u root -p`
+
 **Stop** MySQL Server: <br>
 `sudo service mysqld stop`
 
