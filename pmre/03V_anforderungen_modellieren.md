@@ -51,7 +51,7 @@
 
 > Use-Case-, Aktivitäts-, Klassen- und Zustandsdiagramm modellieren können (Dozent meint: nur erklären können)
 
-Wichtige Prüfungsnotizen:
+### Prüfungsnotizen
 
 * Nie einfach **User** schreiben
 * Immer eine Rolle vergeben (z.B. Filialleiter)
@@ -59,7 +59,6 @@ Wichtige Prüfungsnotizen:
 * *Vielleicht* erhalten wir Notationen für Prüfung
 
 ## CRUD-Matrix
-> See which objects or programs Create/Read/Update/Delete which Tables. <br>
-> *http://www.visual-expert.com/EN/visual-expert-blog/posts-2017/blog-post-crud-matrix.html*
 
-* Gegenüberstellung von UCs (Funktionen) und Klassen (Datenstrukturen)
+* Gegenüberstellung von UseCases (Funktionen) und Klassen (Datenstrukturen)
+* "Habe ich etwas vergessen oder nicht"
