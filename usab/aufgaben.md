@@ -56,7 +56,7 @@ Im WhatsApp-Chat werden die Nachrichten eines Nutzers durch grössere Abstände 
 <img src="img/gesetz_der_nähe.jpeg" style="width:200px">
 
 #### Schlechtes Beispiel
-Hier könnte man aber auf die schlechte Anwendung des Gesetz der Nähe hinweisen. Der Titel der linken Liste ist zu lange und könnte mit dem Titel der rechten Liste als Haupttitel misinterpretiert werden.
+Hier könnte man aber auf die schlechte Anwendung des Gesetz der Nähe hinweisen. Der Titel der linken Liste ist zu lange und könnte mit dem Titel der rechten Liste als Haupttitel misinterpretiert werden. Der Abstand zwischen den Titeln und den Listenelementen ist wiederum eher gross, weshalb der Bezug dazu nicht augenblicklich hergestellt wird.
 
 <img src="img/traumjob.jpg" style="width:400px">
 
@@ -70,7 +70,7 @@ Durch die Checkboxes wird die Liste links von der Liste rechts mit seinen Häckc
 <img src="img/traumjob.jpg" style="width:400px">
 
 #### Schlechtes Beispiel
-Da die Formen alle etwa gleich aussehen und trotzdem nicht und dazu noch immer gleiche/andere Funktionen erfüllen ist dieses Interface leicht verwirrend.
+Da die Formen alle etwa gleich aussehen und trotzdem nicht und dazu noch abwechselnd gleiche/andere Funktionen erfüllen ist dieses Interface verwirrend.
 
 <img src="img/ähnlichkeit.jpg" style="width:400px">
 
@@ -85,13 +85,13 @@ Die einzelnen Hauptfunktionen **DISPLAY**, **VOLUME** und **CONFIG** sind klar d
 <img src="img/hellraumprojektor.jpg" style="width:200px">
 
 #### Schlechtes Beispiel
-Auf diesem Anschlagsbrett sieht man nicht was mit was in Beziehung steht und ob nicht gleich alles zueinander in Beziehung steht.
+Auf diesem Anschlagsbrett sieht man nicht, was mit was in Beziehung steht. So können kaum Gruppierungen erstellt werden, was zu einer Überladenheit führt. Eine einfache Sortierung würde das Anschlagbrett sowohl lesbarer als auch attraktiver machen.
 
 <img src="img/geschlossenheit.jpg" style="width:400px">
 
 ---
 
-### Gesetz der Tiefenwahrnung
+### Gesetz der Tiefenwahrnehmung
 
 #### Gutes Beispiel
 Auf dem Label einer Knutwiler Mineralwasserflasche sieht man ein Muster, welches an einen Berg erinnert. Durch die geringeren Kontraste auf dem Gipfel des Berges scheint sich dieser auch weiter hinten zu befinden.
