@@ -44,6 +44,10 @@ Die Webseite steht gratis zur Verfügung. Einkommensquelle sind Sponsoren, welch
 * Serverinfrastruktur
 * Backups
 
+### Kontextdiagramm
+
+<img src="kontextdiagramm.jpg" style="width:400px">
+
 ## Ziele
 
 ### Use Cases
@@ -66,3 +70,4 @@ angezeigt werden.
 ### Kostenziele
 
 * Ertrag übertrifft Aufwand (Rentabilität gewährleistet)
+

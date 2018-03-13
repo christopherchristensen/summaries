@@ -2,7 +2,9 @@
 
 ## Recherche
 
-### Vorhandene Systeme
+
+
+### Vorhandene Sharing-Systeme
 
 * WeeShare: https://www.weeshare.com/?gclid=EAIaIQobChMI-tiqpu3G2QIVTLftCh0cngepEAAYAyAAEgJYrvD_BwE
 * Sharoo: https://www.sharoo.com/
@@ -11,7 +13,6 @@
 * DriveMyCar: www.drivemycar.com.au
 
 ### Carpooling-Systeme
-
 
 * BlaBlaCar: https://www.blablacar.co.uk/ride-sharing/basel/
 
@@ -22,17 +23,14 @@
 
 ## Definition Ausdrücke
 
-* Car Sharer: Person, welche sein Auto **an** andere ausleiht
-* Car Lender: Person, welche Autos **von** anderen ausleiht
+* Car-Sharing: Privatfahrzeuge ausleihen oder verleihen
+* Car-Pooling: Firmenfahrzeuge ausleihen oder verleihen
+* Car Borrower: Person, welche Autos **von** anderen ausleiht
+* Car Lender: Person, welche sein Auto **an** andere ausleiht
 
 ## Erste Ideen für Features
 
-### Car Lender
-* Man erkennt beim Start direkt die Location und gibt nur noch an wohin man gehen will (Current Location $\to$ _________ )
-* Will Sicherheit haben, dass er das Auto erhält
-* Übersicht von Ausgaben
-
-### Car Sharer
+### Car Borrower
 * Kann Preise bestimmen
 * Bekommt Preisvorschläge
 * Bekommt Punkte (Öko, etc.)
@@ -40,19 +38,88 @@
 * Will Sicherheit vor Schaden an Fahrzeug
 * Will im Falle von verunreinigungen eine Reinigung erhalten
 
+### Car Lender
+* Man erkennt beim Start direkt die Location und gibt nur noch an wohin man gehen will (Current Location $\to$ _________ )
+* Will Sicherheit haben, dass er das Auto erhält
+* Übersicht von Ausgaben
+
 ### Sicht Beide
 * Man kann Ratings vergeben
 * Kommunikation mit der Gegenseite möglich
 
-## UI Vorgaben
+## UI Wünsche
 
 ### Erster Seitenbesuch
-* 
 
-### Neuer Car Sharer
+* Einfache und übersichtliche Benutzeroberfläche
+* Navigation ist intuitiv (Ich finde schnell was ich möchte, der Nutzer wird geführt)
+* Funktionalität ist intuitiv
+* Wenig, aber nutzbare/relevante Informationen darstellen (weniger ist mehr!)
+* Klare Unterteilung der UI gemäss Nutzer (Borrower / Lender)
+* Responsive
+* Als eingeschränkter Nutzer (Sehbehinderung, etc.) schnell zum Ziel kommen
+* Attraktive/Sinnvolle Farbenkombinationen
+* Moderne Design-Features
+* Gute Performance beim Ausführen von Funktionen (Wartezeit gering)
+* "Poweruser-Shortcuts"
+* Kann Inhalt betrachten, ohne Registrierung (gibt es Angebote für Autos, die mich interessieren)
+* Finde aber Registrierung schnell
 
-### Neuer Car Lender
+### Borrower
 
-### Registrierter Car Sharer
+#### Neuer Car Borrower (Registrierung)
 
-### Registrierter Car Lender
+* Navigation zur Registrierung
+* Einfache Registrierung
+* Kurzer Registrierungsprozess (Nur Daten, die absolut notwendig sind)
+* Geführte Navigation (keine Unklarheiten, Entscheidungswege)
+* Bei Unklarheiten $\to$ Forum? (Übersichtliche, relevante FAQ)
+
+#### Registrierter Car Borrower
+
+##### Autosuche
+
+* Ich finde **schnell** und **ohne Aufwand** ein Auto zum gewünschten Zeitpunkt, Preis und am richtigen Ort
+* Gute Autovorschläge
+* Filter für Custom-Wünsche (manuel / automatisch, teuer / billig, etc.)
+* Einfaches Scheduling (Kalender)
+
+##### Abschluss
+
+* Einfache Buchung eines Autos
+* Klare Richtlinien
+* Kommunikation mit Lender
+* Quittung
+
+##### Generelle Funktionen
+
+* Update über Autozustand hinzufügen (Meilenstand, Gute Qualität, Innenaustattung)
+* Beschwerdeplattform
+* Statistiken über Buchungen
+* Profil mit Bewertungen (+ Anfechtungsmöglichkeiten)
+
+### Lender
+
+#### Neuer Car Lender
+
+* Soll sicher wirken (Versicherung)
+* Soll sich und Auto einfach registrieren können
+* Richtlinien klar und übersichtlich
+* Möglichkeit Konto ohne Registrierung
+* Bilderupload einfach
+* Autobeschreib hinzufügen einfach
+* Hilfe bei Kategorisierung (Auswahl bei Modell, etc.)
+
+#### Registrierter Car Lender
+
+##### Generelle Funktionen
+* Beschwerdeplattform
+* Statistiken über Auto, etc.
+* Einfaches Scheduling (Kalender)
+* Profil mit Bewertungen (+ Anfechtungsmöglichkeiten)
+
+##### Abschluss
+
+* (Scheduling)
+* Bestrafung des Borrowers bei Überziehung
+* Quittung
