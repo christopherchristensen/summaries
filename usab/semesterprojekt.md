@@ -123,3 +123,5 @@
 * (Scheduling)
 * Bestrafung des Borrowers bei Überziehung
 * Quittung
+
+## Mentales Modell
