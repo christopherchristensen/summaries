@@ -2,8 +2,6 @@
 
 ## Recherche
 
-
-
 ### Vorhandene Sharing-Systeme
 
 * WeeShare: https://www.weeshare.com/?gclid=EAIaIQobChMI-tiqpu3G2QIVTLftCh0cngepEAAYAyAAEgJYrvD_BwE
@@ -156,7 +154,6 @@
 **Welche Ansprüche haben sie an die Gestaltung des Systems?**
 
 * Die Cognitive Load reduzieren durch Heuristiken (nur die wichtigsten, relevanten Infos anzeigen)
-
 
 **Was muss beim System erfüllt sein, damit sie damit zufrieden sind/wären?**
 
