@@ -154,6 +154,8 @@
 **Welche Ansprüche haben sie an die Gestaltung des Systems?**
 
 * Die Cognitive Load reduzieren durch Heuristiken (nur die wichtigsten, relevanten Infos anzeigen)
+* UserInterface ist wirkt beruhigend (Farben), professionell und sicher (Gestaltgesetze)
+* Das System kann sowohl via App als auch Website benutzt werden
 
 **Was muss beim System erfüllt sein, damit sie damit zufrieden sind/wären?**
 
@@ -161,5 +163,4 @@
 * Flow muss angenehm sein
 * Buchung und Vermietung des Autos geschieht intuitiv in einem Process
 * keine redundanten Dateneingaben bei Funktionen, wie Buchung, Vermietung, Erstellen von Angeboten, Erstellen von Profilen
-* UserInterface ist wirkt beruhigend (Farben), professionell und sicher (Gestaltgesetze)
 * Ein gutes Gleichgewicht zwischen UserControl und Lenkung (vorallem beim Buchungsabschluss)
