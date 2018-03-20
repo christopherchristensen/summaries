@@ -34,7 +34,7 @@
 * Bekommt Punkte (Öko, etc.)
 * Übersicht von Ausleihstatistiken
 * Will Sicherheit vor Schaden an Fahrzeug
-* Will im Falle von verunreinigungen eine Reinigung erhalten
+* Will im Falle von Verunreinigungen eine Reinigung erhalten
 
 ### Car Lender
 * Man erkennt beim Start direkt die Location und gibt nur noch an wohin man gehen will (Current Location $\to$ _________ )
@@ -53,7 +53,7 @@
 * Navigation ist intuitiv (Ich finde schnell was ich möchte, der Nutzer wird geführt)
 * Funktionalität ist intuitiv
 * Wenig, aber nutzbare/relevante Informationen darstellen (weniger ist mehr!)
-* Klare Unterteilung der UI gemäss Nutzer (Borrower / Lender)
+* Klare Unterteilung des UI gemäss Nutzer (Borrower / Lender)
 * Responsive
 * Als eingeschränkter Nutzer (Sehbehinderung, etc.) schnell zum Ziel kommen
 * Attraktive/Sinnvolle Farbenkombinationen
@@ -91,7 +91,7 @@
 
 ##### Generelle Funktionen
 
-* Update über Autozustand hinzufügen (Meilenstand, Gute Qualität, Innenaustattung)
+* Updates über Autozustand hinzufügen (Meilenstand, Gute Qualität, Innenaustattung)
 * Beschwerdeplattform
 * Statistiken über Buchungen
 * Profil mit Bewertungen (+ Anfechtungsmöglichkeiten)
@@ -103,7 +103,6 @@
 * Soll sicher wirken (Versicherung)
 * Soll sich und Auto einfach registrieren können
 * Richtlinien klar und übersichtlich
-* Möglichkeit Konto ohne Registrierung
 * Bilderupload einfach
 * Autobeschreib hinzufügen einfach
 * Hilfe bei Kategorisierung (Auswahl bei Modell, etc.)
@@ -126,17 +125,20 @@
 
 **Was sind Erwartungen an das System?**
 
-* Wenn ich auf ein Auto clicke, bekomme ich zuerst Infos über das Auto, bevor ich es mieten kann (vor Bestellung, Frage, ob ich sicher bin)
+* Wenn ich auf ein Auto klicke, bekomme ich zuerst Infos über das Auto, bevor ich es mieten kann (vor Bestellung, Frage, ob ich sicher bin)
 * Meldung für erfolgreiche Buchung
 * Meldung bei Stornierungen
 * Ladebalken, wenn ich warten muss
-* Preis inklusive Mwst. angeben
+* Preise inklusive Mwst. angeben
 * Antwortzeiten werden mitgeteilt
 * Klare Infos über Verfügbarkeit der Autos
+* Allgemeine gesetzliche Richtlinien nicht verletzen
+* Vertrauenssystem zwischen Lender / Borrower
+* Customer Service
 
 **Welche Erfahrungen haben Sie mit dem System oder mit ähnlichen?**
 
-* Airbnb ermöglicht das Buchen von Appartment/Wohnungen mit demselben Prinzip, wie unser CarPooling-System
+* Airbnb ermöglicht das Buchen von Apartments/Wohnungen mit demselben Prinzip, wie unser CarPooling-System
 * Realität / Bilder sind nicht immer ein und dasselbe
 * Streitigkeiten zwischen Borrower und Lender
 * (Airbnb) Schlüsselübergabestelle nicht immer klar
@@ -154,7 +156,7 @@
 **Welche Ansprüche haben sie an die Gestaltung des Systems?**
 
 * Die Cognitive Load reduzieren durch Heuristiken (nur die wichtigsten, relevanten Infos anzeigen)
-* UserInterface ist wirkt beruhigend (Farben), professionell und sicher (Gestaltgesetze)
+* UserInterface wirkt beruhigend (Farben), professionell und sicher (Gestaltgesetze)
 * Das System kann sowohl via App als auch Website benutzt werden
 
 **Was muss beim System erfüllt sein, damit sie damit zufrieden sind/wären?**
