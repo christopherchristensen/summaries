@@ -25,8 +25,37 @@ $\to$ Backlog-Items umsetzen nach Verfeinerung
 
 ## Features
 
+### Definition
 * beschreiben zusammengefasste Menge von Anforderungen
 * hilft bei Beschreibung von (nicht-)funktionalen Anforderungen 
 * unterstützen Dialog unter Stakeholdern
 * verbessern Anwendungskenntnisse der Entwickler
-* fördern Kreativität
+* fördern Kreativität / Innovation
+* regen zu weiterem Nachforschen an
+
+$\to$ oft für Produktwerbung eingesetzt
+
+### Wichtig zu Beachten
+
+* Entwicklungsteam muss Features verstehen
+* Features nach Bedeutung für System gewichten
+* Features für Realisierung priorisieren
+* Features hierarchisch strukturieren
+
+## User Story
+
+### Definition
+* kurzer, narrativer Text
+* beschreibt Interaktion zwischen Benutzer und System
+* Beschreibung 
+	* als Grundlage für Kommunikation
+	* als Ausgangspunkt für Umsetzung von Produktfunktionalitäten
+* im Scrum Produkt Backlog verwaltet
+* Planungsinstrument für Sprints
+
+### Bestandteile
+
+* Name
+* Beschreibung
+* Akzeptanzkriterien
+* ergänzende Beschreibungen
