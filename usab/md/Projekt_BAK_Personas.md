@@ -182,37 +182,44 @@ Die Benutzer unserer App haben eigene Profile und Kontenangaben. Deswegen sind d
 * Software
 * Computer
 
-**Offenheit**
-- Grad der Variabilität einer Aufgabe, bezüglich sich ändernder Voraussetzungen
-und Randbedingungen (z.B. ist der Prozess der Bearbeitung einer Aufgabe ganz klar definiert oder sehr offen)
+### Offenheit
+* Die schweizer Strassenverkehrsgesetze ändern sich zwar, aber nicht unbedingt schnell. Deswegen ist hier keine grosse Variabilität vorhanden. Aber eine Änderung könnte grosse Änderungen zur Folge haben.
+* Ansonsten ist der Bestellprozess immer der Gleiche
+* Die Übergabestellen der Autos sind immer verschieden
+* Die möglichen Probleme sind sehr unterschiedlich betreffend Lender und Borrower
+* Jeder Lender und Borrower betätigt dieselben Funktionen bei jeder Bestellung also ist die Variabilität hier nicht gross
 
-**Frequenz**
-- Häufigkeit einer Aufgabe in einem Aufgabenspektrum
+### Frequenz
+Jeder Lender und Borrower betätigt dieselben Funktionen bei jeder Bestellung und muss diese auch durchlaufen, um eine Bestellung abzuschliessen also ist die Frequenz sehr hoch dieser Aufgaben.
 
-**Repetivität**
-- Auftreten direkter Wiederholungen einer Aufgabe
+### Repetivität
+* Sobald man ein Auto gebucht hat fährt man dieses eine Zeit lang also ist hier die Repetivität eher tief
+* Wenn man mehrere Autos besitzt kann die Repetivität des Vermietens einiges höher sein
 
-**Wichtigkeit**
+### Wichtigkeit
 - statische Priorität einer Aufgabe in einem Aufgabenspektrum
 
-**Dringlichkeit**
+### Dringlichkeit
 - Dynamische Priorität einer Aufgabe im Verhältnis zu anderen, momentan
 anliegenden Aufgaben
 
-**Sicherheit/Fehlertoleranz**
-- Anforderungen bezüglich der korrekten Durchführung einer Aufgabe
+### Sicherheit/Fehlertoleranz
+* sollte eine Fehlbuchung stattfinden könnte eine Partie recht im Stich gelassen werden, weswegen die Fehlertoleranz sehr klein sein muss
+* auch ist dies eine eher neue Branche mit anderen neueren Mitbewerbern weswegen ein Kunde schnell abspringen würde bei einem einzigen Fehldurchlauf
 
-**Durchführungszeit**
-- zeitliche Randbedingungen bei der Durchführung einer Aufgabe
+### Durchführungszeit
+* Die Abwicklung der Buchungen müsste schnell gehen, da viele Personen ihre Autos in letzter Minute mieten würden
+* Die Dauer einer Miete kann stark varieren (ohne konkrete Grenzen)
 
-**Handlungsspielraum**
-- Freiheit der Benutzer bei der Auswahl der Operationen zur Bearbeitung einer Aufgabe
+### Handlungsspielraum
+* Die Personen werden stark durch den Mietprozess geführt und haben nur insofern Spielraum, dass sie bestimme Optionen zu ihrer Buchung betätigen können.
 
 ## Kontextanalyse
 
-**Umgebung**
-- Umgebung in welcher das System zur Aufgabenerfüllung genutzt wird
-  - Bsp. privater Kontext vs. Arbeitskontext vs. Mischnutzung?
+### Umgebung
+* Unser System wird vorallem im privaten Kontext genutzt
+* Der Kontext umfasst aber auch den Arbeitskontext, da Firmen (Spitex, andere Geschäftsautos) Autos von Lendern auf unserer Seite mieten könnten
+* Wir sprechen also von einer Mischnutzung
   
 **Einsatzbedingungen**
 - Einsatzort und Umgebung
@@ -263,8 +270,7 @@ Will einfach organisieren können, dass diese Familien ihr Auto benutzen können
 
 ## Komplementäre Personas
 
-Person, welche die Führerscheine überprüft?
-Person, welche mit dem Backend arbeitet?
+Hans Müller, 35 Jahre alt. Hans ist selber Autoliebhaber. Er arbeitete zuvor 10 Jahre beim Strassenverkehrsamt bis er vor 2 Jahren kündigte. Heute arbeitet er für unsere Firma und steht immernoch in engem Kontakt mit dem Strassenverkehrsamt. Hans überprüft für uns alle Führerscheine und Autonummern über das Strassenverkehrsamt. Da er selber ein traumitisierenden Ereigniss im Strassenverkehr miterlebt hat ist es ihm sehr wichtig, dass keiner auf der Strasse fährt, der nicht dürfte.
 
 ## Negative Personas
 Philipp Rast, 19 Jahre alt.
