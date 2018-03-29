@@ -146,23 +146,41 @@ Die Benutzer unserer App haben eigene Profile und Kontenangaben. Deswegen sind d
 
 ## Aufgabenanalyse
 
-**Ziel**
-- Mit der Aufgabe verfolgtes Ziel
+### Ziel
+* Unser System soll es einerseits autolosen Fahrern die einfache Möglichkeit bieten schnell und unkompliziert Autos von Lendern mieten gegen Bezahlung. 
+* Auf der anderen Seite soll es Autoinhabern die Möglichkeit ihre Autos während der Nichtbenutzung an andere zu vermieten und dabei Geld zu verdienen.
 
-**Grund**
-- Begründung für die Aufgabe
 
-**Inhalt**
-- Beschreibung der Aufgabe
+### Grund
+* Viele Personen haben die finanziellen Mittel nicht oder den Anspruch nicht auf ein eigenes Fahrzeug.
+* Viele Personen benutzen ihr Auto nicht genug, damit es sich lohnt und können so die Nutzung des Autos erhöhen indem sie es vermieten, sobald sie es nicht mehr benötigen. Dazu verdienen sie sich noch Geld dabei
 
-**Aufgabenabhängigkeit**
-- Abhängigkeiten der Aufgabe zu anderen Aufgaben
+### Inhalt
+* Unser System zeigt den Borrowern Angebote von Lendern
+* Es verknüpft die beiden Entitäten
+* Es klärt die rechtlichen und finanziellen Fragen zwischen den beiden Entitäten
+* Es wickelt die Geschäfte ab
+* Es vereinfacht die Kommunikation zwischen den beiden Entitäten
+* Es gibt beiden Parteien eine höhere Sicherheit bei den entsprechenden Geschäften
 
-**Zustandsabhängigkeit**
-- Abhängigkeiten der Aufgabe zu Zuständen des Arbeitsumfeldes oder der
+### Aufgabenabhängigkeit
+* Der Prozess verlangt
+	* das Registrieren eines Benutzerkontos
+	* das Angeben von Benutzerdaten
+	* das Installieren eines Apps oder/und
+	* den Zugang zum Internet
+	* Bestehen der Fahrprüfung
 
-**Arbeitsgegenstände**
-  - Vorbedingungen, Nachbedingungen, Reihenfolge der Zustandsübergänge
+### Zustandsabhängigkeiten
+* Unsere Aufgabe verlangt folgende Zustände:
+	* existierende Fahrzeuge
+	* finanzielle Mittel
+	* verschiedene Zahlungsmöglichkeiten
+	* Vertrauen
+
+### Arbeitsgegenstände
+* Software
+* Computer
 
 **Offenheit**
 - Grad der Variabilität einer Aufgabe, bezüglich sich ändernder Voraussetzungen
