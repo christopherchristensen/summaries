@@ -31,3 +31,4 @@ Je linearer der Plot, desto besser $\to$ theoretische entspricht empirischem Qua
 ## QQ Plot
 
 Auf dem QQ-Plot müssen sich die Punkte des theoretischen Quantil und des empirischen Quantil auf einer Winkelhalbierenden befinden (45°).
+
