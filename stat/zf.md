@@ -1,3 +1,5 @@
+## zentraler Grenzwertsatz
+
 ## normalverteilte Zufallszahlen simulieren
 
 Und mit Normalplot betrachten (Aufgabe 5.1):
