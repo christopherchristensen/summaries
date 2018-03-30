@@ -284,7 +284,9 @@
 
     \subsection{Aufgabe 5.1}\label{aufgabe-5.1}
 
-    \textbf{a.) Normalverteilte Zufallszahlen simulieren und mit Normalplot
+    \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{a.) Normalverteilte Zufallszahlen simulieren und mit Normalplot
 betrachten.} \(n\) wird als Parameter (size) der Methode rvs übergeben.
 \(n\) ist die Anzahl standard-normalverteilte Zufallszahlen. Wenn man
 die Simulation wiederholt, ändert sich die Streuung jedoch immer um die
@@ -328,7 +330,9 @@ normalverteilt, je mehr Zufallszahlen dazukommen)
     \end{center}
     { \hspace*{\fill} \\}
     
-    \textbf{b.) Langschwänzige Verteilung: t-verteilte Zufallszahlen
+    \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{b.) Langschwänzige Verteilung: t-verteilte Zufallszahlen
 simulieren mit Freiheitsgraden.} Die t-Verteilung näher sich der
 standard-Normalverteilung je mehr Zufallszahlen und je mehr
 Freiheitsgrade existieren. Das heisst die t-Verteilung mit 100
@@ -425,7 +429,9 @@ standard-Normalverteilung.
     \end{center}
     { \hspace*{\fill} \\}
     
-    \textbf{c.) Schiefe Verteilung: chiquadrat-verteilte Zufallszahlen mit
+    \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{c.) Schiefe Verteilung: chiquadrat-verteilte Zufallszahlen mit
 Freiheitsgraden.} Je mehr Freiheitsgrade die chiquadrat-Verteilung
 besitzt desto mehr formt sie sich zu einem Normalplot. Hier spielt die
 Anzahl Zufallsvariablen weniger bis gar keine Rolle im Gegensatz zu
@@ -570,7 +576,9 @@ Mittelwerts \(\overline{X}_n\) von mehreren \(X\).
     \end{center}
     { \hspace*{\fill} \\}
     
-    \textbf{b.) Wir simulieren nun
+    \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{b.) Wir simulieren nun
 \(\overline{X}_5 = \frac{X_1+X_2+X_3+X_4+X_5}{5}\), wobei die \(X_i\)
 die gleiche Verteilung haben wie \(X\) und unabhängig sind.} Stellen Sie
 die Verteilung von \(\overline{X}_5\) anhand von 1000 Realisierungen von
@@ -590,8 +598,37 @@ die Verteilung von \(\overline{X}_5\) anhand von 1000 Realisierungen von
   QQ-Normalplot erstellen
 \end{enumerate}
 
+Je mehr Beobachtungen wir durchführen, sprich je höher \(n\) ist, desto
+mehr wird das Histogramm und der QQ-Plot normalverteilt. Für das
+Verständnis:
+
+\begin{itemize}
+\tightlist
+\item
+  Es kann die Zahlen 0, 10 oder 11 annehmen.
+\item
+  Bei einem ersten Vorgang mit 1000 Realisierungen gab es zufällig 200
+  mal 0, 500 mal 10 und 300 mal 11.
+\item
+  Der Mittelwert dieser Zahlen ist also
+  \(\frac{200*0 + 500*10 + 300*11}{1000} = 8.3\)
+\item
+  Bei einem weiteren Vorgang mit 1000 weiteren Realisierungen gab es
+  zufällig 300 mal 0, 100 mal 10 und 600 mal 11.
+\item
+  Dies gibt wieder einen neuen Wert (7.6)
+\item
+  Die Hauptaussage ist, je mehr Wiederholungen dieses Vorgangs man
+  vornimmt, desto normalverteilter wird die Streuung dieser Mittelwerte
+\end{itemize}
+
+\begin{quote}
+5 Vorgänge:
+\(\frac{\frac{200*0+500*10+300*11}{1000}+\frac{200*0+700*10+100*11}{1000}+\frac{800*0+100*10+100*11}{1000}+\frac{500*0+500*10+0*11}{1000}+\frac{400*0+100*10+500*11}{1000}}{5} = 6\)
+\end{quote}
+
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}38}]:} \PY{c+c1}{\PYZsh{} Anzahl Beobachtungen definieren}
+{\color{incolor}In [{\color{incolor}43}]:} \PY{c+c1}{\PYZsh{} Anzahl Beobachtungen definieren}
          \PY{n}{n} \PY{o}{=} \PY{l+m+mi}{5}
          
          \PY{c+c1}{\PYZsh{} 1. X\PYZus{}1, ..., X\PYZus{}n simulieren und in einer n\PYZhy{}spaltigen Matrix (mit 1000 Zeilen) anordnen}
@@ -602,12 +639,26 @@ die Verteilung von \(\overline{X}_5\) anhand von 1000 Realisierungen von
          \PY{n}{sim\PYZus{}mean} \PY{o}{=} \PY{n}{sim}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
          
          \PY{c+c1}{\PYZsh{} 3. Histogramm erstellen}
-         \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
          \PY{n}{sim\PYZus{}mean}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{edgecolor}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{white}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
          \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Mittelwerte von 5 Beobachtungen}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
          
          \PY{c+c1}{\PYZsh{} 4. QQ\PYZhy{}Normalplot erstellen}
-         \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
+         \PY{n}{st}\PY{o}{.}\PY{n}{probplot}\PY{p}{(}\PY{n}{sim\PYZus{}mean}\PY{p}{,}\PY{n}{plot}\PY{o}{=}\PY{n}{plt}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Normal Q\PYZhy{}Q Plot}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Das Ganze nochmals mit 50 Beobachtungen}
+         \PY{n}{n} \PY{o}{=} \PY{l+m+mi}{50}
+         \PY{n}{sim} \PY{o}{=} \PY{n}{Series}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{choice}\PY{p}{(}\PY{n}{werte}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{n}{n}\PY{o}{*}\PY{l+m+mi}{1000}\PY{p}{,} \PY{n}{replace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{)}
+         \PY{n}{sim} \PY{o}{=} \PY{n}{DataFrame}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{n}{sim}\PY{p}{,} \PY{p}{(}\PY{n}{n}\PY{p}{,} \PY{l+m+mi}{1000}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+         \PY{n}{sim\PYZus{}mean} \PY{o}{=} \PY{n}{sim}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}
+         \PY{n}{sim\PYZus{}mean}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{edgecolor}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{white}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Mittelwerte von 50 Beobachtungen}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}
          \PY{n}{st}\PY{o}{.}\PY{n}{probplot}\PY{p}{(}\PY{n}{sim\PYZus{}mean}\PY{p}{,}\PY{n}{plot}\PY{o}{=}\PY{n}{plt}\PY{p}{)}
          \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Normal Q\PYZhy{}Q Plot}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
          
@@ -627,24 +678,27 @@ die Verteilung von \(\overline{X}_5\) anhand von 1000 Realisierungen von
     \end{center}
     { \hspace*{\fill} \\}
     
-    Als nächstes simulieren wir nun die Verteilung von \(\overline{X}_n\)
-auch für die Fälle, wo \(\overline{X}_n\) das Mittel von \(n=10\) resp.
-\(n=200\) \(X_i\) ist.
+    \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{c.)} Als nächstes simulieren wir die \textbf{Verteilung von
+\(\overline{X}_n\) auch für die Fälle, wo \(\overline{X}_n\) das Mittel
+von \(n=10\) resp. \(n=200\) \(X_i\) ist.} Wie oben bereits erläutert
+nimmt die Verteilung immer mehr die Streuung der Normalverteilung an je
+mehr Beobachtungen durchgeführt werden.
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}11}]:} \PY{n}{n} \PY{o}{=} \PY{l+m+mi}{10}
+{\color{incolor}In [{\color{incolor}48}]:} \PY{n}{n} \PY{o}{=} \PY{l+m+mi}{10}
          \PY{n}{sim} \PY{o}{=} \PY{n}{Series}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{choice}\PY{p}{(}\PY{n}{werte}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{n}{n}\PY{o}{*}\PY{l+m+mi}{1000}\PY{p}{,} \PY{n}{replace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{)}
          \PY{n}{sim} \PY{o}{=} \PY{n}{DataFrame}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{n}{sim}\PY{p}{,}\PY{p}{(}\PY{n}{n}\PY{p}{,}\PY{l+m+mi}{1000}\PY{p}{)}\PY{p}{)}\PY{p}{)}
          \PY{n}{sim\PYZus{}mean} \PY{o}{=} \PY{n}{sim}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
          
          \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
-         \PY{n}{sim\PYZus{}mean}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{edgecolor}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{black}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{sim\PYZus{}mean}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{edgecolor}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{white}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
          \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Mittelwerte von 10 Beobachtungen}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
          
          \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
          \PY{n}{st}\PY{o}{.}\PY{n}{probplot}\PY{p}{(}\PY{n}{sim\PYZus{}mean}\PY{p}{,}\PY{n}{plot}\PY{o}{=}\PY{n}{plt}\PY{p}{)}
          \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Normal Q\PYZhy{}Q Plot}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-         
          
          \PY{n}{n} \PY{o}{=} \PY{l+m+mi}{200}
          \PY{n}{sim} \PY{o}{=} \PY{n}{Series}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{choice}\PY{p}{(}\PY{n}{werte}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{n}{n}\PY{o}{*}\PY{l+m+mi}{1000}\PY{p}{,} \PY{n}{replace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{)}
@@ -652,21 +706,15 @@ auch für die Fälle, wo \(\overline{X}_n\) das Mittel von \(n=10\) resp.
          \PY{n}{sim\PYZus{}mean} \PY{o}{=} \PY{n}{sim}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
          
          \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}
-         \PY{n}{sim\PYZus{}mean}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{edgecolor}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{black}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{sim\PYZus{}mean}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{edgecolor}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{white}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
          \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Mittelwerte von 200 Beobachtungen}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
          
          \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}
          \PY{n}{st}\PY{o}{.}\PY{n}{probplot}\PY{p}{(}\PY{n}{sim\PYZus{}mean}\PY{p}{,} \PY{n}{plot}\PY{o}{=}\PY{n}{plt}\PY{p}{)}
          \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Normal Q\PYZhy{}Q Plot}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
          
-         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
          \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
-         
-         \PY{n}{n} \PY{o}{=} \PY{l+m+mi}{3}
-         \PY{n}{sim} \PY{o}{=} \PY{n}{Series}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{choice}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{11}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{n}{n}\PY{o}{*}\PY{l+m+mi}{200}\PY{p}{,} \PY{n}{replace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{)}
-         \PY{n}{sim} \PY{o}{=} \PY{n}{DataFrame}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{11}\PY{p}{)}\PY{p}{)}
-         \PY{n}{sim\PYZus{}mean} \PY{o}{=} \PY{n}{sim}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
-         \PY{n+nb}{print}\PY{p}{(}\PY{n}{sim\PYZus{}mean}\PY{p}{)}
 \end{Verbatim}
 
 
@@ -681,62 +729,6 @@ auch für die Fälle, wo \(\overline{X}_n\) das Mittel von \(n=10\) resp.
     \end{center}
     { \hspace*{\fill} \\}
     
-    \begin{Verbatim}[commandchars=\\\{\}]
-
-        ---------------------------------------------------------------------------
-
-        AttributeError                            Traceback (most recent call last)
-
-        \textasciitilde{}/anaconda3/lib/python3.6/site-packages/numpy/core/fromnumeric.py in \_wrapfunc(obj, method, *args, **kwds)
-         51     try:
-    ---> 52         return getattr(obj, method)(*args, **kwds)
-         53 
-
-
-        AttributeError: 'int' object has no attribute 'reshape'
-
-        
-    During handling of the above exception, another exception occurred:
-
-
-        ValueError                                Traceback (most recent call last)
-
-        <ipython-input-11-5139f33feb64> in <module>()
-         31 n = 3
-         32 sim = Series(np.random.choice(np.array([0,10,11]), size=n*200, replace=True))
-    ---> 33 sim = DataFrame(np.reshape(0,10,11))
-         34 sim\_mean = sim.mean()
-         35 print(sim\_mean)
-
-
-        \textasciitilde{}/anaconda3/lib/python3.6/site-packages/numpy/core/fromnumeric.py in reshape(a, newshape, order)
-        255            [5, 6]])
-        256     """
-    --> 257     return \_wrapfunc(a, 'reshape', newshape, order=order)
-        258 
-        259 
-
-
-        \textasciitilde{}/anaconda3/lib/python3.6/site-packages/numpy/core/fromnumeric.py in \_wrapfunc(obj, method, *args, **kwds)
-         60     \# a downstream library like 'pandas'.
-         61     except (AttributeError, TypeError):
-    ---> 62         return \_wrapit(obj, method, *args, **kwds)
-         63 
-         64 
-
-
-        \textasciitilde{}/anaconda3/lib/python3.6/site-packages/numpy/core/fromnumeric.py in \_wrapit(obj, method, *args, **kwds)
-         40     except AttributeError:
-         41         wrap = None
-    ---> 42     result = getattr(asarray(obj), method)(*args, **kwds)
-         43     if wrap:
-         44         if not isinstance(result, mu.ndarray):
-
-
-        ValueError: cannot reshape array of size 1 into shape (10,)
-
-    \end{Verbatim}
-
     Die obenstehenden Graphiken zeigen, dass die Form der Verteilung des
 Mittelwerts von unabhängigen Zufallsvariablen auch dann der
 Normalverteilung immer ähnlicher wird, wenn die Variablen selber
@@ -747,64 +739,252 @@ dass die Varianz immer kleiner wird.
 \(\overline{X}_n=\frac{U_1+U_2+\ldots+ U_n}{n}\) einer Normalverteilung
 folgt. Der Mittelwert \(\overline{X}_n\) ergibt sich aus:
 
-\begin{align*}
-\mathrm{E}[\overline{X}_n]
-=\frac{1}{n}\sum_{i=1}^{n}\mathrm{E}(U_i)
-=\mathrm{E}(U_i)
-=\ldots
-\end{align*}
+\begin{quote}
+\(\mathrm{E}[\overline{X}_n] = \frac{1}{n}\sum_{i=1}^{n}\mathrm{E}(U_i) = \mathrm{E}(U_i) = \frac{1}{3}(0+10+11) = 7\)
+\end{quote}
 
-Die Standardabweichung von \(\overline{X}_n\) folgt aus
+Die Standardabweichung von \(\overline{X}_n\) folgt aus:
 
-\begin{align*}
-\mathrm{Var}[\overline{X}_n] & =\frac{1}{n^2}\sum_{i=1}^{n}\mathrm{Var}(U_i)                                                            \\
-& =\frac{\mathrm{Var}(U_i)}{n} \\
-& = \ldots
-\end{align*}
+\begin{quote}
+\(\mathrm{Var}[\overline{X}_n] = \frac{1}{n^2}\sum_{i=1}^{n}\mathrm{Var}(U_i) = \frac{\mathrm{Var}(U_i)}{n} = \frac{1}{n}((0-7)^2*\frac{1}{3}+(10-7)^2*\frac{1}{3}+(11-7)^2*\frac{1}{3}) = \frac{24.67}{n}\)
+\end{quote}
 
 Somit ist die Standardabweichung von \(\overline{X}_n\), also der
-Standardfehler, gegeben durch
-
-\begin{align*}
-\sigma_{\overline{X}_n}=\ldots
-\end{align*}
+Standardfehler, gegeben durch: \textgreater{}
+\(\sigma_{\overline{X}_n} = \sqrt{\frac{24.67}{n}}\)
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}5}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
-        \PY{k+kn}{from} \PY{n+nn}{pandas} \PY{k}{import} \PY{n}{Series}\PY{p}{,} \PY{n}{DataFrame}
-        
-        \PY{n}{werte} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{11}\PY{p}{]}\PY{p}{)}
-        \PY{n}{n} \PY{o}{=} \PY{l+m+mi}{200}
-        \PY{n}{sim} \PY{o}{=} \PY{n}{Series}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{choice}\PY{p}{(}\PY{n}{werte}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{n}{n}\PY{o}{*}\PY{l+m+mi}{1000}\PY{p}{,} \PY{n}{replace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{)}
-        \PY{n}{sim} \PY{o}{=} \PY{n}{DataFrame}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{n}{sim}\PY{p}{,}\PY{p}{(}\PY{n}{n}\PY{p}{,}\PY{l+m+mi}{1000}\PY{p}{)}\PY{p}{)}\PY{p}{)}
-        
-        \PY{n}{sim\PYZus{}mean} \PY{o}{=} \PY{n}{sim}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
-        \PY{n}{sim\PYZus{}mean}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{sim\PYZus{}mean}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{)}
-        \PY{n}{sim\PYZus{}mean}\PY{o}{.}\PY{n}{std}\PY{p}{(}\PY{p}{)}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{sim\PYZus{}mean}\PY{o}{.}\PY{n}{std}\PY{p}{(}\PY{p}{)}\PY{p}{)}
-        \PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{l+m+mf}{24.67}\PY{o}{/}\PY{l+m+mi}{200}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}52}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+         \PY{k+kn}{from} \PY{n+nn}{pandas} \PY{k}{import} \PY{n}{Series}\PY{p}{,} \PY{n}{DataFrame}
+         
+         \PY{n}{werte} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{11}\PY{p}{]}\PY{p}{)}
+         \PY{n}{n} \PY{o}{=} \PY{l+m+mi}{200}
+         \PY{n}{sim} \PY{o}{=} \PY{n}{Series}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{choice}\PY{p}{(}\PY{n}{werte}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{n}{n}\PY{o}{*}\PY{l+m+mi}{1000}\PY{p}{,} \PY{n}{replace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{)}
+         \PY{n}{sim} \PY{o}{=} \PY{n}{DataFrame}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{n}{sim}\PY{p}{,}\PY{p}{(}\PY{n}{n}\PY{p}{,}\PY{l+m+mi}{1000}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+         
+         \PY{n}{sim\PYZus{}mean} \PY{o}{=} \PY{n}{sim}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
+         \PY{n}{sim\PYZus{}mean}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
+         \PY{n}{sim\PYZus{}mean}\PY{o}{.}\PY{n}{std}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-6.99909
-0.3502413323565497
-
-    \end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-/Users/mirkobirbaumer/anaconda/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:57: FutureWarning: reshape is deprecated and will raise in a subsequent release. Please use .values.reshape({\ldots}) instead
+/Users/Christopher/anaconda3/lib/python3.6/site-packages/numpy/core/fromnumeric.py:52: FutureWarning: reshape is deprecated and will raise in a subsequent release. Please use .values.reshape({\ldots}) instead
   return getattr(obj, method)(*args, **kwds)
 
     \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}5}]:} 0.35121218657671893
+{\color{outcolor}Out[{\color{outcolor}52}]:} 0.36519431521159124
 \end{Verbatim}
             
     Experiment und Berechnung sind also in guter Uebereinstimmung.
 \(\overline{X}_n\) folgt also der Verteilung \(\mathcal{N}(7,0.12)\).
+
+    \subsection{Aufgabe 5.3}\label{aufgabe-5.3}
+
+\begin{quote}
+Boxplot, Transformation, \(\mu\), \(\sigma^2\)
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{a.) Boxplot für jede Versuchtsbedingung erstellen}. Die grösste
+normale Beobachtung ist die grösste Beobachtung, die höchstens 1.5 *
+Quantilsdifferenz vom oberen Quantil entfernt ist. Bei der hohen Dosis
+ist diese nicht weit vom oberen Quartil entfernt, bei der Medium-Dosis
+ein wenig weiter weg und bei der tiefen Dosis ist die grösste normale
+Beobachtung sehr weit vom oberen Quartil entfernt. Die hohe Dosis-Gruppe
+hat einen Ausreisser nach oben.
+
+\begin{itemize}
+\tightlist
+\item
+  Die hohe Dosis-Gruppe hat eher symmetrisch-verteilte Messwerte
+  (normalverteilt)
+\item
+  Die mittlere und tiefe Dosis-Gruppe hat eher rechtsschiefe Messwerte
+\item
+  Je kleiner die Dosis, desto grösser ist die Streuung
+\end{itemize}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}59}]:} \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
+         
+         \PY{c+c1}{\PYZsh{} Daten einlesen}
+         \PY{n}{iron} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}table}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ironF3.dat}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{sep}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ }\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{index\PYZus{}col}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}
+         \PY{c+c1}{\PYZsh{} Boxplot erstellen}
+         \PY{n}{iron}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{box}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Boxplot Methode A}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}59}]:} <matplotlib.axes.\_subplots.AxesSubplot at 0x1a18151fd0>
+\end{Verbatim}
+            
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_21_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}69}]:} \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+         \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+         \PY{k+kn}{from} \PY{n+nn}{pandas} \PY{k}{import} \PY{n}{DataFrame}
+         
+         \PY{c+c1}{\PYZsh{} iron Daten beschreiben (optional als Übersicht)}
+         \PY{n}{DataFrame}\PY{o}{.}\PY{n}{describe}\PY{p}{(}\PY{n}{iron}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}69}]:}             high     medium       low
+         count  18.000000  18.000000  18.00000
+         mean    3.698889   8.203889  11.75000
+         std     2.030870   5.447386   7.02815
+         min     0.710000   2.200000   2.25000
+         25\%     2.420000   4.320000   6.10250
+         50\%     3.475000   5.965000   9.98000
+         75\%     4.472500  11.182500  15.99750
+         max     8.240000  18.590000  29.13000
+\end{Verbatim}
+            
+    \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{b.) Logarithmus-Transformation.}
+
+\begin{itemize}
+\tightlist
+\item
+  Wenn man die Daten logarithmiert, so wird die Varianz "stabilisiert",
+\item
+  d.h. alle Gruppen zeigen jetzt eine ähnlich grosse Streuung.
+\item
+  Der Unterschied in der Lage ist immer noch ersichtlich.
+\end{itemize}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}61}]:} \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+         
+         \PY{c+c1}{\PYZsh{} 1. Subplot erstellen (1 Reihe, 2 Zeilen, 1. Plot)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} iron Daten als Boxplot plotten}
+         \PY{n}{iron}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{box}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{plt}\PY{o}{.}\PY{n}{gca}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{iron}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} 2. Subplot erstellen}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} log(iron) Daten als Boxplot plotten}
+         \PY{n}{np}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{n}{iron}\PY{p}{)}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{box}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{plt}\PY{o}{.}\PY{n}{gca}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{log(iron)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_24_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{c.) Normalverteilung vor und nach Logarithmieren.}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}76}]:} \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+         \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+         \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
+         \PY{k+kn}{import} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{stats} \PY{k}{as} \PY{n+nn}{st}
+         
+         \PY{c+c1}{\PYZsh{} Plot vor dem Logarithmieren}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{st}\PY{o}{.}\PY{n}{probplot}\PY{p}{(}\PY{n}{iron}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{medium}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{,} \PY{n}{plot}\PY{o}{=}\PY{n}{plt}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Eisenwerte (mittel) vor Log.}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Plot nach dem Logarithmieren}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+         \PY{n}{st}\PY{o}{.}\PY{n}{probplot}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{n}{iron}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{medium}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{n}{plot}\PY{o}{=}\PY{n}{plt}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Eisenwerte (mittel) nach Log.}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_26_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{d.) Parameter \(\mu\) (Erwartungswert) und \(\sigma^2\)
+(empirische Varianz) schätzen. Wie gross ist Wahrscheinlichkeit, dass
+50\% Eisen zurückgehalten wird?}
+
+\begin{itemize}
+\tightlist
+\item
+  Erwartungswert durch empirischen Mittelwert der Daten bei mittlerer
+  Dosierung berechnen
+\item
+  Varianz durch \texttt{iron{[}"medium"{]}.var()} berechnen
+\item
+  Beide Werte werden benötigt, um die Wahrscheinlichkeit zu berechnen
+\end{itemize}
+
+Wenn \(X\) den zurückgehaltenen Prozentsatz Eisen bei mittlerer
+Dosierung bezeichnet, dann ist
+
+\begin{quote}
+\(X \sim \mathcal{N}(\hat{\mu} = 8.20, \hat{\sigma}^2 = 29.7)\)
+\end{quote}
+
+Die Wahrscheinlichkeit \(P(X > 10) = 1 - P(X \leq 10)\) ergibt
+0.370805119544
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}77}]:} \PY{c+c1}{\PYZsh{} Erwartungswert berechnen}
+         \PY{n}{iron}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{medium}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}77}]:} 8.203888888888889
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}78}]:} \PY{c+c1}{\PYZsh{} empirische Varianz berechnen}
+         \PY{n}{iron}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{medium}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{var}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}78}]:} 29.67401339869281
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}79}]:} \PY{k+kn}{import} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{stats} \PY{k}{as} \PY{n+nn}{st}
+         
+         \PY{c+c1}{\PYZsh{} Wahrscheinlichkeit mit der norm.cdf Methode}
+         \PY{l+m+mi}{1} \PY{o}{\PYZhy{}} \PY{n}{st}\PY{o}{.}\PY{n}{norm}\PY{o}{.}\PY{n}{cdf}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{,} \PY{n}{loc}\PY{o}{=}\PY{l+m+mf}{8.204}\PY{p}{,} \PY{n}{scale}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{l+m+mf}{29.67}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}79}]:} 0.37080511954367934
+\end{Verbatim}
+            
+    \subsection{Aufgabe 5.4}\label{aufgabe-5.4}
+
+\begin{quote}
+Poissonprozess, Momentenmethode, QQ-Plot, empirische/theoretische
+Quantile, Exponentialverteilung
+\end{quote}
 
     \subsection{Aufgabe 5.5}\label{aufgabe-5.5}
 
