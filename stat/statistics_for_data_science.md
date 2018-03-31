@@ -104,3 +104,14 @@ Mittelwert = $\overline{x}_n$
 
 ### Histogramm
 
+* Graphischer Überblick eines Datensatzes
+* In welchem Wertebereich liegen viele Daten
+* Einteilung in Klassen (Säulen)
+* Werte auf Balkengrenze nur einmal berücksichtigen!
+* **Faustregel**: bei weniger als 50 Messungen 5 bis 7 Klassen, bei mehr als 250 Messungen 10 bis 20 Klassen
+
+<img src="img/histogramm.png" style="width:300px">
+
+* Im normierten Histogramm entspricht die Höhe der Balken gerade der Anzahl Beobachtungen einer Klasse
+
+### Boxplot
