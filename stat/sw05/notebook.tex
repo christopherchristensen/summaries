@@ -141,7 +141,7 @@
     \def\gt{>}
     \def\lt{<}
     % Document parameters
-    \title{Python Code - Series 5}
+    \title{serie\_05}
     
     
     
@@ -283,6 +283,11 @@
     \section{Series 5}\label{series-5}
 
     \subsection{Aufgabe 5.1}\label{aufgabe-5.1}
+
+\begin{quote}
+Normalverteile, t-verteilte, chiquadrat-verteile Zufallszahlen,
+Freiheitsgrade, QQ-Plot
+\end{quote}
 
     \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
@@ -510,6 +515,10 @@ einer t-Verteilung.
     
     \subsection{Aufgabe 5.2}\label{aufgabe-5.2}
 
+\begin{quote}
+Zentraler Grenzwertsatz, Histogramm, Normalplot
+\end{quote}
+
     In dieser Aufgabe untersuchen Sie die \textbf{Wirkung des Zentralen
 Grenzwertsatzes mittels Simulation}. Gehen Sie von einer
 Zufallsvariablen \(X\) aus, die folgendermassen verteilt ist: die Werte
@@ -542,39 +551,40 @@ Mittelwerts \(\overline{X}_n\) von mehreren \(X\).
 \end{enumerate}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}34}]:} \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
-         \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
-         \PY{k+kn}{from} \PY{n+nn}{pandas} \PY{k}{import} \PY{n}{Series}\PY{p}{,} \PY{n}{DataFrame}
-         \PY{k+kn}{import} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{stats} \PY{k}{as} \PY{n+nn}{st}
-         
-         \PY{c+c1}{\PYZsh{} 1. mögliche Werte von X definieren}
-         \PY{n}{werte} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{11}\PY{p}{]}\PY{p}{)}
-         
-         \PY{c+c1}{\PYZsh{} 2. X simulieren mit Series(np.random.choice())}
-         \PY{n}{sim} \PY{o}{=} \PY{n}{Series}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{choice}\PY{p}{(}\PY{n}{werte}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{l+m+mi}{1000}\PY{p}{,} \PY{n}{replace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{)}
-         
-         \PY{c+c1}{\PYZsh{} 3. Subplot für Histogramm}
-         \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
-         
-         \PY{c+c1}{\PYZsh{} 4. Histogramm erstellen}
-         \PY{n}{sim}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{bins}\PY{o}{=}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{11}\PY{p}{,} \PY{l+m+mi}{12}\PY{p}{]}\PY{p}{,} \PY{n}{edgecolor}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{white}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Histogramm}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-         
-         \PY{c+c1}{\PYZsh{} 5. Subplot für Normalplot}
-         \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
-         
-         \PY{c+c1}{\PYZsh{} 6. Normalplot erstellen}
-         \PY{n}{st}\PY{o}{.}\PY{n}{probplot}\PY{p}{(}\PY{n}{sim}\PY{p}{,} \PY{n}{plot}\PY{o}{=}\PY{n}{plt}\PY{p}{)}
-         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Normal Q\PYZhy{}Q Plot}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
-         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        \PY{k+kn}{from} \PY{n+nn}{pandas} \PY{k}{import} \PY{n}{Series}\PY{p}{,} \PY{n}{DataFrame}
+        \PY{k+kn}{import} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{stats} \PY{k}{as} \PY{n+nn}{st}
+        
+        \PY{c+c1}{\PYZsh{} 1. mögliche Werte von X definieren}
+        \PY{n}{werte} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{11}\PY{p}{]}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} 2. X simulieren mit Series(np.random.choice())}
+        \PY{n}{sim} \PY{o}{=} \PY{n}{Series}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{choice}\PY{p}{(}\PY{n}{werte}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{l+m+mi}{1000}\PY{p}{,} \PY{n}{replace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} 3. Subplot für Histogramm}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} 4. Histogramm erstellen}
+        \PY{n}{sim}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{bins}\PY{o}{=}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{11}\PY{p}{,} \PY{l+m+mi}{12}\PY{p}{]}\PY{p}{,} \PY{n}{edgecolor}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{white}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Histogramm}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} 5. Subplot für Normalplot}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} 6. Normalplot erstellen}
+        \PY{n}{st}\PY{o}{.}\PY{n}{probplot}\PY{p}{(}\PY{n}{sim}\PY{p}{,} \PY{n}{plot}\PY{o}{=}\PY{n}{plt}\PY{p}{)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Normal Q\PYZhy{}Q Plot}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
 
-    \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_11_0.png}
-    \end{center}
-    { \hspace*{\fill} \\}
+    
+    \begin{verbatim}
+<matplotlib.figure.Figure at 0x106fa0c50>
+    \end{verbatim}
+
     
     \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
@@ -983,15 +993,156 @@ Die Wahrscheinlichkeit \(P(X > 10) = 1 - P(X \leq 10)\) ergibt
 
 \begin{quote}
 Poissonprozess, Momentenmethode, QQ-Plot, empirische/theoretische
-Quantile, Exponentialverteilung
+Quantile, Exponentialverteilung, Regressionsgerade
 \end{quote}
 
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{a.) Momentenmethode verwenden, um Parameter zu schätzen.}
+
+\begin{itemize}
+\tightlist
+\item
+  Angler fängt in 2 Stunden 15 Fische
+\item
+  Poissonprozess
+\item
+  Mit welcher Wahrscheinlichkeit dauert es länger als 12 Minuten bis
+  nächster Fisch anbeisst
+\end{itemize}
+
+\textbf{Theorie} Ablauf der Momentenmethode
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Daten \(x_1, x_2, ..., x_n\) als Realisierungen von Zufallsvariablen
+  \(X_1, X_2, ..., X_n\) auffassen (mit bekannter Verteilung)
+\item
+  Erwartungswert \(E(X)\) berechnen
+\item
+  Gleichung nach unbekanntem Parameter auflösen
+\item
+  Wahrscheinlichkeit berechnen
+\end{enumerate}
+
+Von der Poissonverteilung wissen wir folgendes:
+
+\begin{quote}
+\(E(X) = \lambda\), \(Var(X) = \lambda\), d.h. \(\mu = \lambda\),
+\(\sigma^2 = \lambda\)
+\end{quote}
+
+Also haben wir hier:
+
+\begin{quote}
+\(P[X \leq x] \approx \phi(\frac{x - \lambda}{\sqrt{\lambda}})\)
+\end{quote}
+
+\textbf{Lösung}
+
+\begin{itemize}
+\tightlist
+\item
+  Als Wahrscheinlichkeitsverteilung der Wartezeit T (in Minuten) \(\to\)
+  Exponentialverteilung
+\item
+  D.h. Wahrscheinlichkeitsdichte ist:
+  \(f(t) = \lambda \cdot e^{-\lambda t}\) für \(t > 0\)
+\item
+  Wir verwenden jedoch die kummulative Verteilungsfunktion der
+  Exponentialverteilung \(F(t) = 1 - e^{\frac{-t}{8}}\) (1 -
+  Stammfunktion)
+\item
+  Parameter \(\lambda\) ermitteln (Momentenmethode)
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Daten auffassen (sind bereits gegeben, 2 h - 15 Fische)
+\item
+  Erwartungswert berechnen:
+
+  \begin{quote}
+  \(E(T) = \frac{1}{\lambda}\) (Momentenmethode, beobachteten Wert für
+  mittlere verstrichene Zeit gleich dem Erwartungswert setzen).
+  Erwartungswert
+  \(= \frac{120 Minuten}{15 Fische} = \frac{1}{\lambda} = 8\)
+  \end{quote}
+\item
+  Gleichung nach unbekanntem Parameter auflösen:
+
+  \begin{quote}
+  \(\frac{1}{\lambda} = 8 \Leftrightarrow \hat{\lambda} = \frac{1}{8}\)
+  \end{quote}
+\item
+  Wahrscheinlichkeit berechnen:
+
+  \begin{quote}
+  \(P(T > 12) = 1 - P(T \leq 12) = 1 - F(12) = 1 - (1 - e^{-12/8}) = e^{-1.5} = 0.223\)
+  \end{quote}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{b.) Wahrscheinlichkeit, dass genau 2 Fische in 12 Minuten
+anbeissen.}
+
+\begin{itemize}
+\tightlist
+\item
+  X ist Anzahl Fische, die in nächsten 12 Minuten anbeissen
+\item
+  X ist poissonverteilt mit \(\lambda = 1.5\) (in 12 Minuten beissen
+  durchschnittlich 1.5 Fische an)
+\end{itemize}
+
+\begin{quote}
+\(P(X = 12) = e^{-1.5} \cdot \frac{1.5^2}{2!} = 0.251\)
+\end{quote}
+
+\textbf{c.) Wartezeiten zwischen Fischfängen. QQ-Plot. Steigung der
+Regressionsgeraden.}
+
+Für die Exponentialverteilung haben wir:
+
+\begin{quote}
+\(F(t) = \begin{cases} 1 - e^{-\lambda t} \text{ falls } t \geq 0\\ 0 \text{ falls } t < 0 \end{cases}\)
+\end{quote}
+
+Das \(\alpha\)-Quantil ist gegeben durch die Beziehung
+\(F(q_\alpha) = \alpha\), also (Inverse):
+
+\begin{quote}
+\(q_\alpha = F^{-1}(\alpha) = - \frac{1}{\lambda} log(1-\alpha)\)
+\end{quote}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{k+kn}{from} \PY{n+nn}{pandas} \PY{k}{import} \PY{n}{Series}
+        \PY{k+kn}{import} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{stats} \PY{k}{as} \PY{n+nn}{st}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+        
+        \PY{c+c1}{\PYZsh{} 1. Messwerte eintragen und sortieren}
+        \PY{n}{messungen} \PY{o}{=} \PY{n}{Series}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{16.9}\PY{p}{,} \PY{l+m+mf}{4.2}\PY{p}{,} \PY{l+m+mf}{6.7}\PY{p}{,} \PY{l+m+mf}{8.83}\PY{p}{,} \PY{l+m+mf}{10.7}\PY{p}{,} \PY{l+m+mf}{22.4}\PY{p}{,} \PY{l+m+mf}{1.37}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mf}{4.82}\PY{p}{,} \PY{l+m+mf}{4.53}\PY{p}{,} \PY{l+m+mf}{6.77}\PY{p}{,} \PY{l+m+mf}{4.81}\PY{p}{]}\PY{p}{)}
+        
+        \PY{n}{x} \PY{o}{=} \PY{n}{st}\PY{o}{.}\PY{n}{probplot}\PY{p}{(}\PY{n}{messungen}\PY{p}{,} \PY{n}{plot}\PY{o}{=}\PY{n}{plt}\PY{p}{)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_32_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
     \subsection{Aufgabe 5.5}\label{aufgabe-5.5}
 
     Stetige Verteilung mit gegebener Dichte.
 
 \textbf{a. + b.) Likelihood- und Log-Likelihood-Funktion bestimmen}.
-Integral muss ein geben, damit es eine gültige Wahrscheinlichkeitskurve
+Integral muss 1 geben, damit es eine gültige Wahrscheinlichkeitskurve
 ist.
 
 \begin{quote}
@@ -1005,7 +1156,7 @@ ist.
 \item
   Alle x-Werte auf Funktion anwenden
 \item
-  \(L(\alpha) = f(x_1 ; \alpha) * f(x_2 ; \alpha) *** f(x_5 ; \alpha) = \frac{\alpha}{x_1^{\alpha + 1}} + ... + = Summe von \frac{\alpha}{x_i^{\alpha + 1}}\)
+  \(L(\alpha) = f(x_1 ; \alpha) * f(x_2 ; \alpha) *** f(x_5 ; \alpha) = \frac{\alpha}{x_1^{\alpha + 1}} + ... + = \displaystyle\sum_{i=1}^{5} \frac{\alpha}{x_i^{\alpha + 1}}\)
 \item
   \(L(\alpha) = log(L(\alpha)) => \frac{5}{log(12) + log(4) + ... + log(15.4)}\)
 \end{enumerate}
