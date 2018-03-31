@@ -115,3 +115,19 @@ Mittelwert = $\overline{x}_n$
 * Im normierten Histogramm entspricht die Höhe der Balken gerade der Anzahl Beobachtungen einer Klasse
 
 ### Boxplot
+
+* Graphischer Überblick eines Datensatzes
+* Besteht aus:
+	* **Rechteck**, dessen Höhe vom empirischen 25%- und 75%-Quantil begrenzt wird
+	* **Linien**, vom Rechteck bis zum kleinsten/grössten "normalen" Wert (1.5 mal Quartilsdifferenz) führen
+	* **horizontaler Strich** für Median
+	* **kleinen Kreisen**, die Ausreisser markieren
+* Gut um Verteilung der Daten in verschiedenen Gruppen vergleichen will
+* Höhe des Rechtecks zeigt wie gross Streuung ist (Quartilsdifferenz)
+
+<img src="img/boxplot.png" style="width:300px">
+
+### Empirische kumulative Verteilungsfunktion
+
+
+

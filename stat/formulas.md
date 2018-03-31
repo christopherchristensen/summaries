@@ -145,3 +145,9 @@ plt.ylabel("Häufigkeit")
 
 plt.show()
 ```
+
+### Boxplot
+
+```python
+methodeA.plot(kind="box", title="Boxplot")
+```
