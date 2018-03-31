@@ -56,5 +56,62 @@ methodeA.std()
 methodeA.median()
 ```
 
+### Quartile
 
-### Quartilsdifferenz
+#### Untere Quartil
+
+* Mehrere Möglichkeiten / Definitionen:
+
+```python
+methodeA.quantile(q=.25, interpolation="linear")
+methodeA.quantile(q=.25, interpolation="lower")
+methodeA.quantile(q=.25, interpolation="higher")
+methodeA.quantile(q=.25, interpolation="midpoint")
+methodeA.quantile(q=.25, interpolation="nearest")
+```
+
+#### Obere Quartil
+
+* Mehrere Möglichkeiten / Definitionen:
+
+```python
+methodeA.quantile(q=.75, interpolation="linear")
+methodeA.quantile(q=.75, interpolation="lower")
+methodeA.quantile(q=.75, interpolation="higher")
+methodeA.quantile(q=.75, interpolation="midpoint")
+methodeA.quantile(q=.75, interpolation="nearest")
+```
+
+#### Quartilsdifferenz
+
+##### Mathematisch
+> $\text{oberes Quartil} - \text{unteres Quartil}$
+
+##### Mit Python
+
+```python
+q75, q25 = methodeA.quantile(q = [.75, .25])
+iqr = q75 - q25
+iqr
+```
+
+### Quantile
+
+* Ein bestimmtes Quantil:
+
+```python
+methodeA.quantile(q=.5, interpolation="linear")
+methodeA.quantile(q=.15, interpolation="lower")
+methodeA.quantile(q=.25, interpolation="higher")
+methodeA.quantile(q=.50, interpolation="midpoint")
+methodeA.quantile(q=.65, interpolation="nearest")
+```
+
+* Mehrere Quantile gleichzeitig:
+
+```python
+import numpy as np
+
+# Zeigt verschiedene Quantile von 20% bis 100%
+methodeA.quantile(q = np.linspace(start=.2, stop=1, num=5)
+```

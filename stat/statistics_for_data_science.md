@@ -68,6 +68,7 @@ Mittelwert = $\overline{x}_n$
 * Alternatives Lagemass für mittlere Lage
 * Wert, bei dem rund Hälfte der Messwerte unterhalb diesem Wert liegen
 * Wird weniger stark durch extreme Beobachtungen beinflusst als arithmetisches Mittel (Robustheit)
+* Empirische Median = 50%-Quantil
 
 1. Werte der Grösse nach ordnen
 2. Wert der mittleren Beobachtung ermitteln
@@ -76,4 +77,30 @@ Mittelwert = $\overline{x}_n$
 
 #### Quartile
 
+* Quartile sind robust (schwach beinflussbar)
+* Quartile haben verschiedene Definitionen (je nach Software, Mathematiker)
+* Durch Robustheit haben Definitionen keinen starken Einfluss (höchsten ein Wert verschieden)
+
+##### Untere Quartil
+
+* Wert, bei welchem **etwa** 25% kleiner-gleich oder 75% grösser-gleich diesem Wert sind
+
+##### Obere Quartil
+
+* Wert, bei welchem **etwa** 25% grösser-gleich oder 75% kleiner-gleich diesem Wert sind
+
+##### Quartilsdifferenz
+
+* Misst Länge des Intervalls, das **etwa** Hälfte der mittleren Beobachtungen enthält
+* Je kleiner, umso näher liegt Hälfte aller Werte beim Median (kleinere Streuung) $\to$ robustes Streuungsmass
+
+> $\text{oberes Quartil} - \text{unteres Quartil}$
+
+### Quantile
+
+* Quartile auf jede Prozentzahl verallgemeinert
+* 10%-Quantil, 20%-Quantil, etc.
+* Empirisches $\alpha$-Quantil ($\alpha$ = Prozent)
+
+### Histogramm
 
