@@ -274,99 +274,47 @@ anliegenden Aufgaben
 
 ## Kontextanalyse
 
-
 ### Umgebung
 * Unser System wird vorallem im privaten Kontext genutzt
 * Der Kontext umfasst aber auch den Arbeitskontext, da Firmen (Spitex, andere Geschäftsautos) Autos von Lendern auf unserer Seite mieten könnten
 * Wir sprechen also von einer Mischnutzung
   
-**Einsatzbedingungen**
-- Einsatzort und Umgebung
-  - Bsp. Labor, Fabrikhalle, Schichtsystem, Verschmutzungsgrad, Aktionsradius zur Nutzung, Licht- und Geräuschverhältnisse, kritische Zeitbedingungen, Parallelaufgaben etc.
+### Einsatzbedingungen
+* Kritische Zeitbedingungen: Wir rechnen mit höherer Nutzung zu Rush-Hours, deswegen muss hier die Serverkapazität genügen
+* Wir brauchen keine Labor oder Fabrikhallen
+* Lender und Borrower müssen gleichzeitig Dienste beanspruchen können
+* Im Winter bei viel Schnee werden unsere Dienste wahrscheinlich **nicht** oder weniger verwendet
+* Lender muss angeben, ob sein Auto Winterpneu hat oder nicht
 
-
-**Benutzeranzahl**
-- Anzahl der (gleichzeitigen Nutzer), Kommunikationswege der Nutzer
-  - Bsp: Wenn es mehrere Benutzer gibt, wie kommunizieren diese unter- bzw. miteinander? Welchen aufgabenbezogenen Informationsaustausch gibt es? Wer kommuniziert mit wem? Welche Kommunikationswege werden genutzt? Sind diese, z.B. durch die Firma, vorgegeben? Werden sie umgangen?
+### Benutzeranzahl
+* Es kommunizieren immer zwei gleichzeitig miteinander
+* Allgemeine Benutzeranzahl ist grundsätzlich unbegrenzt
+* Wir legen unsere Server in einem ersten Schritt auf 20'000 Benutzer aus mit einer maximaler gleichzeitigen Nutzung von 2'000 Benutzern
+* Unsere Server sollen einfach skalierbar aufgesetzt werden
+* Borrower kommuniziert mit Lender (vice versa)
   
-**Fehlerkultur**
-- Vorgehen im Fehlerfall bzw. bei Zwischenfällen?
-  - Bsp.: Wie wird mit Fehlern, Ausfällen, Katastrophen umgegangen? Wer ist zu benachrichtigen und welche Kontrollen gibt es?
-Wartung
-- Wie und durch wen erfolgt die Wartung des Systems?
+### Fehlerkultur
+* Ausfälle der Bezahlungssoftware führt zu einer Blockade der Buchungen (keine Transaktionen zu dieser Zeit)
+* Buchungsfehler (inkorrekte Transaktionen) führen zu einer Vergütung beider Parteien
+* Bezahlungssoftware wird extern bezogen
+* Server für unsere Applikationen werden extern bezogen (SaaS)
+* Wartung der Software von der internen Applikationsentwicklung
 
+### Datensicherheit
+* Da es sich bei unseren Diensten um sensitive Daten handelt (Führerschein, Autokennnummer) wählen wir den Datenstandort Schweiz
+* Durch die Bezüge dieser Leistungen ist Datensicherheit und -integrität gewährleistet
+* Backups werden auch durch die Serveranbieter übernommen
+* Nur ausgewählte interne Mitarbeiter haben Zugriff auf sensitive Daten 
 
-**Datensicherheit**
-- Backupsysteme, Datenschutz, Verschlüsselung
-
-
-**Datenzugriff**
-- Wie stellt sich der Datenzugriff für Nutzer dar?
-  - Bsp: Gibt es einen oder mehrere Arbeitsplätze für einzelne Nutzer? Müssen die Daten zwischen mehreren Arbeitsplätzen bewegt werden bzw. ist ein multi-stationeller Zugriff notwendig? Variiert die Art der In- und  Outputgeräte? Gibt es Einschränkungen im Zugriff und welche?
+### Datenzugriff
+* Jeder Nutzer hat sein eigenes Profil
+* Sensitive Benutzerdaten werden anderen Benutzern vorenthalten
+* Nur Leihobjekte und Kalender sind öffentlich (ausser Autokennnummer)
+* Personendaten (Name, genauer Standort) sind erst nach abgeschlossener Buchung der anderen Partei ersichtlich
   
-**Hilfssysteme**
-- Welche weiteren Produkte/Systeme bzw. Hilfsmittel verwenden die Nutzer?
-  - Bsp.: Werden Hilfssysteme genutzt? Gibt es weitere Informationsquellen (z.B. Mobilgeräte) ausser dem primären Interaktionssystem? Verteilte Bediensysteme?
-  
-Kontextanalyse Organisation / Daten Kommunikation... mömmer die mache????
-
-
-# Personas
-
-
-## Primäre Personas
-
-
-Thomas Berchtold, 24 Jahre alt
-Wohnt in der Stadt. Benötigt sein Auto nur am Wochenende.
-Geht via ÖV zur Arbeit.
-Will mit seinem Auto Geld verdienen, da er dieses nicht braucht.
-Ist besorgt, dass sein Auto beschädigt wird.
-
-
-Simona Wiederkehr, 22 Jahre alt
-Besitzt weder ein Auto noch ein ÖV Abo.
-Geht mit dem Fahrad zur Arbeit.
-Möchte ihre Eltern und Freunde einfach besuchen können. Diese leben abgelegen.
-
-
-## Sekundäre Personas
-
-
-Helene Meier, 52 Jahre Alt.
-Hat eine Querschnittsgelähmte 20 jährige Tochter. Diese ist mittlerweile ausgezogen.
-Besitzt ein Rollstuhlgängliches Auto.
-Ist in einer sozialen Gemeinschäft tätig, welche Familien helfen, welche Querschnittsgelähmte angehörige haben.
-Will einfach organisieren können, dass diese Familien ihr Auto benutzen können, ohne dass Sie dabei grosse Verluste macht.
-
-
-
-
-## Komplementäre Personas
-
-
-Hans Müller, 35 Jahre alt. Hans ist selber Autoliebhaber. Er arbeitete zuvor 10 Jahre beim Strassenverkehrsamt bis er vor 2 Jahren kündigte. Heute arbeitet er für unsere Firma und steht immernoch in engem Kontakt mit dem Strassenverkehrsamt. Hans überprüft für uns alle Führerscheine und Autonummern über das Strassenverkehrsamt. Da er selber ein traumitisierenden Ereigniss im Strassenverkehr miterlebt hat ist es ihm sehr wichtig, dass keiner auf der Strasse fährt, der nicht dürfte.
-
-
-## Negative Personas
-Philipp Rast, 19 Jahre alt.
-Hat den Führerschein und sein Auto wegen Rasen abgegeben.
-Ist sich sicher, dass er fahren dürfen sollte. Er hat ja niemanden verletzt.
-Besitzt Schulden von der Busse.
-Sein Onkel führt eine Autogarage. Dieser ihm Geschichten erzählt, dass er auch schon Autos verkauft hat, welche von seinem Kollegen gestohlen wurde.
-Besitzt Bilder seines Führerscheins, welcher bis 2020 gültig ist.
-Überlegt sich, wie man Autoschlüssel kopieren kann.
-
-
-# Kontext Szenarien
-l führt eine Autogarage. Dieser ihm Geschichten erzählt, dass er auch schon Autos verkauft hat, welche von seinem Kollegen gestohlen wurde.
-Besitzt Bilder seines Führerscheins, welcher bis 2020 gültig ist.
-Überlegt sich, wie man Autoschlüssel kopieren kann.
-
-
-
-
-# Kontext Szenarien
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2NzMzMjY0LDU5NDk2ODQ1Nl19
--->
+### Hilfssysteme
+* Eigene Agenda (Unsere Agenda in Google Agenda eintragen)
+* Twint, Paypal (und andere Bezahlsysteme)
+* Google Maps
+* Wir bieten Messaging an, ermöglichen aber auch das Kommunizieren über Whatsapp oder andere Messaging-Dienste
+* Mobilgeräte und eigene Computer
