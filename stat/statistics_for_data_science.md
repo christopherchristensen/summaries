@@ -1,6 +1,8 @@
 # Statistics for Data Science
 
-## Deskriptive Statistik
+## Deskriptive Statistik (1D)
+
+* Ein Messwert wird beobachtet
 
 ### Definition
 
@@ -129,5 +131,35 @@ Mittelwert = $\overline{x}_n$
 
 ### Empirische kumulative Verteilungsfunktion
 
+> $\displaystyle F_n(x) = \frac{1}{n} \text{Anzahl} \{ i | x_i \leq x \}$
 
+* Graphischer Überblick eines Datensatzes
+* Median leicht ablesbar (im Gegensatz zum Histogramm)
+* Treppenfunktion ($F_n(\cdot)$)
+* links von $x_{(1)}$ ist die Funktion = 0
+* bei jedem $x_{(i)}$ wir ein Sprung der Höhe $\frac{1}{n}$ gemacht
 
+<img src="img/kumulative_verteilungsfunktion.png" style="width:300px">
+
+* Bei 0.5 auf vertikaler Achse sind Hälfte aller Werte aufsummiert. Zeichnen wir von 0.5 eine horizontale Linie (siehe Abbildung) wird die kumulative Verteilungsfunktion bei 80.03 geschnitten.
+* Das entspricht gerade dem Median.
+* Dort, wo grosse Sprünge sind, hat es viele Beobachtungswerte.
+* In der Abbildung liegen die meisten Beobachtungswerte zwischen 80.02 und 80.04 (hier untere und obere Quartil)
+
+## Deskriptive Statistik (2D)
+
+* Zwei Messwerte werden beobachet
+* Korrelationen zwischen Daten finden
+
+### Streudiagramm
+
+* Zwei Messungen als Koordinaten von Punkten dargestellt
+* Kausalitäten können anhand Streudiagramme erahnt werden
+* Beweist jedoch keinen kausalen Zusammenhang
+
+<img src="img/streudiagramm.png" style="width:300px">
+
+### Einfache lineare Regression
+
+* lineare Abhängigkeit (z.B. Zusammenhang zw. Seitenzahl x und Buchpreis y)
+* 

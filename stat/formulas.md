@@ -1,6 +1,8 @@
 # Formulas
 
-## Deskriptive Statistik
+## Deskriptive Statistik (1D)
+
+* Ein Messwert wird beobachtet
 
 ### Arithmetische Mittel ($x_n$)
 
@@ -150,4 +152,33 @@ plt.show()
 
 ```python
 methodeA.plot(kind="box", title="Boxplot")
+```
+
+### Empirische kumulative Verteilungsfunktion
+
+> $\displaystyle F_n(x) = \frac{1}{n} \text{Anzahl} \{ i | x_i \leq x \}$
+
+```python
+methodeA.plot(kind="hist", cumulative=True, histtype="step", 
+					normed=True, bins=8, edgecolor="white")
+```
+
+## Deskriptive Statistik (2D)
+
+### Streudiagramm
+
+```python
+import pandaas as pd
+from pandas import DataFrame, Series
+import numpy as np
+
+mort = DataFrame({
+	"wine": ([2.8, 3.2, 3.2, ..., 75.9]),
+	"mor": ([6.2, 9.0, 7.1, ..., 2.1])
+})
+
+mort.plot(kind="scatter", x="wine", y="mor")
+plt.xlabel("Weinkonsum (Liter / Jahr und Person)")
+plt.ylabel("Mortalitaet")
+plt.show()
 ```
