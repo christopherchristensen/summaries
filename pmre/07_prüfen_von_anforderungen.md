@@ -156,4 +156,4 @@ Klassische Arten von Reviews:
 * Verständlichkeit / Abhängigkeit vor Backlog-Grooming überprüfen
 * Ergänzungen im Rahmen der Sprint-Abhnahme kontinuierlich abhandeln
 * Qualität in Retrospektive hinterfragen und verbessern
-* agile Vorgehen hilft frühzeitiges Erkennen von Fehlern
+* agile Vorgehen hilft frühzeitiges Erkennen von Fehlern
