@@ -56,8 +56,8 @@
 <br>
 ## Reviews
 
-* **Reviews**: examinations of an artifact $\to$ Product Quality
-* **Audit**: verification of tangible evidence of a process $\to$ Process Quality
+* **Reviews**: interpersonal examinations of an artifact $\to$ Product Quality
+* **Audit**: impersonal verification of tangible evidence of a process $\to$ Process Quality
 * **Acceptance Tests**: black-box testing performed on system prior to transfer of ownership $\to$ Validation
 
 ## Reviews nach Objekten
