@@ -1,8 +1,3 @@
-
-
-
-
-
 # BAK Anlyse
 
 
