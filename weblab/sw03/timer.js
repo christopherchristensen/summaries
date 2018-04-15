@@ -23,7 +23,7 @@ document.onreadystatechange = function () {
 
             seconds: document.getElementById("timer-display").childNodes[1].innerHTML.split(":")[1],
 
-            runningIntervall: null,
+            runningInterval: null,
 
             countdown: function (element, minutes, seconds){
 
@@ -45,9 +45,7 @@ document.onreadystatechange = function () {
                         element.seconds = seconds = 59;
 
                         if(minutes < 0) {
-
                             clearInterval(setTime);
-
                         }
 
                     }
@@ -57,24 +55,20 @@ document.onreadystatechange = function () {
             },
             
             stopCountdown: function (interval) {
-
                 clearInterval(interval);
-
             },
             
             resetTimer: function (element) {
-
                 element.display.innerHTML = "00:00";
-
             }
 
         }
 
         timer.startButton.addEventListener("click", function () {
 
-            if(!timer.runningIntervall) {
+            if(!timer.runningInterval) {
 
-                timer.runningIntervall = timer.countdown(
+                timer.runningInterval = timer.countdown(
 
                     timer, timer.minutes, timer.seconds
 
@@ -82,13 +76,12 @@ document.onreadystatechange = function () {
 
             }
 
-
         });
         
         timer.stopButton.addEventListener("click", function () {
 
-            timer.stopCountdown(timer.runningIntervall);
-            timer.runningIntervall = null;
+            timer.stopCountdown(timer.runningInterval);
+            timer.runningInterval = null;
 
         });
         
@@ -96,10 +89,10 @@ document.onreadystatechange = function () {
 
             timer.resetTimer(timer);
 
-            if(timer.runningIntervall) {
+            if(timer.runningInterval) {
 
-                timer.stopCountdown(timer.runningIntervall);
-                timer.runningIntervall = null;
+                timer.stopCountdown(timer.runningInterval);
+                timer.runningInterval = null;
                 timer.display = "00:00";
                 timer.minutes = 0;
                 timer.seconds = 0;
