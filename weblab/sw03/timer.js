@@ -60,6 +60,14 @@ document.onreadystatechange = function () {
             
             resetTimer: function (element) {
                 element.display.innerHTML = "00:00";
+                element.minutes = 0;
+                element.seconds = 0;
+
+
+                if(element.runningInterval) {
+                    element.stopCountdown(element.runningInterval);
+                    element.runningInterval = null;
+                }
             }
 
         }
@@ -88,16 +96,6 @@ document.onreadystatechange = function () {
         timer.resetButton.addEventListener("click", function () {
 
             timer.resetTimer(timer);
-
-            if(timer.runningInterval) {
-
-                timer.stopCountdown(timer.runningInterval);
-                timer.runningInterval = null;
-                timer.display = "00:00";
-                timer.minutes = 0;
-                timer.seconds = 0;
-
-            }
 
         });
         
