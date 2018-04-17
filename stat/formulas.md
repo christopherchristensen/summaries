@@ -200,3 +200,28 @@ b, a = np.polyfit(book["pages"], book["price"], deg=1)
 > 
 > $\displaystyle \frac{\delta}{\delta \alpha} \sum_{i=1}^n (y_i - (a+bx_i))^2 \doteq 0$<br>
 > $\displaystyle \frac{\delta}{\delta \beta} \sum_{i=1}^n (y_i - (a+bx_i))^2 \doteq 0$
+
+### Empirische Korrelation
+
+> $\displaystyle r = \frac{\sum_{i=1}^n (x_i - \bar{x}) (y_i - \bar{y})}{\sqrt{(\sum_{i=1}^n (x_i - \bar{x})^2) \cdot (\sum_{i=1}^n (y_i - \bar{y})^2)}}$
+
+```python
+data.corr()
+```
+
+## Modelle für Messdaten
+
+### kummulative Verteilungsfunktion
+
+* Wahrscheinlichkeit einer stetigen Zufallsvariablen X: 
+
+> $$ P(X \in (a, b]) = P(a < X \leq b)$$
+> 
+
+* Berechnen mit der kumulativen Verteilungsfunktion $F(x) = P(X \leq x)$
+
+> Eigenschaften der kummulativen Verteilungsfunktion:
+> 
+> 1. $0 \leq F(x) \leq 1$ (Wahrscheinlichkeit)
+> 2. $F(-\infty) = 0$ (Wahrscheinlichkeit, dass Messwert kleiner als $-\infty$)
+> 3. $F(\infty) = 1$ (Wahrscheinlichkeit, dass Messwert kleiner als $\infty$)
