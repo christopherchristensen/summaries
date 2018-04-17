@@ -6,8 +6,8 @@
 * **Verifikation**: Nachweis der Korrektheit von Software / Spezifikation (Entwickle ich das System richtig)
 * **Mangel**: Eine Anforderung beschreibt gefordertes Systemverhalten nicht (fehlende Info)
 * **Fehler**: Eine Anforderung beschreibt gefordertes Systemverhalten falsch (Widerspruch, inkonsistente Info)
-* **Konstruktive Qualitätssicherung**: Einsatz von Techniken / Hilfsmittel, um Fehler / Mängel zu vermeiden
-* **Analytische Qualitätssicherung**: Einsatz von Techniken / Hilfsmittel, um Fehler / Mängel zu beheben
+* **Konstruktive Qualitätssicherung**: Einsatz von Techniken / Hilfsmittel, um Fehler / Mängel zu vermeiden (z.B. Glossar, Checkliste, Templates)
+* **Analytische Qualitätssicherung**: Einsatz von Techniken / Hilfsmittel, um Fehler / Mängel aufzudecken / zu beheben (im Nachhinein Mittel überprüfen z.b. aufgrund des Review-Protokols)
 
 ## Grundsätze Qualitätsmanagement RE
 
@@ -79,4 +79,4 @@ Requirement:
 
 ## Quality Grid
 
-> siehe Folie 24
+<img src="img/quality-grid.png" style="width:400px"/>
