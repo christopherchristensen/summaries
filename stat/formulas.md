@@ -182,3 +182,21 @@ plt.xlabel("Weinkonsum (Liter / Jahr und Person)")
 plt.ylabel("Mortalitaet")
 plt.show()
 ```
+
+### Einfache lineare Regression
+
+> $\text{Residuum} = r_i = y_i - (a + bx_i) = y_i - a - bx_i$
+
+Ziel ist es Summe der Quadrate der Residuen möglichst minimal zu machen:
+
+$\displaystyle r_1^2 + r_2^2 + ... + r_n^2 = \sum_{i} r_i^2 = \sum_{i=1}^n (y_i - (a+bx_i))^2$
+
+```python
+b, a = np.polyfit(book["pages"], book["price"], deg=1)
+
+```
+
+> **Minimum**: <br>
+> 
+> $\displaystyle \frac{\delta}{\delta \alpha} \sum_{i=1}^n (y_i - (a+bx_i))^2 \doteq 0$<br>
+> $\displaystyle \frac{\delta}{\delta \beta} \sum_{i=1}^n (y_i - (a+bx_i))^2 \doteq 0$

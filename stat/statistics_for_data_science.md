@@ -161,5 +161,29 @@ Mittelwert = $\overline{x}_n$
 
 ### Einfache lineare Regression
 
-* lineare Abhängigkeit (z.B. Zusammenhang zw. Seitenzahl x und Buchpreis y)
-* 
+* lineare Abhängigkeit (z.B. Zusammenhang Seitenzahl x und Buchpreis y $\to$ dickere Bücher sind teurer)
+* $\text{Regressionsgerade} = y = a + bx$
+
+#### Methode der kleinsten Quadrate
+
+* In Streudiagramm kann man keine Gerade durch alle Punkte ziehen
+* Versuche Summe der vertikalen Differenzen zw. Beabachtungen und Gerade möglichst klein halten
+* **Residuum**: Vertikale Differenz zw. Beabachtungspunkt $(x_i, y_i)$ und Gerade (Punkt auf Gerade = $(x_i, a+bx_i)$):
+
+> $\text{Residuum} = r_i = y_i - (a + bx_i) = y_i - a - bx_i$
+
+* **Ziel**: Summe der Residuen möglichst minimal,
+
+> $\displaystyle r_1 + r_2 + ... + r_n = \sum_{i} r_i$
+
+* **Schwäche**: Wenn Hälfte der Punkte weit über und andere Hälfte weit unter der Geraden, ist Summe der Residuen null. Gerade passt aber trotzdem nicht zu Datenpunkten
+* **Lösung**: Vorzeichen eliminieren. 
+	* Option 1: Absolutbetrag verwenden (schwierig abzuleiten)
+	* Option 2: Quadrate der Residuen aufsummieren,
+	* $\displaystyle r_1^2 + r_2^2 + ... + r_n^2 = \sum_{i} r_i^2 = \sum_{i=1}^n (y_i - (a+bx_i))^2$
+	* python: `np.polyfit`
+
+> **Minimum** (wird aber immer mit Python gemacht): <br>
+> 
+> $\displaystyle \frac{\delta}{\delta \alpha} \sum_{i=1}^n (y_i - (a+bx_i))^2 \doteq 0$<br>
+> $\displaystyle \frac{\delta}{\delta \beta} \sum_{i=1}^n (y_i - (a+bx_i))^2 \doteq 0$
