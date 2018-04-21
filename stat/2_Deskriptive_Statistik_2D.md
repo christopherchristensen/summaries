@@ -1,4 +1,4 @@
-# Deskriptive Statistik (2D)
+# 2 Deskriptive Statistik (2D)
 
 * Zwei Messwerte werden beobachet
 * Korrelationen zwischen Daten finden

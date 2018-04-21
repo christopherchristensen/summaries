@@ -227,3 +227,24 @@ data.corr()
 > 3. $F(\infty) = 1$ (Wahrscheinlichkeit, dass Messwert kleiner als $\infty$)
 > 4. $F(x)$ ist monoton wachsend: $F(a) < F(b)$. Ableitung $F'(x)$ von $F(x)$ also immer grösser gleich 0
 
+> Eigenschaften der **Wahrscheinlichkeitsdichte**:
+> 
+> 1. $f(x) \geq 0$, F(x) ist monoton wachsend
+> 2. $P(a < X \leq b) = F(b) - F(a) = \int\limits_a^b f(x) dx$, Fläche zwischen a und b unter f(x)
+> 3. $\int\limits_{-\infty}^\infty f(x) dx = 1$
+
+### Kennzahlen von stetigen Verteilungen
+
+#### Erwartungswert ( $\mu$ )
+> $$\displaystyle E(X) = \mu x = \int\limits_{-\infty}^\infty x \cdot f(x) dx$$
+
+#### Standardabweichung ( $\sigma_x$ )
+
+#### Varianz ( $\sigma^2_x$ )
+
+> $$\displaystyle Var(X) = \sigma^2_x = E((X - E(X))^2 = \int\limits_{-\infty}^\infty (x - E(X))^2 \cdot f(x) dx = E(X^2) - E(X)^2$$
+
+#### Quantile ( $q(\alpha)$ )
+
+> $$P(X \geq q(\alpha)) = \alpha$$
+

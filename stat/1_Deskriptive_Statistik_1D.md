@@ -1,4 +1,4 @@
-# Deskriptive Statistik (1D)
+# 1 Deskriptive Statistik (1D)
 
 * Ein Messwert wird beobachtet
 
