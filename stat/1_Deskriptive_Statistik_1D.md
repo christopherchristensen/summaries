@@ -39,7 +39,8 @@ $\to$ Rundungen möglichst erst am Schluss!
 ### Arithmetisches Mittel
 
 * Durchschnitt ($\overline{x}_n$) der Messwerte. 
-* Beachtet die Verteilung der Datensätze um den Mittelwert nicht. 
+* Beachtet die Verteilung der Datensätze um den Mittelwert nicht.
+* python: `data.mean()` 
 
 > $\displaystyle\overline{x}_n = \frac{x_1 + x_2 + \dots + x_n}{n} = \frac{1}{n} \cdot \displaystyle\sum_{i=1}^{n} x_i$
 
@@ -50,7 +51,8 @@ $\to$ Rundungen möglichst erst am Schluss!
 * Bei der Varianz quadrieren wir Abweichungen, damit Abweichungen vom Mittelwert sich nicht gegenseitig aufheben.
 * Standardabweichung ist Wurzel der Varianz
 * Empirische Varianz hat keine physikalische Bedeutung
-* Wir wissen nur, je grösser der Wert, desto grösser die Streuung
+* Je grösser der Wert, desto grösser die Streuung
+* python: `data.var()`
 
 Mittelwert = $\overline{x}_n$
 
@@ -61,6 +63,8 @@ Mittelwert = $\overline{x}_n$
 > $Var(x) = \displaystyle\frac{(x_1 - \overline{x}_n)^2 + (x_2 - \overline{x}_n)^2 + \cdots + (x_n - \overline{x}_n)^2}{n-1} = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \overline{x}_n)^2$
 
 #### Standardabweichung
+* python: `data.std()`
+
 > $\displaystyle s_x = \sqrt{Var(x)} = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n} (x_i - \overline{x}_n)^2}$
 
 ### Median
@@ -69,6 +73,7 @@ Mittelwert = $\overline{x}_n$
 * Wert, bei dem rund Hälfte der Messwerte unterhalb diesem Wert liegen
 * Wird weniger stark durch extreme Beobachtungen beinflusst als arithmetisches Mittel (Robustheit)
 * Empirische Median = 50%-Quantil
+* python: `data.median()`
 
 1. Werte der Grösse nach ordnen
 2. Wert der mittleren Beobachtung ermitteln
@@ -94,10 +99,12 @@ Mittelwert = $\overline{x}_n$
 #### Untere Quartil
 
 * Wert, bei welchem **etwa** 25% kleiner-gleich oder 75% grösser-gleich diesem Wert sind
+* python: `data.quantile(q=.25)`
 
 #### Obere Quartil
 
 * Wert, bei welchem **etwa** 25% grösser-gleich oder 75% kleiner-gleich diesem Wert sind
+* python: `data.quantile(q=.75)`
 
 #### Quartilsdifferenz
 
@@ -113,10 +120,12 @@ Mittelwert = $\overline{x}_n$
 * Einteilung in Klassen (Säulen)
 * Werte auf Balkengrenze nur einmal berücksichtigen!
 * **Faustregel**: bei weniger als 50 Messungen 5 bis 7 Klassen, bei mehr als 250 Messungen 10 bis 20 Klassen
+* python: `data.plot(kind="hist", bins=7)`
 
 <img src="img/histogramm.png" style="width:300px">
 
-* Im normierten Histogramm entspricht die Höhe der Balken gerade der Anzahl Beobachtungen einer Klasse
+* Im **normierten Histogramm** entspricht die Höhe der Balken gerade der Anzahl Beobachtungen einer Klasse
+* python: `data.plot(kind="hist", normed=True)`
 
 ## Boxplot
 
@@ -128,6 +137,7 @@ Mittelwert = $\overline{x}_n$
 	* **kleinen Kreisen**, die Ausreisser markieren
 * Gut um Verteilung der Daten in verschiedenen Gruppen vergleichen will
 * Höhe des Rechtecks zeigt wie gross Streuung ist (Quartilsdifferenz)
+* python: `data.plot(kind="box")`
 
 <img src="img/boxplot.png" style="width:300px">
 
@@ -150,6 +160,8 @@ Mittelwert = $\overline{x}_n$
 * Treppenfunktion ($F_n(\cdot)$)
 * links von $x_{(1)}$ ist die Funktion = 0
 * bei jedem $x_{(i)}$ wir ein Sprung der Höhe $\frac{1}{n}$ gemacht
+* python: `data.plot(kind="hist", cumulative=True, histtype="step", 
+                    normed=True, bins=8)`
 
 > $\displaystyle F_n(x) = \frac{1}{n} \text{Anzahl} \{ i | x_i \leq x \}$
 
