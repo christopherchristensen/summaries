@@ -133,7 +133,17 @@ Mittelwert = $\overline{x}_n$
 
 ## Empirische kumulative Verteilungsfunktion
 
-> $\displaystyle F_n(x) = \frac{1}{n} \text{Anzahl} \{ i | x_i \leq x \}$
+### Allgemeine Verteilungsfunktion
+
+* Aus einer Messreihe, 
+* wie gross ist die Wahrscheinlichkeit, 
+* dass ein bestimmter Wert,
+* höchstens 5 mal vorkommt
+
+> $P(X = k) = \bigl(\begin{smallmatrix}n \\ k\end{smallmatrix} \bigr) \cdot p^k \cdot (1-p)^{n-k} $
+
+
+### Kumulative Verteilungsfunktion
 
 * Graphischer Überblick eines Datensatzes
 * Median leicht ablesbar (im Gegensatz zum Histogramm)
@@ -141,9 +151,15 @@ Mittelwert = $\overline{x}_n$
 * links von $x_{(1)}$ ist die Funktion = 0
 * bei jedem $x_{(i)}$ wir ein Sprung der Höhe $\frac{1}{n}$ gemacht
 
+> $\displaystyle F_n(x) = \frac{1}{n} \text{Anzahl} \{ i | x_i \leq x \}$
+
 <img src="img/kumulative_verteilungsfunktion.png" style="width:300px">
 
 * Bei 0.5 auf vertikaler Achse sind Hälfte aller Werte aufsummiert. Zeichnen wir von 0.5 eine horizontale Linie (siehe Abbildung) wird die kumulative Verteilungsfunktion bei 80.03 geschnitten.
 * Das entspricht gerade dem Median.
 * Dort, wo grosse Sprünge sind, hat es viele Beobachtungswerte.
-* In der Abbildung liegen die meisten Beobachtungswerte zwischen 80.02 und 80.04 (hier untere und obere Quartil)
+* In der Abbildung liegen die meisten Beobachtungswerte zwischen 80.02 und 80.04 
+	* (hier untere und obere Quartil)
+	* Bis zum Wert 79.97 haben wir ca. 10%
+	* Bis zum Wert 80.00 ca. 30%, usw.
+
