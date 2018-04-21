@@ -137,3 +137,158 @@ uniform.rvs(loc = 1, scale=9, size=5)
 ```
 
 ### Exponentialverteilung
+
+* einfachste Modell für "Wartezeiten auf Ausfälle" (Lebensdauer)
+* (Poissonverteilung: Anzahl Beobachtungen in einem festen Zeitintervall)
+* **Exponentialverteilung**: Wahrscheinlichkeit für eine Lebensdauer
+* $exp(x) := e^x$
+
+> * Zufallsvariable $X$,
+> * mit Wertebereich $W_x = \mathbb{R}^+ = [0, \infty)$
+> * mit Parameter $\lambda \in \mathbb{R}^+$ 
+> * heisst exponentialverteilt falls,
+>
+> $$ f(x) =
+  \begin{cases}
+    \lambda \cdot exp(-\lambda x)  & \quad \text{falls } x \geq 0 \\
+    0 & \quad \text{sonst}
+  \end{cases} $$
+> 
+> * Geschrieben als: $$ X \sim Exp(\lambda) $$
+> 
+> * kumulative Verteilungsfunktion dazu: $$ f(x) =
+  \begin{cases}
+    1 - exp(-\lambda x)  & \quad \text{falls } x \geq 0 \\
+    0 & \quad \text{falls } x < 0
+  \end{cases} $$
+  
+$\to$ Lambda muss oft aus Experimenten geschätzt werden.
+
+#### Erwartungswert bei Exponentialverteilung
+
+> $E(X) = \frac{1}{\lambda}$
+
+#### Varianz bei Exponentialverteilung
+
+> $Var(X) = \frac{1}{\lambda^2}$
+
+#### Standardabweichung bei Exponentialverteilung
+
+> $\sigma_x = \frac{1}{\lambda}$
+
+#### python
+
+```python
+from scipy.stats import expon
+
+# X ~ Exp(3), Wahrscheinlichkeit P(0 <= X <= 4)
+expon.cdf(x=4, scale=1/3)
+```
+
+### Normalverteilung
+
+* häufigste / wichtigste Verteilung für Messwerte
+* Dichte der Normalverteilung ist symmetrisch um Erwartungswert
+* Je grösser $\sigma$, desto flacher / breiter die Dichte
+
+> * Zufallsvariable $X$
+> * mit Wertebereich $W_x = \mathbb{R}$
+> * mit Parametern $\mu \in \mathbb{R} und \sigma^2 \in \mathbb{R}^+$
+> * ist normalverteilt falls,
+> 
+> $$ \displaystyle f(x) = \frac{1}{\sigma \sqrt{2 \pi}} \cdot exp \Big( -\frac{(x - \mu)^2}{2\sigma^2}\Big) $$
+> 
+> Geschrieben als: $$X \sim \mathcal{N}(\mu, \sigma^2)$$
+> 
+> kumulative Verteilungsfunktion dazu:
+> $$ F(x) = \int \limits_{-\infty}^x f(y) dy$$
+
+#### Erwartungswert bei Normalverteilung
+
+> $E(X) = \mu$
+
+#### Varianz bei Normalverteilung
+
+> $Var(X) = \sigma^2$
+
+#### Standardabweichung bei Exponentialverteilung
+
+> $\sigma_x = \sigma$
+
+#### python
+
+```python
+from scipy.stats import norm
+
+# P(X > 130) (also 1 - P(X <= 130)), X ~ N(100, 15^2)
+1 - norm.cdf(x=130, loc=100, scale=15)
+```
+
+### Standardnormalverteilung
+
+* Normalverteilung $\mathcal{N} (0,1)$
+* Normalverteilung kann immer in eine Standardnormalverteilung transformiert werden
+
+#### Dichte bei Standardnormalverteilung
+
+> $$ \phi(x) = \frac{1}{\sqrt{2 \pi}} exp \Big (-\frac{x^2}{2} \Big )$$
+
+* python: `norm.cdf(x)`
+
+#### kumulative Verteilungsfunktion bei Standardnormalverteilung
+
+> $$ \Phi(x) = \int \limits_{-\infty}^x \phi(y) dy $$
+
+* python: `norm.ppf(q)` <br>(probability point function ist Umkehrung von `cdf`)
+
+## Funktionen einer Zufallsvariable
+
+* Zu jeder Realisierung $x$ von $X$ gehört die Realisierung $y = g(x)$ von $Y$
+* "Funktion als neue Funktion darstellen"
+* solche Transformationen treten häufig auf
+
+### Lineare Transformationen von Zufallsvariablen
+
+* $y = g(x) = a + bx$
+
+> Eigenschaften von linearen Transformationen einer Zufallsvariable
+> 
+> 1. $E(Y) = E(a + bX) = a + b(E(Y))$
+> 2. $Var(Y) = Var(a + bX) = b^2 Var(X), \sigma = |b|\sigma_x$
+> 3. $\alpha - \text{Quantil von Y} = q_Y(\alpha) = \alpha + bq_X(\alpha)$
+> 4. $f_Y(y) = \frac{1}{b} f_X \Big(\frac{y-a}{b}\Big)$
+
+### Standardisieren einer Zufallsvariablen
+
+* X kann immer linear transformiert werden sodass,
+* Erwartungswert = 0 und
+* Varianz = 1 ist.
+
+> $E(Z) = a + bE(X) = 0$<br>
+> $Var(Z) = b^2Var(X) = 1$
+
+> Standardnormalverteilung: 
+> $$ Z = \frac{X - \mu}{\sigma} \sim \mathcal{N} (0,1)$$
+
+### Nichtlineare Transformationen von Zufallsvariablen
+
+> z.B. Quadratische Transformation:
+> $$y = g(x) = x^2$$
+> 
+> Wie sonst auch:
+> $$E[Y] = \int \limits_{-\infty}^{\infty} y \cdot f_y(y) dy$$
+
+
+## Funktionen von mehreren Zufallsvariablen
+
+* z.B. gleiche Grösse mehrmals messen
+* Messungen $x_1, x_2, ..., x_n$ werden als Realisierungen $X_1, X_2, ..., X_n$ dargestellt
+* $X_i$ ist die $i$-te Wiederholung von unserem Zufallsexperiment
+
+> Summe:
+> $$S_n = X_1 + ... + X_n = \sum_{i=1}^n X_i$$
+> 
+> arithmetisches Mittel:
+> $$\overline{X}_n = \frac{1}{n} S_n$$
+
+* Das arithmetische Mittel der Daten $\overline{x}_n$ ist eine Realisierung der Zufallsvariablen $\overline{X_n}$
