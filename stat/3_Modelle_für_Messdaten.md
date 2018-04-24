@@ -292,3 +292,41 @@ from scipy.stats import norm
 > $$\overline{X}_n = \frac{1}{n} S_n$$
 
 * Das arithmetische Mittel der Daten $\overline{x}_n$ ist eine Realisierung der Zufallsvariablen $\overline{X_n}$
+
+### Unabhängigkeit und i.i.d Annahme
+
+* z.B. ein Messwert beinflusst den nächsten nicht
+* Wenn Zufallsvariablen $X_1, X_2, ..., X_n$ 
+* unabhängig sind und
+* alle dieselbe Verteilung haben
+* dann schreiben wir: $X_1, X_2, ..., X_n i.i.d.$ (**i**ndependent, **i**dentically, **d**istributed)
+* wir arbeiten meistens mit dieser Annahme
+* Mit dieser Annahme gilt:
+
+> $$E(X_1 + X_2) = E(X_1) + E(X_2)$$
+> $$Var(X_1 + X_2) = Var(X_1) + Var(X_2)$$
+
+### Kennzahlen von $S_n$ und $\overline{X}_n$
+
+* Relative Häufigkeit von fairen Münzen: 
+
+> $$\overline{X}_n = \frac{1}{n} \sum_{i = 1}^n X_i$$
+
+* Kennzahlen von $S_n$
+
+>$$E(S_n) = E(X_1 + X_2 + ... + X_n) = \sum_{i = 1}^n E(X_i) = n\mu$$
+>$$Var(S_n) = \sum_{i = 1}^n Var(X_i) = nVar(X_i)$$
+>$$\sigma(S_n) = \sqrt{n}\sigma_x$$
+
+* Kennzahlen von $\overline{X_n}$
+
+> $$E(\overline{X_n} = E\Big(\frac{X_1 + X_2 + ... + X_n}{n}\Big) = \frac{1}{n} \sum_{i = 1}^n E(X_i) = \frac{1}{n} n E(X_i) = \mu$$
+> $$Var(\overline{X}_n) = \frac{1}{n^2} \sum_{i = 1}^n Var(X_i) = \frac{1}{n^2} n \sigma_x^2 = \frac{\sigma_x^2}{n}$$
+> $$\sigma(\overline{X}_n) = \frac{\sigma_x}{\sqrt{n}}$$
+> 
+> Die Standardabweichung von $\overline{X}_n$ heisst auch der Standardfehler des arithmetischen Mittels.
+
+
+### Gesetz der Grossen Zahlen
+
+Für $
