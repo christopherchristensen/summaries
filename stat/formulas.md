@@ -6,6 +6,8 @@
 
 ### Arithmetische Mittel ($x_n$)
 
+Mittelwert (Arithmetisches Mittel) = $\overline{x}_n$
+
 #### Mathematisch
 
 > $\displaystyle\overline{x}_n = \frac{x_1 + x_2 + \dots + x_n}{n} = \frac{1}{n} \cdot \displaystyle\sum_{i=1}^{n} x_i$
@@ -21,8 +23,6 @@ methodeA.mean()
 ```
 
 ### Empirische Varianz
-
-Mittelwert (Arithmetisches Mittel) = $\overline{x}_n$
 
 #### Mittlere absolute Abweichung
 > $\displaystyle\frac{|(x_1 - \overline{x}_n)| + |(x_2 - \overline{x}_n)| + \dots + |(x_3 - \overline{x}_n)|}{n-1}$
