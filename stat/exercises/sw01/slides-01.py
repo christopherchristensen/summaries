@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from pandas import Series
+from pandas import Series, DataFrame
 import pandas as pd
+import matplotlib.pyplot as plt
 
-methodeA = Series([79.87, 30.23, 40.09, 80.04, 80.02, 80.04, 80.03,
+methodeA = Series([79.87, 80.04, 80.02, 80.04, 80.03,
 80.03, 80.04, 79.97, 80.05, 80.03, 80.02, 80.00, 80.02])
 
 print(methodeA.mean());
@@ -20,3 +21,12 @@ seriesDataSetA = Series([4, 4, 4, 4])
 
 print(seriesDataSetA.var())
 print(seriesDataSetA.std())
+
+methodeA.plot(kind="hist", edgecolor="black")
+
+plt.title("Histogramm")
+plt.xlabel("methodeA")
+plt.ylabel("Häufigkeit")
+
+plt.show()
+

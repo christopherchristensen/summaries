@@ -1,5 +1,17 @@
 # Formulas
 
+
+
+## Verwendete Bibliotheken in Python
+
+| Bibliothek | Anwendungsfälle                                              | Import                                                       |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `numpy`    | Die Bibliothek **numpy** ermöglicht Berechnungen (Numerical Py), z.B. Wurzel ziehen, Vektoren berechnen, etc. | - `import numpy`<br />- `import numpy as np`                 |
+| `pandas`   | Die Bibliothek `pandas` wird für statistische Datenanalysen verwendet. Es gibt in **Pandas** zwei wichtige Befehle für Daten: Series und DataFrame. Mit Series werden eindimensionale Datensätze erzeugt. Mit dem Befehl DataFrame werden (unter anderem) zweidimensionale Datensätze erzeugt, die wie Matrizen funktionieren. | - `import pandas as pd`<br />- `from pandas import Series, DataFrame` |
+|            |                                                              |                                                              |
+
+
+
 ## Deskriptive Statistik (1D)
 
 * Ein Messwert wird beobachtet
@@ -62,7 +74,7 @@ methodeA.median()
 methodeA.quantile(q=.25, interpolation="linear")
 methodeA.quantile(q=.25, interpolation="lower")
 methodeA.quantile(q=.25, interpolation="higher")
-methodeA.quantile(q=.25, interpolation="midpoint")
+methodeA.quantile(q=.25, interpolation="midpoint") # Verwendet diese Option für Quartile
 methodeA.quantile(q=.25, interpolation="nearest")
 ```
 
@@ -74,7 +86,7 @@ methodeA.quantile(q=.25, interpolation="nearest")
 methodeA.quantile(q=.75, interpolation="linear")
 methodeA.quantile(q=.75, interpolation="lower")
 methodeA.quantile(q=.75, interpolation="higher")
-methodeA.quantile(q=.75, interpolation="midpoint")
+methodeA.quantile(q=.75, interpolation="midpoint") # Verwendet diese Option für Quartile
 methodeA.quantile(q=.75, interpolation="nearest")
 ```
 
@@ -83,7 +95,7 @@ methodeA.quantile(q=.75, interpolation="nearest")
 > $\text{oberes Quartil} - \text{unteres Quartil}$
 
 ```python
-q75, q25 = methodeA.quantile(q = [.75, .25])
+q75, q25 = methodeA.quantile(q = [.75, .25], interpolation="midpoint")
 iqr = q75 - q25
 iqr
 ```
@@ -105,8 +117,18 @@ methodeA.quantile(q=.65, interpolation="nearest")
 ```python
 import numpy as np
 
-# Zeigt verschiedene Quantile von 20% bis 100%
-methodeA.quantile(q = np.linspace(start=.2, stop=1, num=5)
+# Noten einer Prüfung
+noten = Series([4.2, 2.3, 5.6, 4.5, 4.8, 3.9, 5.9, 2.4, 5.9, 6, 4, 3.7, 5, 5.2, 4.5, 3.6, 5, 6, 2.8, 3.3, 5.5, 4.2, 4.9, 5.1])
+
+# 0.2 bis 1.0 in 5 Schritten
+noten.quantile(q = np.linspace(0.2,1.0,5), interpolation="midpoint") 
+
+## 0.2    3.7  rund 20%  kleiner oder gleich Note 3.7
+## 0.4    4.4  rund 40%  kleiner oder gleich Note 4.4
+## 0.6    5.0  rund 60%  kleiner oder gleich Note 5.0 (40% 5.0 oder besser)
+## 0.8    5.6  rund 80%  kleiner oder gleich Note 5.6 (20% 5.6 oder besser)
+## 1.0    6.0  rund 100% kleiner oder gleich Note 6.0
+## dtype: float64
 ```
 
 ### Histogramm
