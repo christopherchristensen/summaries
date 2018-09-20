@@ -6,11 +6,11 @@
 
 | Begriff              | Definition                                                   |
 | -------------------- | ------------------------------------------------------------ |
-| Programmiersprache   | Formal konstruierte Sprache, entworfen um Befehle an Maschinen (speziell Computer) zu übermitteln. Gemeinsame Sprache zwischen Mensch und Maschine. |
+| Programmiersprache   | Formal konstruierte Sprache, entworfen um Befehle an Maschinen (speziell Computer) zu übermitteln. Gemeinsame Sprache zwischen Mensch und Maschine. (Eine Programmiersprache muss **eindeutig** und **Turing-vollständig** sein) $$\to$$ alle Sprachen sind gleichmächtig, haben aber eigene Schwächen und Stärken untereinander |
 | Syntax               | Gibt das Muster (die formale Struktur) vor, nach dem Programme einer Sprache aufgebaut sind (Zusammenfügungsregeln). |
 | Semantik             | Definiert die Bedeutung von Programmen (Anweisungen, Operatoren, usw.) (Interpreta- tionsregeln). |
 | Programmierparadigma | Fundamentaler Programmierstil. Eine bestimmte Art die Struktur und Ele- mente von Programmen aufzubauen. Man kann mit allen Programmiersprachen die gleichen Probleme lösen (sind alle Turing-Vollständig), aber nicht gleich elegant. |
-| Algorithmus          | Verfahren zur Lösung von einem Problem oder einer Klasse von Problemen. |
+| Algorithmus          | Schrittweises Verfahren zur Lösung von einem Problem oder einer Klasse von Problemen. |
 
 
 
@@ -54,6 +54,7 @@
 * objektorientiert (Java)
 
 ```c
+// In C
 int a = 25; 				// Variablendeklaration  
 int b = 15; 				// Variablendeklaration
 
