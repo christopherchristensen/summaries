@@ -123,7 +123,28 @@ import pandas as pd
 # Datei einlesen und in Variable (data) speichern
 data = pd.read_csv(r"./child.csv", sep=",", index_col=0)
 
-## TODO...
+# Dimension der Daten
+data.shape
+
+# Daten beschreiben
+data.describe()
+
+# Zeilen
+data.index
+
+# Sortieren
+data.sort_values(by=["Drunkenness"], ascending=False)["Drunkenness"]
+
+# Filtern nach kleinsten Einträgen
+data.nsmallest(1, ["Infant.mortality"])["Infant.mortality"]
+
+# Nach Schlüssel filtern
+data.loc[["Switzerland"], ["Infant.mortality"]]
+
+# Filtern nach Bedingung
+data.loc[data["Physical.activity"] < data["Physical.activity"].mean()]["Physical.activity"]
+
+
 
 ##################################################
 
@@ -134,6 +155,8 @@ data = pd.read_csv(r"./child.csv", sep=",", index_col=0)
 import pandas as pd
 from pandas import DataFrame, Series
 fuel = pd.read_table(r"d.fuel.dat", sep=",", index_col=0)
+
+fuel.loc[5]
 
 
 ##################################################
