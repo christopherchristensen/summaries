@@ -227,3 +227,88 @@ U = \frac{0.436*(B - Y)}{(1 - 0.114)} \\
 V = \frac{0.615*(R - Y)}{(1 - 0.299)}
 $$
 
+## Was wird deutlich durch das Mc Adams Experiment?
+
+* Man kann nicht alle Farben voneinander unterscheiden
+* Eingekreiste Bereiche enthalten Farben, die man nicht voneinander unterscheiden kann
+
+
+
+## CIE Lab
+
+* absolutes Farbsystem
+* gleiche Abstände für gleich empfundene Farbunterschiede
+* (bessere Unterscheidung der Farben)
+
+
+
+## Was ist die Gamma Korrektur?
+
+> Manche Bildbearbeitungsprogramme (z. B. GIMP) geben bei der **Gammakorrektur** nicht den Gammawert selbst, sondern den Kehrwert 1/**Gamma** an, so dass eine Erhöhung des Wertes einer Erhöhung der Helligkeit entspricht.
+
+* Kontrastunterschied
+* Darstellung und Verbesserung
+* Durch Gamma Korrektur, Farben linear verteilt $ \to$ um Kontraste richtig darzustellen
+
+
+
+ ## Helligkeits / Kontrast Wahrnehmung
+
+* Helligkeit und Kontrast werden logarithmisch wahrgenommen
+* Webers law $$\frac{\Delta I}{I} = c$$
+
+
+
+## Was ist HD, UHD und 4K?
+
+* Auflösung
+
+
+
+## Was ist HDR?
+
+* High Dynamic Range
+* Hoher Kontrast
+* (Dolby Vision = HDR Spezifikation)
+
+
+
+## Was sind bekannte Auflösungen?
+
+| Auflösung | Name            |
+| --------- | --------------- |
+| 720x480   | NTSC            |
+| 720x576   | PAL / SECAM     |
+| 1280x720  | Blu-ray (720p)  |
+| 1920x1080 | Blu-ray (1080p) |
+| 3840x2160 | 4K UHDTV        |
+| 4096x2169 | 4K DCI (Cinema) |
+
+
+
+## Wie funktionieren HDR Aufnahmen?
+
+* nimmt mehrere Bilder
+* legt diese übereinander
+* das bestmögliche Bild
+
+
+
+## HDR Video (Darstellung)
+
+* HDR 10:
+  * Wide gamut color space $\to$ gamut = the complete range or scope of something 
+  * 10 bit color depth
+  * Transfer function
+  * High contrast (0.05 - 1000 nits, or 0.0005 - 540 nits)
+* HDR 10+:
+  * Metadata per frame
+* Dolby Vision:
+  * Similar, but up to 12 bit color depth and 4k
+
+
+
+## Bit depth
+
+* HD / Blue-ray: 8 bit color
+* HDR: 10 bit color
