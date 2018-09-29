@@ -12,6 +12,8 @@ parent(inge, mary). parent(per, mary).
 mother(MOM, KID) :- 
     parent(MOM, KID), female(MOM).
 
+is_mother(MOM, KID) :- mother(MOM, KID).
+
 father(DAD, KID) :-
     parent(DAD, KID), male(DAD).
 
@@ -35,9 +37,16 @@ grandmother(GRANDMOTHER, GRANDKID) :-
 % Aber nur über zwei Generationen
 
 % 2. Möglichkeit:
-offspring(ANCESTOR, OFFSPRING) :-
+offspring(OFFSPRING, ANCESTOR) :-
     parent(ANCESTOR, OFFSPRING).
 
-offspring(ANCESTOR, OFFSPRING) :-
-    parent(PARENT, OFFSPRING), offspring(ANCESTOR, PARENT).
+offspring(OFFSPRING, ANCESTOR) :-
+    parent(ANCESTOR, PARENT), offspring(OFFSPRING, PARENT).
+
+is_offspring(OFFSPRING, ANCESTOR) :- offspring(OFFSPRING, ANCESTOR).
 % Funktioniert über mehrere Generationen
+
+% 5. Eigener Familien-Operator
+
+?- op(1150, xfx, is_mother).
+?- op(1150, xfx, is_offspring).
