@@ -7,7 +7,7 @@
 // Register function to call after document has loaded
 window.onload = startup;
 
-// the gl object is saved globally
+// GL object saved globally
 var gl;
 
 // we keep all local parameters for the program in a single object
@@ -34,10 +34,13 @@ function startup() {
     "use strict";
     var canvas = document.getElementById("myCanvas");
 
+    // -- 1. Create context from canvas
     gl = createGLContext(canvas);
 
+    // -- 2. Initialize the GL object (global)
     initGL();
 
+    // -- 3. Draw objects
     draw();
 
 }
@@ -49,13 +52,17 @@ function initGL() {
     
     "use strict";
 
-    // Add custom Shaders
+    // -- 1. Add shaders (load / compile)
     ctx.shaderProgram = loadAndCompileShaders(gl, "VertexShader.glsl", "FragmentShader.glsl");
+
+    // -- 2. Assign attribute-index to context
     setUpAttributesAndUniforms();
+
+    // -- 3. Setup buffers
     setUpBuffers();
-    gl.clearColor(0.3688,0.2312,0.0000,0.3725);
-    
-    // add more necessary commands here
+
+    // -- 4. Set color ??
+    gl.clearColor(0.4688,0.1512,0.0000,0.2725);
 
 }
 
@@ -64,18 +71,22 @@ function initGL() {
  * Schritt 2: Abfragen des Index dieses Attributs im JavaScript Program
  */
 function setUpAttributesAndUniforms(){
+
     "use strict";
 
-    // finds the index of the variable in the program
+    // Finds index of the variable in the program
     ctx.aVertexPositionId = gl.getAttribLocation(ctx.shaderProgram, "aVertexPosition");
+
 }
 
 /**
  * Setup the buffers to use. If more objects are needed this should be split in a file per object.
  */
 function setUpBuffers(){
+
     "use strict";
 
+    // Vertex data (positions)
     var vertices = [
         0,0,
         1,0,
@@ -83,8 +94,10 @@ function setUpBuffers(){
         1,1
     ];
 
+    // Create WebGL buffer
     rectangleObject.buffer = gl.createBuffer();
 
+    // Bind the WebGL buffer to WebGL global context
     gl.bindBuffer(
 
         gl.ARRAY_BUFFER,
@@ -92,6 +105,7 @@ function setUpBuffers(){
 
     );
 
+    // Put data into buffer
     gl.bufferData(
 
         gl.ARRAY_BUFFER ,
@@ -99,6 +113,7 @@ function setUpBuffers(){
         gl.STATIC_DRAW
 
     );
+
 }
 
 /**
@@ -111,11 +126,13 @@ function draw() {
 
     // Schritt 5: Verbinden des Buffers mit dem Attribut Index
     gl.clear(gl.COLOR_BUFFER_BIT);
+
     gl.bindBuffer(gl.ARRAY_BUFFER , rectangleObject.buffer);
     gl.vertexAttribPointer(ctx.aVertexPositionId, 2, gl.FLOAT, false, 0, 0);
     gl.enableVertexAttribArray(ctx.aVertexPositionId);
 
     // Schritt 6: Zeichnen des Arrays
     gl.drawArrays(gl.LINE_LOOP, 0, 4);
+
 
 }

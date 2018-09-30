@@ -16,14 +16,20 @@
  * @return the WebGL context (wrapped into a debug context)
  */
 function createGLContext(canvas) {
+
     "use strict";
 	// get the gl drawing context
 	var context = canvas.getContext("webgl");
+
 	if (!context) {
+
 		alert("Failed to create GL context");
+
 	}
+
 	// wrap the context to a debug context to get error messages
 	return WebGLDebugUtils.makeDebugContext(context);
+
 }
 
 
@@ -38,20 +44,27 @@ function createGLContext(canvas) {
  * @returns {string} the content of the resource
  */
 function loadResource(name) {
+
 	"use strict";
 	var request = new XMLHttpRequest();
 	request.open("GET", name, false); // false gives a synchronous request
 	request.send(null);
+
 	if (request.status === 200 || request.status === 0) {
+
 		return request.responseText;
+
 	} else {
+
 		console.log("Error: loadFile status:" + request.statusText);
 		console.log(request.status);
 		console.log(request.statusText);
 		console.log(request.toString());
 		console.log(request.responseText);
 		return null;
+
 	}
+
 }
 
 /**
@@ -64,6 +77,7 @@ function loadResource(name) {
 function loadAndCompileShaders(gl, vertexShaderFileName, fragmentShaderFileName) {
 
 	"use strict";
+
 	// Load resource
 	var vertexShaderSource 	 = loadResource(vertexShaderFileName);
 	var fragmentShaderSource = loadResource(fragmentShaderFileName);
@@ -75,7 +89,7 @@ function loadAndCompileShaders(gl, vertexShaderFileName, fragmentShaderFileName)
 
 	}
 
-	// create Shader
+	// Create Shader
 	var vertexShader = gl.createShader(gl.VERTEX_SHADER);
 
 	// Reference shader source
@@ -96,9 +110,12 @@ function loadAndCompileShaders(gl, vertexShaderFileName, fragmentShaderFileName)
 	gl.compileShader(fragmentShader);
 
 	if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
+
 		alert("Fragment Shader Error: " + gl.getShaderInfoLog(fragmentShader));
 		return false;
+
 	}
+
 	return setupProgram(gl, vertexShader, fragmentShader);
 
 }
@@ -111,18 +128,25 @@ function loadAndCompileShaders(gl, vertexShaderFileName, fragmentShaderFileName)
  * @returns {*} the compiled shader program if successful, false otherwise
  */
 function setupProgram(gl, vertexShader, fragmentShader) {
+
 	"use strict";
+
 	var shaderProgram = gl.createProgram();
+
 	gl.attachShader(shaderProgram, vertexShader);
 	gl.attachShader(shaderProgram, fragmentShader);
 	gl.linkProgram(shaderProgram);
 
 	if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
+
 		alert("Failed to setup shader");
         return false;
+
 	}
+	
 	gl.useProgram(shaderProgram);
 	return shaderProgram;
+
 }
 
 
