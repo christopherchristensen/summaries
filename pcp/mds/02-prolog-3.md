@@ -12,12 +12,53 @@
 
 
 
+## Was ist Endrekursion?
+
+* rekursive Funktion, bei der
+* der rekursive Funktionsaufruf die letzte Aktion zur Berechnung von *f* ist
+
+
+
 ## Wann ist eine Prozedur endrekursiv?
 
 Wenn,
 
 * sie nur einen rekursiven Aufruf hat und
 * dieser rekursive Aufruf ist der letzte Aufruf in der letzten Klausel von dieser Prozedur
+* Aufrufe vor dem rekursiven Aufruf alle deterministisch sein
+
+> alle Punkte zusammen!
+
+
+
+## Was ist der Vorteil von Endrekursion?
+
+* kein zusätzlicher Speicherplatz zur Verwaltung der Rekursion notwendig
+* kein Backtracking notwendig
+* Endrekursion kann als Iteration ohne zusätzlichen
+  Speicherplatz ausgeführt werden
+
+
+
+## Beispiel Endrekursion
+
+```erlang
+p(...) :- ...  	% no recursive call in the body 
+p(...) :- ...  	% no recursive call in the body
+...
+p(...) :- 
+	..., 		% all deterministic and
+	..., 		% no recursive calls until here. 
+    p(...). 	% here: tail-recursive call
+```
+
+> Iteration (weniger Speicher benötigt)
+
+
+
+## Was ist mit "last call optimization" gemeint?
+
+* Endrekursion
 
 
 
