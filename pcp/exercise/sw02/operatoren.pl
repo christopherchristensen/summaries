@@ -1,13 +1,14 @@
 add(X, Y, Z) :-
     Z is X + Y.
 
-mult(X, Y, Z) :-
+mult(_,0,0).
+mult(0,_,0).
+mult(A,1,A).
+mult(1,B,B).
 
-    X =:= 0 ->
-    Z is X ;
-
-    Y =:= 0 ->
-    Z is Y ;
-
-    X1 = X - 1,
-    mult(X1, Y, XY), add(XY, Y, Z). % X = 0
+mult(A, B, X) :-
+    A > 0,
+    B > 0,
+    B2 is B - 1,
+    mult(A, B2, X2),
+    X is X2 + A.
