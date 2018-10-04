@@ -88,10 +88,11 @@ function setUpBuffers(){
 
     // Vertex data (positions)
     var vertices = [
-        0,0,
-        1,0,
-        0,1,
-        1,1
+        -0.5, -0.5,
+        -0.5, 0.5,
+        0.5, -0.5,
+        0.5, 0.5,
+        1.0,1.0
     ];
 
     // Create WebGL buffer
@@ -132,7 +133,7 @@ function draw() {
     gl.enableVertexAttribArray(ctx.aVertexPositionId);
 
     // Schritt 6: Zeichnen des Arrays
-    gl.drawArrays(gl.LINE_LOOP, 0, 4);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
 
 
 }
