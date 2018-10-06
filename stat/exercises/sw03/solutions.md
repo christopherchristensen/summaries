@@ -4,6 +4,8 @@
 
 ## 3.1 Anwendungsbeispiel 1 Wahrscheinlichkeitsdichtefunktion
 
+
+
 > **Frage 1**: Sind die Werte im Intervall $[0, 60]$ Anzahl CHF? 
 >
 > **Frage 2**: Was repräsentiert die y-Achse?
@@ -99,9 +101,9 @@ Wir nehmen nun den einzigen Wert der sich in unserem Interval $[0, 60]$ befindet
 
 #### d.) Erwarteten monatlichen Aufwendungen berechnen
 
-> **Frage 1**: Wieso wird hier das Intervall $[0, 60]$ verwendet in der Lösung und nicht $[-\infin, \infin]$ wie in der Formel? 
+> **Frage 3**: Wieso wird hier das Intervall $[0, 60]$ verwendet in der Lösung und nicht $[-\infin, \infin]$ wie in der Formel? 
 >
-> **Frage 2**: Wann weiss man, dass es sich bei einer Wahrscheinlichkeitsdichtefunktion um eine normalverteilte symmetrische Kurve handelt?
+> **Frage 4**: Wann weiss man, dass es sich bei einer Wahrscheinlichkeitsdichtefunktion um eine normalverteilte symmetrische Kurve handelt?
 
 In dieser Aufgabe liegt die Antwort, wie wir vorgehen müssen, bereits in der Aufgabenstellung. Die **erwarteten** monatlichen Aufwendungen sind zu berechnen. Dabei handelt es sich, um den wahrscheinlichsten Wert oder dem Schwerpunkt der Funktion: **der Erwartungswert**.
 
@@ -163,18 +165,260 @@ $\displaystyle f(x) = \begin{cases} 0 & \quad \text{falls }  60 < x < 20 \\ \fra
 
  
 
+
+
  #### b.)  Wahrscheinlichkeit, dass Wert kleiner als $5$ und $10$ ist, berechnen
 
-Wir haben hier die beiden Werte $5$ und $10$ gegeben, die Werte auf der $x$-Achse beschreiben. Da wir die Dichtefunktion in der vorherigen Teilaufgabe ermittelt haben, können wir diese hier verwenden, um die kummulative Verteilungsfunktion $F(x)$ von $X$ zu berechnen. Diese lässt sich berechnen durch Integration der Dichtefunktion $f(x)$ im Interval $[0, 20]$.
+Wir haben hier die beiden Werte $5$ und $10$ gegeben, die Werte auf der $x$-Achse beschreiben. Da wir die Dichtefunktion in der vorherigen Teilaufgabe ermittelt haben, können wir diese hier verwenden, um die kummulative Verteilungsfunktion $F(x)$ von $X$ zu berechnen. Diese lässt sich berechnen durch Integration der Dichtefunktion $f(x)$.
 
 
+
+$\displaystyle F(x) = \int_{0}^{x} f(t) \ dt = \int_{0}^{x} \frac{1}{10} \left( 1 - \frac{t}{20} \right) \ dt = \frac{1}{10} \left(x - \frac{x^2}{40}\right) = \frac{x}{10} - \frac{x^2}{400}$
+
+
+
+> Merke: Dies gilt nur für den Wertebereich $[0, 20]$. Für die Werte wo $x \leq 0$ ist, ist die Wahrscheinlichkeit 0 und für die Werte wo $x \geq 20$ ist, ist die Wahrscheinlichkeit $1$.
+
+
+
+* $F(5) = \frac{(5)}{10} - \frac{(5)^2}{400} = 0.4375 = 43.75\%$
+* $F(10) = \frac{(10)}{10} - \frac{(10)^2}{400} = 0.75 = 75\%$
+
+
+
+Die Wahrscheinlichkeit, dass Werte unter $5$ angenommen werden, liegt bei $43.75\%$ und dass Werte unter $10$ angenommen werden liegt bei $75\%$.  Wir schreiben:
+
+
+
+* $P[X < 5] = 43.75\%$
+* $P[X < 10] = 75\%$
+
+
+
+ #### c.) Kummulative Verteilungsfunktion skizzieren
+
+Am besten skizziert man sich die gesammte Funktion (ohne Rücksicht auf das Intervall $[0, 20]$) und schneidet dann eifach bei $20$ ab. So sieht man, dass die Funktion bis $20$ steigt.
+
+
+
+![stat-ex03-3.2c](/Users/christopher/Development/studies/github/summaries-me/stat/exercises/sw03/stat-ex03-3.2c.png)
+
+
+
+#### d.) Erwartungswert, Median und Standardabweichung berechnen
+
+##### Erwartungswert
+
+Den Erwartungswert können wir wie im Beispiel vorhin mit der Wahrscheinlichkeits&shy;dichtefunktion $f(x)$ berechnen. Die Formel dazu lautet:
 
  
 
+$\displaystyle E(X) = \int_{-\infin}^{\infin} x \cdot f(x) \ dx$
 
 
-* $f(5) = 0.075 = 7.5\%$
-* $f(10) = 0.05 = 5\%$
+
+Nun setzen wir die zuvor ermittelte Wahrscheinlichkeitsdichtefunktion in diese Formel ein, um den Erwartungswert zu berechnen:
+
+
+
+$\displaystyle E(X) = \int_{0}^{20} x \cdot \left( \frac{1}{10}(1 - \frac{x}{20}) \right) \ dx = \int_{0}^{20} x \cdot \left( \frac{1}{10} - \frac{x}{200} \right) \ dx = \left| \frac{x^2}{20} - \frac{x^3}{600} \right|_{0}^{20}$
+
+$\displaystyle E(X)  = \left| \frac{x^2}{20} - \frac{x^3}{600} \right|_{0}^{20} = \left[ \frac{(20)^2}{20} - \frac{(20)^3}{600} \right] - 0 = \frac{20}{3} = 6.\overline{666}$
+
+
+
+##### Median
+
+Der Median entspricht $50\%$ der Fläche unter der Wahrscheinlichkeitsdichtefunktion. Deshalb wissen wir, dass die kummulative Verteilungsfunktion $F(x) \overset{!}{=} 0.5$ sein muss im Bereich $[0, 20]$.
+
+
+
+$\displaystyle F(x) = \frac{x}{10} - \frac{x^2}{400} \overset{!}{=} 0.5$
+
+
+
+Wir wandeln die Funktion um damit wir ein Polynom zweiten Grades erhalten und diese dann mit der "Mitternachtsformel" oder eine andere Methode eurer Wahl (z.B. [WolframAlpha](https://www.wolframalpha.com)) auflösen können.
+
+
+
+$\displaystyle \frac{x^2}{400} - \frac{x}{10} + 0.5 \overset{!}{=} 0$
+
+
+
+Nach Auflösen dieser Gleichung erhalten wir die folgenden zwei Resultate:
+
+
+
+* $x = 5.85786$
+* $x = 34.1421$
+
+
+
+Da der zweite Wert nicht in unserem gesuchten Wertebereich liegt können wir diesen vernachlässigen und erhalten als Median den Wert $5.85786$.
+
+
+
+ ##### Standardabweichung
+
+> Wir wissen, dass
+>
+> * Die Standardabweichung ist gleich der Wurzel der Varianz $\sigma_x = \sqrt{Var(X)}$
+> * Die Varianz lässt sich aus dem Erwartungswert berechnen: $Var(X) = E(X^2) − (E(X))^2$
+
+
+
+Aus dem vorhin berechneten Erwartungswert können wir nun die Varianz berechnen, um damit nachher die Standardabweichung ausrechnen zu können. Zuerst berechnen wir jedoch die Teilkomponenten der Varianzformel:
+
+
+
+$\displaystyle E(X)^2 = (\frac{20}{3})^2 = (6.\overline{666})^2 = \frac{400}{9}$
+
+
+
+$\displaystyle E(X^2) = \int_{-\infin}^{\infin} x^2 \cdot f(x^2) \ dx = \int_{0}^{20} x^2 \cdot \frac{1}{10}(1 - \frac{x^2}{20}) = \frac{200}{3}$
+
+
+
+$\displaystyle Var(X) = E(X^2) − (E(X))^2 =  \frac{200}{3} - \frac{400}{9} = \frac{200}{9}$
+
+
+
+Die Standardabweichung lässt sich nun kann einfach aus der Wurzel der Varianz ($\frac{200}{9}$) berechnen: 
+
+
+
+$\displaystyle \text{Standardabweichung }  \sigma_x = \sqrt{Var(X)} = \sqrt{\frac{200}{9}} = 4.7140$
+
+
+
+#### e.) Wahrscheinlichkeit, dass Kosten höchstens $120'000.- \text{Fr.}$ sind
+
+Wir haben die Formel um aus der Zufallsvariable $X$ die Kosten $K$ zu berechen. Diese lautet $K = 40000 \cdot \sqrt{X}$. Wir wollen die Wahrscheinlichkeit kennen, bei der die Kosten  $K = 120000.- \text{Fr.}$ sind. Um diese Wahrscheinlichkeit ausrechnen zu können, müssen wir zuerst die Zufallsvariable $X$ kennen.
+
+
+
+$K = 120000 = 40000 \cdot \sqrt{X}$
+
+$\text{Zufallsvariable } X = 9$ 
+
+
+
+> Wir wissen, dass 
+>
+> * wir für die Wahrscheinlichkeit die kummulative Verteilungsfunktion brauchen
+> * die kummulative Verteilungsfunktion $F(x) = \frac{x}{10} - \frac{x^2}{400}$ (siehe Teilaufgabe b.))
+>
+>
+> **Merke**: Wir wollen nur die Fläche bis und mit der Zufallsvariable kennen, denn in der Aufgabenstellung steht "höchstens" 120'000 Fr. und nicht "mindestens".
+
+
+
+Nun können wir diese Zufallsvariable $X$ in die kummulative Verteilungsfunktion einsetzen und erhalten die entsprechende Wahrscheinlichkeit.
+
+ 
+
+$\displaystyle F(9) = P[X \leq 9] = \frac{(9)}{10} - \frac{(9)^2}{400} = 0.6975 = 69.75\%$
+
+
+
+#### f.) Für welchen Parameter $\lambda$ hat die Exponentialverteilung denselben Erwartungswert?
+
+> **Frage 5**: Wieso kann man einfach eine andere Verteilung nehmen? Verändert dies nicht die komplette Aussage der Wahrscheinlichkeiten?
+>
+>
+> Wir wissen, dass
+>
+> * Der Erwartungswert in einer Exponentialverteilung wie folgt definiert ist: $E(X) = \frac{1}{\lambda}$ 
+> * Der Erwartungswert dieser Aufgabe $\frac{20}{3}$ ist. 
+
+
+
+Wir nehmen den zuvor berechneten Erwartungswert $E(X) = \frac{20}{3}$ und verwenden die Formel $E(X) = \frac{1}{\lambda}$ um den Parameter $\lambda$ zu berechnen.
+
+
+
+$E(X) = \frac{1}{\lambda} = \frac{20}{3}$
+
+$\lambda = \frac{3}{20}$
+
+
+
+#### g.) Wahrscheinlichkeit mit Exponentialverteilung berechnen
+
+> Wir wissen, dass
+>
+> * $\lambda = \frac{3}{20}$ ist
+> *  die Formel für die kummulate Verteilungsfunktion mit einer Exponentialverteilung ist immer $F(x) = 1 − e^{−λx}$, wobei sich der Parameter $\lambda$ sich je nach Werten / Wahrscheinlichkeiten ändert 
+> * die Zufallsvariable $X = 9$  
+
+
+
+Wir berechnung nun mit der kummulativen Verteilungsfunktion einer Exponentialverteilung die Wahrscheinlichkeit erneut wie in der Teilaufgabe e.):
+
+
+
+$F(9) = 1 − e^{−(\frac{3}{20})(9)} = 0.7408 = 74.08\%$
+
+
+
+Nehmen wir an die Dauer der Baustellen ist exponentialverteilt, ist die Wahrscheinlichkeit, dass die Kosten einer Baustelle unter $120000.- \text{Fr.}$ liegt grösser. Die verschiedenen Verteilungen sind einfach Modelle, um die Wahrscheinlichkeiten annehmen zu können. Aus Erfahrung nimmt man für bestimmte Anwendungsbeispielen unterschiedliche Verteilungen an. Merke jedoch wie die Erwartungswerte immer gleich bleiben.
+
+> **Frage 6**: Stimmt diese Aussage oben?
+
+
+
+## 3.3 Exponentialverteilung
+
+> Wir wissen, dass
+>
+> * der Parameter $\lambda = 0.04$
+> * der Median 50% der Fläche unter der Wahrscheinlichkeitsdichtefunktion
+>
+> * der Wertebereich über 0 ist $\to W_X =[0, \infin)$
+> * die Wahrscheinlichkeitsdichtefunktion $f(x) = \lambda e^{−λx}$
+> * die kummulative Verteilungsfunktion $F(x) = 1 − e^{−λx}$
+> * der Erwartungswert $E(X) = \frac{1}{\lambda}$
+> * die Varianz $Var(X) = \frac{1}{\lambda^2}$
+
+
+
+#### a.) Median, Erwartungswert und Wahrscheinlichkeit berechnen
+
+##### Median
+
+Wir kennen $\lambda$  (0.04) und wissen, dass der Median 50% der Fläche unter der Wahrscheinlichkeitsdichtefunktion entspricht und können somit folgendes gleichstellen:
+
+
+
+$F(x) \overset{!}{=}  1 − e^{−(0.04)x} \overset{!}{=} 0.5$
+
+$x = 17.3$
+
+
+
+Hier entspricht $x$ dem Median, denn bei diesem Wert befinden sich die Hälfte der Werte unterhalt und die andere Hälfte oberhalb dieses Wertes.
+
+
+
+##### Erwartungswert
+
+Der Erwartungswert ist ziemlich einfach zu ermitteln, denn wir kennen das folgenden Gesetzt $E(X) = \frac{1}{\lambda}$ für exponentialverteilte Modelle.
+
+
+
+$\displaystyle E(X) = \frac{1}{(0.04)} = 25h$
+
+
+
+Der Erwartungswert entspricht in dieser Aufgabe der Lebenserwartung einer Maschine. Wir können jetzt mit der kummulativen Verteilungsfunktion berechnen, mit welcher Wahrscheinlichkeit die Maschine mindestens die Lebenserwartung erreicht $\to 1 - P[T_1 > E(T_1)]$. Dies entspricht gleich der Wahrscheinlichkeit des Erwartungswertes.
+
+
+
+$\displaystyle E(25) = ... \to TODO$
+
+
+
+> **Frage 7**: Wieso entspricht dieser Wert nicht gleich dem Wert des Erwartungswertes?
 
 
 
