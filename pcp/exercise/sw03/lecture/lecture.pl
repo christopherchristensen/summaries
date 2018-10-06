@@ -1,10 +1,10 @@
-fib_tr(N, F) :- fib_tr(N, 0, 1, F).
-fib_tr(0, A, _, A).
-fib_tr(N, A, B, F) :-
-    N1 is N - 1,
-    N1 >= 0,
-    Sum is A + B,
-    fib_tr(N1, B, Sum, F).
+% fib_tr(N, F) :- fib_tr(N, 0, 1, F).
+% fib_tr(0, A, _, A).
+% fib_tr(N, A, B, F) :-
+%     N1 is N - 1,
+%     N1 >= 0,
+%     Sum is A + B,
+%     fib_tr(N1, B, Sum, F).
 
 
 
@@ -42,3 +42,40 @@ conc([X | L1], L2, [X | L3]) :- conc(L1, L2, L3).
 
 mem_c(X, L) :-
     conc(_, [X | _], L). % Ähnlich wie Kontrollfrage 2 (S. 43)
+
+f(a).
+f(b).
+g(c).
+
+g(X) :-
+    f(X).
+
+u(1).
+u(X) :- 
+    v(X).
+u(2).
+v(_X) :- 
+    !, write("CUT").
+
+max1(X, Y, Z) :- 
+    X >= Y, !, X = Z. 
+
+max1(_X, Y, Y).
+
+r(a) :- !. 
+r(b). 
+r(c).
+
+b(b). 
+b(a) :- !. 
+b(c).
+
+fib_tr(N,F) :-
+    fib_tr(N, 0, 1, F).
+
+fib_tr(0,A,_,A).
+fib_tr(N,A,B,F) :-
+    N1 is N - 1,
+    N1 >= 0,
+    Sum is A + B,
+    fib_tr(N1, B, Sum, F).
