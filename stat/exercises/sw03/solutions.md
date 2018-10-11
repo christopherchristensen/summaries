@@ -422,3 +422,23 @@ $\displaystyle E(25) = ... \to TODO$
 
 
 
+
+
+## 3.4 Normverteilung
+
+
+
+#### a.) Skizze der Dichte
+
+> Wir wissen,
+>
+> * Die Wahrscheinlichkeit ist annähernd normalverteilt (also eine Gaussche Glockenkurve)
+> * Erwartungswert ist 32ppb (Mitte der Glockenkurve)
+> * Standardabweichung 6ppb (Streuung um die Glockenkurve)
+
+
+
+![glockenkurve](/Users/christopher/Development/studies/github/summaries-me/stat/exercises/sw03/glockenkurve.png)
+
+
+
