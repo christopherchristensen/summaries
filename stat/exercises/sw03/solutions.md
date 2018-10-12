@@ -424,7 +424,7 @@ $\displaystyle E(25) = ... \to TODO$
 
 
 
-## 3.4 Normverteilung
+## 3.4 Normverteilung I
 
 
 
@@ -441,4 +441,219 @@ $\displaystyle E(25) = ... \to TODO$
 ![glockenkurve](/Users/christopher/Development/studies/github/summaries-me/stat/exercises/sw03/glockenkurve.png)
 
 
+
+#### b.) Kummulative Verteilungsfunktion I
+
+> Wir wissen,
+>
+> * `from scipy.stats import norm`
+> * normale Verteilung
+> * standardisierte Zufallsvariable $\displaystyle Z = \Phi \left( \frac{X − μ}{σ} \right)$ 
+>   (siehe Slide 35 / 42 Verteilungsfunktion)
+> * $\mu = $ Erwartungswert, $\sigma = $  Standardabweichung 
+> * kummulative Verteilungsfunktion `cdf`
+
+> **Frage 8**: Wieso dient die standardisierte Zufallsvariable Z als Kontrolle der erhaltenen Wahrscheinlichkeit? Oder sind das einfach zwei Arten dieselbe Wahrscheinlichkeit zu berechnen?
+
+
+
+Da die Wahrscheinlichkeit normalverteilt ist verwenden wir die Funktion `norm.cdf()` von `scipy.stats` , um zu ermitteln wie wahrscheinlich der Schwermetallgehalt in einer Bodenprobe höchstens $40ppb$ ist. 
+
+`norm.cdf(x=40, loc=32, scale=6) # 0.9087887802741321` 
+
+* `x` = "höchstens"
+* `loc` = Erwartungswert
+* `scale` = Standardabweichung
+
+
+
+Wir wollen nun überprüfen, dass die erhaltene Wahrscheinlichkeit stimmt indem wir die **standardisierte Zufallsvariable Z** einführen und mit der Standardnormalverteilung die Wahrscheinlichkeit berechnen.
+
+standardisierte Zufallsvariable $\displaystyle Z = \frac{(X − μ)}{σ} = \frac{(40 - 32)}{6} = \frac{4}{3} = \Phi$
+
+`norm.cdf(x = (40 - 32) / 6) # 0.9087887802741321`
+
+
+
+#### c.) Kummulative Verteilungsfunktion II
+
+> Gleiches Verfahren wie in Teilaufgabe b.)
+
+`norm.cdf(x=27, loc=32, scale6) # 0.20232838096364308`
+
+
+
+#### d.) Wahrscheinlichkeitsdichtefunktion I
+
+> Wir wissen,
+>
+> * `from scipy.stats import norm`
+> * normale Verteilung
+> * Wahrscheinlichkeitsdichtefunktion `ppf` 
+
+
+
+Wir wollen nun die Zufallsvariable (Bleigehalt) finden, die mit einer Wahrscheinlichkeit von 97.5% unterschritten wird. Dazu wenden wir die Python-Funktion `norm.ppf()` an. 
+
+`norm.ppf(q=0.975, loc=32, scale=6) # 43.759783907240326`
+
+* `q ` = Quantil
+* `loc` = Erwartungswert
+* `scale` = Standardabweichung
+
+
+
+// TODO Alternative (siehe Lösungen)
+
+
+
+#### e.) Wahrscheinlichkeitsdichtefunktion II
+
+> Gleiches Verfahren wie in Teilaufgabe d.)
+
+`norm.ppf(q=0.1, loc=32, scale=6) # 24.310690606732397`
+
+
+
+#### f.) Wahrscheinlichkeit eines Wertebereiches
+
+> Wir wissen,
+>
+> * die Wahrscheinlichkeit der tieferen Zufallsvariable und der höheren Zufallsvariable
+
+
+
+Zuerst die Wahrscheinlichkeit der ersten Zufallsvariable ermitteln:
+
+`P1 = norm.cdf(x=32+6, loc=32, scale=6)`
+
+
+
+Dann die Wahrscheinlichkeit der zweiten Zufallsvariable ermitteln:
+
+`P2 = norm.cdf(x=32-6, loc=32, scale=6)` 
+
+
+
+Danach die Differenz der Wahrscheinlichkeit dieser beiden Variablen berechnen:
+
+`P = P1 - P2 # 0.6826894921370859`
+
+
+
+## 3.5 Normalverteilung II
+
+> Wir wissen,
+>
+> * Grundrauschen normalverteilt
+> * Mittelwert (Erwartungswert) ist $0 V$
+> * Standardabweichung ist $0.45 V$ 
+> * digitale $1$, wenn Spannung über $0.9$   
+
+
+
+#### a.) kummulative Verteilungsfunktion
+
+Wir betrachten hier nur das Grundrauschen und **nicht** das eigentliche Übertragen eines Signals. Deswegen nimmt das System aus Versehen ein digitales Signal wahr, wenn das Grundrauschen über $0.9$ Volt steigt.
+
+Somit müssen wir die Wahrscheinlichkeit berechnen, dass das Grundrauschen einen Wert grösser gleich $0.9$ Volt hat. Das ist das Gegenteil wie wenn wir die Wahrscheinlichkeit, dass das Grundrauschen höchstens $0.9$ Volt hat, berechnen wollen. 
+
+Wir berechnen also: $1 - \text{Wahrscheinlichkeit, dass Grundrauschen hoechsten 0.9V}$.
+
+
+
+In Python können wir dies folgendermassen berechnen:
+
+`1 - norm.cdf(x=0.9, loc=0, scale=0.45) # 0.02275013194817921` 
+
+* `x` = Zufallsvariable
+* `loc` = Erwartungswert
+* `scale` = Standardabweichung
+
+
+
+#### b.) Quantile
+
+Die Grenzen entsprechen den beiden Quantilen links und rechts der $99\%$ - Fläche der Wahrscheinlichkeit. Die Kurve ist normalverteilt um den Nullpunkt und symmetrisch. Das heisst diese $99\%$ der Fläche verteilen sich gleichmässig links und rechts des Nullpunktes (hier auch Erwartungswert). Somit entsteht eine Grenze links und rechts dieser Fläche, die je beide $0.5\%$ der Gesamtfläche entsprechen.
+
+ Um ein Quantil zu berechnen verwenden wir die Methode `norm.ppf` .
+
+`norm.ppf(q=0.05, loc=0, scale=0.45) # -1.1591231865970053 `
+
+
+
+Mit diesem Ergebnis können wir nun sagen:
+
+* $99\%$ des Grundrauschens befinden sich im Intervall $[-1.1591, 1.1591]$ 
+
+
+
+ #### c.) kummulative Verteilungsfunktion
+
+In diesem Beispiel berechnen wir das Gegenteil wie in Teilaufgabe a.). Wir wollen wissen wie gross die Wahrscheinlichkeit ist, dass die Spannung höchstens $0.9$ Volt beträgt.
+
+`norm.cdf(x=0.9, loc=1.8, scale=0.45) # 0.022750131948179195`
+
+
+
+> **Frage 9**: Was ist Standardisieren genau?
+
+
+
+## 3.6 Normalverteilung III
+
+
+
+#### a.) kummulative Verteilungsfunktion
+
+> Wir wissen,
+>
+> * Erwartungswert = $0.2508 mm$
+> * Standardabweichung = $0.0005 mm$ 
+> * Intervall $0.2500 \pm 0.0015 mm \to [0.2485, 0.2515]$ 
+
+> **Frage**: Wie kommt man darauf, dass die Wahrscheinlichkeit gesucht ist?
+>
+> **Antwort**: Es wird nach einem Anteil (Prozentsatz) gefragt, der innerhalb der technischen Angaben liegt.
+
+
+
+Wir verwenden wie in den vorherigen Aufgaben wieder die Python-Funktion der kummulativen Verteilungsfunktion `norm.cdf` um die Wahrscheinlichkeit zu berechnen.
+
+`norm.cdf(x=0.2515, loc=0.2508, scale=0.0005) - norm.cdf(x=0.2485, loc=0.2508, scale=0.0005) # 0.91924122831152`
+
+
+
+#### b.) kummulative Verteilungsfunktion
+
+> Genau gleiches Vorgehen wie bei Teilaufgabe a.), einfach mit dem Erwartungswert $0.2508$ .
+
+`norm.cdf(x=0.2515, loc=0.2500, scale=0.0005) - norm.cdf(x=0.2485, loc=0.2500, scale=0.0005) # 0.9973002039367398`
+
+
+
+## 3.6 Uniforme Verteilung
+
+> **Frage**: Wieso ist der Erwartungswert $-1$ ? 
+
+1. $100$ gleichmässig-verteilte Zufallszahlen generieren mit `uniform.rvs`
+
+```python
+x = uniform.rvs(size=100, loc=-1, scale=2)
+y = uniform.rvs(size=100, loc=-1, scale=2)
+```
+
+2. Anzahl Punkte im Kreis ist gegeben durch
+
+```python
+points_in_circle = np.sum(np.sqrt(x * x + y * y) < 1) 
+```
+
+3. Aus der Aufgabenstellung wissen wir dass $\displaystyle P[(x, y) \in Kreis] = \frac{\pi}{4}$ gilt. Deswegen können wir nun folgendes Rechnen um $\pi$ zu berechnen. Die Anzahl Punkte im Kreis durch die Anzahl Punkte insgesamt (Wahrscheinlichkeit) * 4 ausrechnen.
+
+```  python
+pi = 4 * points_in_circle / 100 = 3
+```
+
+> Je mehr Zufallsvariablen man generiert, desto genauer wird $\pi$ 
 
