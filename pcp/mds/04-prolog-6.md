@@ -55,6 +55,8 @@ blocks([A, B, C|Bs1], [D, E, F|Bs2], [G, H, I|Bs3]) :-
 	[_, _, _, 4, 1, 9, _, _, _],
 	[_, _, _, _, 8, _, _, 7, 9]
 	],
+    
+    % um die Lösung schön zu formatieren
 	Puzzle = [A, B, C, D, E, F, G, H, I], 
     sudoku([A, B, C, D, E, F, G, H, I]).
 ```
@@ -67,6 +69,146 @@ blocks([A, B, C|Bs1], [D, E, F|Bs2], [G, H, I|Bs3]) :-
 * so dass die angegebenen Constraints alle erfüllt sind.
 
 > Damit beginnt im Sudoku-Beispiel die eigentliche Lösungssuche an!
+
+
+
+## Unterstützt SWI-Prolog HTTP?
+
+* Ja, mit der `http/http_client` - Library
+* Damit stehen u.a. Prädikate für http-Anfragen (GET, POST)
+  * `http_get/3` 
+  * `http_post/4` 
+
+```erlang
+?- use_module(library(http/http_client)).
+?- use_module(library(http/http_json)).
+
+% ...
+
+% GET
+% library(http/http_client) compiled into http_client 0.11 sec, 
+% 1,744 clauses
+?- http_get('http://wherever.ch/pcp.txt', Reply, []).
+
+Reply = 'Hallo zusammen! Dies ist eine Test-Datei fuer das PCP-
+		Modul, abgelegt unter http://wherever.ch/pcp.txt. - Prolog rockt!
+		:-) MfG, Ruedi Arnold' .
+		
+
+% POST
+?- http_post(
+	'http://localhost:16316/test',
+    json(['say hi to http post']),
+    SolutionResponse,[]
+).
+
+SolutionResponse = 'PCPProblemProvider server up and running at
+					http://localhost:16316/, reached via HTTP POST - 						POSTed data: ["say hi to http post" ]'.
+```
+
+
+
+## Unterstützt SWI-Prolog JSON?
+
+* Ja, mit der Library `http/json` $\to$ `use_module(library(http/json))`  
+* JSON-Objekte werden in Prolog in Terme der Form `json([…])` abgepackt, wobei in dieser Liste jeweils Paare von Name=Value kommen.
+* z.B. `json([institution=hslu, dept=t&a])` 
+* `json()` ist also praktisch ein "Markier"-Prädikat (marker predicate) und bietet sonst keine Funktionalität
+
+
+
+## Wie ruft man Prädikate generisch auf?
+
+* Mit dem eingebauten Prädikat `call/2`
+* `?- call(is_bigger, horse, dog).` 
+* `call/2` verwendet VarArgs, also können beliebig viele Argumente mitgegeben werden.
+
+
+
+## Wie kann ein Prädikat auf eine Liste angewandt und das Resultat in einer andern Liste abgelegt werden?
+
+* mit Hilfe von `maplist/3`
+
+```erlang
+?- maplist(sqrt, [4, 9, 16], X).
+X = [2.0, 3.0, 4.0].
+```
+
+* Damit kann "funktional" programmiert werden, indem eine Funktion (hier: `sqrt/1` - Prädikat) auf alle Elemente einer Liste angewandt wird
+
+
+
+## Kontrollfragen
+
+#### Was bewirkt das eingebaute Prädikat `all_distinct/1` ?
+
+* Dass jeder Wert nicht zweimal vorkommt
+
+
+
+#### Was bewirkt das eingebaute Prädikat `maplist/2 ` ? Erläutere die Anwendung an einem eigenen Beispiel.
+
+* Bildet jedes Prädikat auf jedes Element der Liste ab
+* `NaturalNumber = [], maplist(not(0), NaturalNumbers).` 
+
+
+
+#### Was bewirkt `transpose/2` auf eine Liste von Listen? Machen Sie zur Illustration ein Beispiel dazu.
+
+* Matrixoperation "transponieren"
+* Zeilen auf Spalten abbilden
+
+
+
+#### Was passiert, wenn `sudoku/1` mit einer Liste von 9 Listen mit je 9 anonymen Variablen aufgerufen wird? Was ist also die von Prolog ermittelte Lösung zu einer Sudoku-Instanz ohne vorgegebene Zahlen?
+
+* Gibt alle möglichen Lösungen aus, 
+* da wir keine Werte vorgegeben haben
+
+
+
+#### Mit welchen beiden Prädikaten werden aus Prolog GET- resp. POST-Anfragen gestellt?
+
+* `http_get/3`
+* `http_post/4`
+
+
+
+#### Welche Antwort erwartet man bei einer GET- Anfrage auf die nicht-existente URL „http://www.invalid-url.net/“?
+
+* Error (Socket Error)
+
+
+
+#### Aus welchen Elementen sind JSON-Objekte grundsätzlich aufgebaut? Machen sie je ein Beispiel für jeden Element-Typ.
+
+* Listen,
+* Key/Value Pairs
+* Atom und 
+* Nummern
+
+
+
+#### Was können Sie mit dem eingebauten Prädikat `call/2` tun? Illustrieren Sie an einem Beispiel.
+
+* Prädikate generisch aufrufen
+* Erstes Argument ist das Prädikat, danach Variablen
+* `call(is_bigger, mary, john)` .
+
+
+
+#### Wie kann `maplist/3` eingesetzt werden? (inkl.Beispiel)
+
+* Führt Prädikat auf gesamte List aus
+
+```erlang
+?- maplist(sqrt, [4, 9, 16], X).
+X = [2.0, 3.0, 4.0].
+```
+
+
+
+
 
 
 
