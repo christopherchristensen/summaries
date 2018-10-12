@@ -11,7 +11,7 @@
 
 
 
-## Was sind OpenGL Merkmal?
+## Was sind OpenGL Merkmale?
 
 * Low Level Graphics API
 * Unterstützung für verschiedene Platformen
@@ -44,3 +44,6 @@ $\to$ rasterization engine
 * Uniforms
 * Textures
 * Varyings
+
+
+
