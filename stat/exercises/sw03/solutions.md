@@ -410,19 +410,76 @@ $\displaystyle E(X) = \frac{1}{(0.04)} = 25h$
 
 
 
-Der Erwartungswert entspricht in dieser Aufgabe der Lebenserwartung einer Maschine. Wir können jetzt mit der kummulativen Verteilungsfunktion berechnen, mit welcher Wahrscheinlichkeit die Maschine mindestens die Lebenserwartung erreicht $\to 1 - P[T_1 > E(T_1)]$. Dies entspricht gleich der Wahrscheinlichkeit des Erwartungswertes.
+Der Erwartungswert entspricht in dieser Aufgabe der Lebenserwartung einer Maschine. Wir können jetzt mit der kummulativen Verteilungsfunktion berechnen, mit welcher Wahrscheinlichkeit die Maschine mindestens die Lebenserwartung erreicht $\to 1 - P[T_1 > E(T_1)]$. Dies entspricht der Fläche nach dem Erwartungswert. Wir berechnen also $1$  minus die kummulative Verteilungsfunktion für die Zufallsvariable $25$.
 
 
 
-$\displaystyle E(25) = ... \to TODO$
+$\displaystyle P(T_1 > E(T_1)) = 1 - F(25) = 1 - \left(1 - e^{-(0.04 \cdot 25)}\right) \approx 0.368$
 
 
 
-> **Frage 7**: Wieso entspricht dieser Wert nicht gleich dem Wert des Erwartungswertes?
+> **Frage**: Wieso entspricht dieser Wert nicht gleich dem Wert des Erwartungswertes?
+>
+> **Antwort**: Die Verteilung ist exponentiell was dazu führt, dass die Wahrscheinlichkeit für Zufallszahlen höher als der Erwartungswert sich anders verhalten als bei einer Normalverteilung.
 
 
 
+#### b.) Wahrscheinlichkeit eines Intervals
 
+Wir sollen die Wahrscheinlichkeit des Intervals $E[T_1] \pm \sigma_{T_1}$ berechnen, also Erwartungswert ($25$) $\pm$ Standardabweichung $(\frac{1}{\lambda})$. Dazu verwendet man wieder die kummulative Verteilungsfunktion, um den linken und rechten Wert des Intervals und dessen Differenz zu berechnen.
+
+
+
+$P(\mu_1 - \sigma_{T_1} \leq T_1 \leq \mu_1 + \sigma_{T_1})$  
+
+> Wahrscheinlichkeit des Erwartungswerts minus Standardabweichung ist kleiner als $T_1$ und die Wahrscheinlichkeit des Erwartungswerts plus Standardabweichung ist grösser als $T_1$.  Wir berechnen die Wahrscheinlichkeit, dass diese Bedingungen erfüllt werden.
+
+
+
+Da Erwartungswert und Standardabweichung in diesem Fall gleich sind ergibt sich folgende Wahrscheinlichkeit:
+
+
+
+$P(0 \leq T_1 \leq \frac{2}{\lambda_1})$
+
+
+
+Das können wir nun einfach mit der kummulativen Verteilungsfunktion berechnen.
+
+
+
+$P(0 \leq T_1 \leq \frac{2}{\lambda_1}) = F(\frac{2}{\lambda_1}) - F(0) = 1 - e^{-2} - 0 \approx 0.865$
+
+
+
+#### c.) Ermitteln der kummulativen Verteilungsfunktion
+
+> Wir wissen,
+>
+> * Die gesamte Fläche unter der Wahrscheinlichkeitsdichtefunktion beträgt $1$
+> * also, kummulative Verteilungsfunktion $= 1$
+
+Uns fehlt eine unbekannte der Wahrscheinlichkeitsdichtefunktion um die kummulative Verteilungsfunktion und somit den Erwartungswert und die Standardabweichung zu ermitteln. Die Fläche unter der Wahrscheinlichkeitsdichtefunktion ergibt $1$ also gilt,
+
+
+
+$\displaystyle \int_{-\infin}^{\infin} f_{T_2}(t) \ dt = 1$
+
+
+
+Nach Auflösen dieser Gleichung erhält man für $c_2 = \frac{1}{1000}$. Der Erwartungswert ist bekanntlich $\frac{1}{\lambda}$ und auch die Standardabweichung, also $= 1000$. 
+
+
+
+#### d.) Wahrscheinlichkeit zweier Maschinen
+
+Die Wahrscheinlichkeit beider Maschinen berechnen für den Fall, dass sie länger als 200 Stunden leben. Danach miteinander multiplizieren. Dies ergibt schlussendlich folgendes:
+
+
+
+$e^{-200(c_1 + c_2)} = 0.00027465$
+
+ 
 
 ## 3.4 Normverteilung I
 
