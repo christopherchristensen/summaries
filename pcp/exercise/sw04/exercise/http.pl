@@ -7,7 +7,7 @@
 % http_post('http://localhost:16316/test',json(['say hi to http post']),SolutionResponse,[]).
 
 
-% Aus Übung SW02
+% Aus Übung SW02 --- RELATIONSHIPS
 female(mary). female(liz). female(mia). female(tina). female(ann). female(sue). female(inge).
 male(mike). male(jack). male(fred). male(tom). male(joe). male(jim). male(per).
 parent(mary, mia). parent(mary, fred). parent(mary, tina). 
@@ -61,35 +61,99 @@ is_offspring(OFFSPRING, ANCESTOR) :- offspring(OFFSPRING, ANCESTOR).
 ?- op(1150, xfx, is_mother).
 ?- op(1150, xfx, is_offspring).
 
-% Übergebene Prädikat aufrufen
-call_relationship(RELATIONSHIP, FIRST_PERSON, SECOND_PERSON, RESULT) :-
-    call(RELATIONSHIP, FIRST_PERSON, SECOND_PERSON),
-    RESULT = true, !.
+% --- SUDOKU aus den Folien
+:- use_module(library(clpfd)).
 
-call_relationship(RELATIONSHIP, FIRST_PERSON, SECOND_PERSON, RESULT) :-
-    not(call(RELATIONSHIP, FIRST_PERSON, SECOND_PERSON)),
-    RESULT = false, !.
-    
+sudoku(Rows) :-
+    append(Rows, Vs), Vs ins 1..9, maplist(all_distinct, Rows),
+    transpose(Rows, Columns),
+    maplist(all_distinct, Columns),
+    Rows = [A, B, C, D, E, F, G, H, I],
+    blocks(A, B, C), blocks(D, E, F), blocks(G, H, I), maplist(label, Rows),
+    RESULT = Rows.
+
+blocks([], [], []).
+
+blocks([A, B, C|Bs1], [D, E, F|Bs2], [G, H, I|Bs3]) :-
+    all_distinct([A, B, C, D, E, F, G, H, I]),
+    blocks(Bs1, Bs2, Bs3).
+
+% ---
 
 % JSON TO PROLOG
 % :- json_object
 %         point(x:integer, y:integer).
 % http://www.swi-prolog.org/pldoc/man?section=jsonconvert
 
+% HTTP --- Übergebene Prädikat aufrufen
 :- json_object
+    % JSON Objekte definieren, um von und nach JSON parsen zu können
     relationship(problemKey: integer, relationship: atom, firstPerson: atom, secondPerson: atom),
-    post_solution(solution: atom, problemKey: integer).
+    relationship_solution(solution: atom, problemKey: integer),
+    sudoku_object(problemKey: integer, sudoku: list),
+    sudoku_solution(problemKey: integer, solution: list).
+
+
+% Prädikate definieren
+solve_relationship(RELATIONSHIP, FIRST_PERSON, SECOND_PERSON, RESULT) :-
+    call(RELATIONSHIP, FIRST_PERSON, SECOND_PERSON),
+    RESULT = true, !.
+
+solve_relationship(RELATIONSHIP, FIRST_PERSON, SECOND_PERSON, RESULT) :-
+    not(call(RELATIONSHIP, FIRST_PERSON, SECOND_PERSON)),
+    RESULT = false, !.
+
+solve_sudoku(PUZZLE, RESULT) :-
+    maplist(replace_0, PUZZLE, RESULT),
+	RESULT = [A, B, C, D, E, F, G, H, I],
+	sudoku([A, B, C, D, E, F, G, H, I]).
+    
+    
 
 % solve(relationship, ).
 solve(relationship, PROBLEM_ID) :-
+
     atom_concat("http://localhost:16316/problem/relationship/", PROBLEM_ID, URL),
     http_get(URL, REPLY, []),
+
     % Von JSON nach prolog convertieren in das zuvor definierte JSON Objekt
     json_to_prolog(REPLY, relationship(PROBLEM_ID, RELATIONSHIP, FIRST_PERSON, SECOND_PERSON)),
-    % Prädikat aufrufen, um RESULT zu erhalten 
-    call_relationship(RELATIONSHIP, FIRST_PERSON, SECOND_PERSON, RESULT),
-    % POST mit RESULT und PROBLEM
-    prolog_to_json(post_solution(RESULT, PROBLEM_ID), JSONObject),
-    http_post("http://localhost:16316/problem/relationship", json(JSONObject), _, []),
-    !.
 
+    % Prädikat aufrufen, um RESULT zu erhalten 
+    solve_relationship(RELATIONSHIP, FIRST_PERSON, SECOND_PERSON, RESULT),
+
+    % Prolog zu JSON umwandeln mit zuvor definiertem JSON Objekt
+    prolog_to_json(relationship_solution(RESULT, PROBLEM_ID), JSON_OBJECT),
+
+    % POST mit RESULT und PROBLEM
+    http_post("http://localhost:16316/problem/relationship", json(JSON_OBJECT), _, []),
+    !. % CUT
+
+
+% solve(sudoku, ).
+solve(sudoku, PROBLEM_ID) :-
+
+    atom_concat("http://localhost:16316/problem/sudoku/", PROBLEM_ID, URL),
+    
+    http_get(URL, REPLY, []),
+
+    % Von JSON nach prolog convertieren in das zuvor definierte JSON Objekt
+    json_to_prolog(REPLY, sudoku_object(PROBLEM_ID, PUZZLE)),
+
+    % Prädikat aufrufen, um RESULT zu erhalten 
+    solve_sudoku(PUZZLE, RESULT),
+
+    % Prolog zu JSON umwandeln mit zuvor definiertem JSON Objekt
+    prolog_to_json(sudoku_solution(PROBLEM_ID, RESULT), JSON_OBJECT),
+
+    % POST mit RESULT und PROBLEM
+    http_post("http://localhost:16316/problem/sudoku", json(JSON_OBJECT), _, []),
+    !. % CUT
+
+
+% ABGESCHAUT
+replace_0(L1, L2) :-
+    maplist(replace_help, L1, L2),
+    !.
+replace_help(0, _).
+replace_help(X, X).
