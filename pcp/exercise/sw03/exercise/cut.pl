@@ -34,29 +34,34 @@ c(2).
 c(3).
 d(4).
 
-/**
 
-warn(T) :- 
+
+warn1(T) :- 
     T < 80, 
     write('Temperatur ok'), !.
 
-warn(T) :- 
+warn1(T) :- 
     T < 100, 
     write('Temperatur sehr warm'), !. 
 
-warn(_) :- 
+warn1(_) :- 
     write('Temperatur zu heiss').
 
-*/
 
-warn(T) :- 
+
+warn2(T) :- 
     T < 80, 
     write('Temperatur ok').
 
-warn(T) :- 
+warn2(T) :- 
     T > 80,
     T < 100, 
     write('Temperatur sehr warm'). 
 
-warn(_) :- 
+warn2(_) :- 
     write('Temperatur zu heiss').
+
+
+mem(X, [X | _]):- !. % tail doesn’t matter 
+mem(X, [_| Tail]) :- % head doesn’t matter
+    mem(X, Tail). 
