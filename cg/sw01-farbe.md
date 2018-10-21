@@ -26,32 +26,41 @@
 
 
 
-## Wie entsteht die Farbe einer Fläche?
+## Wie entsteht die Farbe einer Fläche / eines Objektes?
 
-// TODO (Folie 7)
+* $\text{Illumination} \cdot \text{Reflectance} = \text{Color signal}$
 
 
 
 ## Wie ist das Auge aufgebaut?
 
 * **Iris**: Kreisring mit radialen Muskeln
+
 * **Pupille**: Öffnung, durch Iris kontrolliert
+
 * **Linse**: Fokussieren
+
 * **Photorezeptoren**: Nehmen das Licht wahr
+
+  $\to$ Stäbchen und Zäpfchen 
 
 
 
 ## Für was benötigen wir Stäbchen und Zäpfchen in unseren Augen?
 
-- 75 – 100 106 Stäbchen für Intensität (Helligkeit)
-- 6 – 7 106 Zäpfchen für Farbe
-- Wenn Licht darauf strahlt, geben sie Signale an das Gehirn weiter
+- Stäbchen: 
+  - ca. $75 \ – 100 \cdot 10^6$ 
+  - für Intensität (Helligkeit)
+- Zäpfchen: 
+  - ca. $6 \ – 7 \cdot 10^6$
+  - für Farbe
+- Wenn Lichtwellen darauf strahlen, geben sie Signale an das Gehirn weiter
 
 
 
 ## Was ist die Fovea?
 
-- Fovea: Gebiet im Zentrum des Sichtfeldes mit grosser Zäpfchendichte, aber ohne Stäbchen
+- Gebiet im Zentrum des Sichtfeldes mit grosser Zäpfchendichte, aber ohne Stäbchen
 
 
 
@@ -60,7 +69,7 @@
 * S (440nm)
 * M (530nm)
 * L (560nm)
-* Verhältnis im Auge $\to$ L : M : S = 10 : 5 : 1
+* Verhältnis im Auge $\to$ $L : M : S = 10 : 5 : 1$
 
 
 
@@ -82,7 +91,17 @@
 
 ## Helligkeitswahrnehmung
 
-// TODO (Folie 15)
+* **TODO (Folie 15)**
+
+* Die Stäbchen (Scoptic Vision) und Zäpfen (Photopic Vision) haben unterschiedliche Empfindlichkeiten
+  * Die Stäbchen haben einen Empfindlichkeits-Peak bei ca. der Wellenlänge $510 nm$
+  *  Die Zäpfchen haben einen bei ca. der Wellenlänge $560nm$
+
+
+
+## Können alle Farben durch 3 Farben gemischt werden?
+
+* **TODO (Folie 17)**
 
 
 
@@ -103,6 +122,10 @@
   * <p style="color:red">// Integral TODO</p>
 
 * Ist eine beliebige Farbe durch ihre Spektralzusammensetzung $C = P(\lambda)$ gegeben, so sind ihre $X$, $Y$, und $Z$ Anteile gegeben durch
+
+  * $X = k \int{P(\lambda) \overline{x}_\lambda} \ d\lambda$
+  * $Y = k \int{P(\lambda) \overline{y}_\lambda} \ d\lambda$
+  * $Z = k \int{P(\lambda) \overline{z}_\lambda} \ d\lambda$
 
 * Man erhält mit diesen Integralen einen Farbraum
 
@@ -163,7 +186,7 @@
 
 
 
-## Was ist der Zusammenhang zwischen RGB?
+## Was ist der Zusammenhang zwischen RGB und CMY?
 
 
 $$
@@ -185,12 +208,15 @@ B
 $$
 
 
+
 ## Was bedeutet CMYK
 
 * **C**yan
 * **M**agenta
 * **Y**ellow
 * Blac**k**
+
+
 
 ## Was ist das HSV Farbsystem?
 
@@ -226,6 +252,8 @@ Y = 0.299*R + 0.587*G + 0.114*B \\
 U = \frac{0.436*(B - Y)}{(1 - 0.114)} \\
 V = \frac{0.615*(R - Y)}{(1 - 0.299)}
 $$
+
+
 
 ## Was wird deutlich durch das Mc Adams Experiment?
 

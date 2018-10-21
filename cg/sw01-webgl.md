@@ -47,3 +47,7 @@ $\to$ rasterization engine
 
 
 
+## Wie übergibt man eine Farbe pro Objekt (Dreieck) mit einem Vertex-Shader mit?
+
+* Mit dem Attribut `uniform` 
+* So wird das ganze Objekt die Farbe des `uniform` - Farbattributs übernehmen
