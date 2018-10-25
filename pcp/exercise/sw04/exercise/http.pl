@@ -35,6 +35,9 @@ sibling(KID, SIBLING) :-
 grandmother(GRANDMOTHER, GRANDKID) :-
     parent(GRANDMOTHER, MOTHER), parent(MOTHER, GRANDKID), female(GRANDMOTHER).
 
+grandfather(GRANDMOTHER, GRANDKID) :-
+    parent(GRANDMOTHER, MOTHER), parent(MOTHER, GRANDKID), male(GRANDMOTHER).
+
 % Um alle Grossmütter von jim auszugeben, kann man grandmother(X, jim). ausführen
 
 % Zwei Möglichkeiten

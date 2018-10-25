@@ -74,7 +74,7 @@
     ((<= total-weight 10000) 100)
     (else 250)))
 
-; c.) Wo ein Switch-ähnliches Szenario gefragt ist
+; c.) Wo ein Switch-ähnliches Szenario gefragt ist (mit eingeschränkten Wertebereich)
 (define (switch-case number)
   (cond
     ((= number 0) "You entered the number 0")
@@ -108,7 +108,7 @@
 
 (define (b-length h)
   (cond
-    ((string=? (human-gender h) "man") (- (+ 69.089 (* 2.238 (human-obershenkelknookslength h))) (* 0.06 (human-age h))))
+    ((string=? (bö(human-gender h) "man") (- (+ 69.089 (* 2.238 (human-obershenkelknookslength h))) (* 0.06 (human-age h))))
     ((string=? (human-gender h) "woman") (- (+ 61.412 (* 2.317 (human-obershenkelknookslength h))) (* 0.06 (human-age h))))
     (else "wrong parameters")))
 

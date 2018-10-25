@@ -27,14 +27,14 @@ import numpy as np
 ##################################################
 
 # Code aus der Aufgabenstellung übernehmen
-n=5
+n = 5
 m = 500
 
-# Zufallszahlen generieren
-ran = np.array(norm.rvs(size=n*m)) 
+# Zufallszahlen generieren (normalverteilt?)
+ran = np.array(norm.rvs(size = n * m)) 
 
 # Matrix aus Zufallszahlen erstellen
-sim = ran.reshape((n,m))
+sim = ran.reshape((n, m))
 
 # --- a.) Stichproben als Runs darstellen
 plt.plot(sim)
