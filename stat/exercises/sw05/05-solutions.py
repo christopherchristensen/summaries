@@ -14,9 +14,10 @@ Created on Thu Oct 25 14:32:59 2018
 
 from pandas import Series, DataFrame 
 import pandas as pd
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
 from scipy.stats import norm, uniform, probplot, t, chi2
 import numpy as np
+import math
 
 
 ##################################################
@@ -131,6 +132,8 @@ probplot(sim_mean,plot=plt)
 plt.title("Normal Q-Q Plot")
 
 
+# --- c.) n = 10 und n = 200
+
 n=10
 
 # X_1,...,X_n simulieren und in einer n-spaltigen
@@ -141,6 +144,7 @@ sim = DataFrame(np.reshape(sim,(n,1000)))
 
 #In jeder Matrixzeile Mittelwert berechnen
 sim_mean = sim.mean()
+std = sim_mean.std()
 
 plt.subplot(4,2,3) 
 
@@ -162,6 +166,7 @@ sim = DataFrame(np.reshape(sim,(n,1000)))
 
 #In jeder Matrixzeile Mittelwert berechnen
 sim_mean = sim.mean()
+std = sim_mean.std()
 
 plt.subplot(4,2,3) 
 
@@ -174,3 +179,82 @@ plt.title("Normal Q-Q Plot")
 
 # Immer stärker Normalverteilt
 
+
+##################################################
+
+# AUFGABE 5.3
+
+##################################################
+
+
+iron = pd.read_table("ironF3.dat",sep=" ",index_col=False)
+
+
+# --- a.) Boxplot
+# Sie unterscheiden sich in ihrer Streuung und Wertebereich
+# High: am meisten normalverteilt im Vergleich zu den anderen mit einem Ausreisser nach oben
+# Medium: eher linksschief mit "Ausreisser" um 15
+# Low: Schwierig zu sagen, was für eine Verteilung
+iron.plot(kind="box")
+
+# --- b.) Boxplot logarithmieren mit log(iron)
+# Die Streuung hat sich ausgeglichen...
+
+np.log(iron).plot(kind="box",ax=plt.gca()) 
+plt.ylabel("log(iron)")
+
+
+# --- c.) Check Normalverteilung
+# Logarithmische Verteilung scheint besser zu passen...
+probplot(iron["high"], plot=plt)
+probplot(iron["medium"], plot=plt)
+probplot(iron["low"], plot=plt)
+
+probplot(np.log(iron["high"]), plot=plt)
+probplot(np.log(iron["medium"]), plot=plt)
+probplot(np.log(iron["low"]), plot=plt)
+
+# --- d.) Parameter und Wahrscheinlichkeit
+# Erwartungswert
+iron.mean()
+# Varianz
+iron.var()
+
+# Wahrscheinlichkeit
+w_10 = 1 - norm.cdf(x=10, loc=iron.mean(), scale=np.sqrt(iron.var()))
+
+# High: 0.009589
+# Medium: 0.370805
+# Low: 0.598319
+
+# --- e.) Log-Verteilung
+# Erwartungswert (log)
+loc = np.log(iron["medium"]).mean()
+
+# Varianz (log)
+var = np.log(iron["medium"]).var()
+
+# Wahrscheinlichkeit (log)
+w_10_log = 1 - norm.cdf(x=np.log(10), loc=loc, scale=np.sqrt(var))
+# 0.27097597476867175
+
+
+##################################################
+
+# AUFGABE 5.4
+
+##################################################
+
+
+# --- a.) Momentenmethode
+# Erwartungswert
+e = 120 / 15 # 8 => Erwartungswert (lambda) = 1/8
+
+# Exponentialverteilt
+P = 1 - (1 - math.exp(-12/8)) = 0.22313
+
+# Erwartungswert für 12min
+e12 = 15 / 120 * 12 # 1.5
+
+# Wahrscheinlichkeit innerhalb 12min 2 Fische
+P2F = math.exp(-12/8) * ((1.5**2)/math.factorial(2)) # 0.25102
