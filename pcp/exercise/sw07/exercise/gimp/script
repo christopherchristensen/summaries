@@ -1,0 +1,6 @@
+Welcome to TinyScheme
+Copyright (c) Dimitrios Souflis
+Script-Fu Console - Interactive Scheme Development
+
+> (script-fu-grid-lines 200 200 20 01 brush (255 255 255) (0 0 0) FALSE TRUE FALSE FALSE)
+Error: eval: unbound variable: brush 

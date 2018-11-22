@@ -32,11 +32,10 @@
 (define (multiply-by factor a-list)
 (cond ((empty? a-list) empty)
         (else
-         (cons (* factor (first a-list))            ; multiply
-               (multiply-by factor (rest a-list)))) ; rekursion rest of list
+         (cons (* factor (first a-list))
+               (redouble (rest a-list))))
 ))
 
-; (multiply-by 5 '(1 2 3 4))
 
 
 ; ------- AUFGABE 3 ------- ;
@@ -68,7 +67,7 @@
   (cond
     ((empty? a-list) empty)                                ; falls Liste leer, leere Liste zurück
     ((eqv? item (first a-list)) (rest a-list))             ; falls item gleich erstes Listenelement, Rest der Liste zurück
-    (else                      
+    (else                                                  ;
      (cons (first a-list) (delete item (rest a-list))))))
 
 
@@ -110,8 +109,8 @@
 (define (list-filter-divisor a-list divisor)
   (cond
     [(empty? a-list) empty]
-    [(= (remainder (first a-list) divisor) 0) ; falls remainder = 0
-     (cons (first a-list) (list-filter-divisor (rest a-list) divisor))] ; dann setze Element mit Rest der teilbaren Elemente
+    [(= (remainder (first a-list) divisor) 0)
+     (cons (first a-list) (list-filter-divisor (rest a-list) divisor))]
     [else (list-filter-divisor (rest a-list) divisor)]))
 
 
@@ -125,16 +124,12 @@
     
     [(string? (first list)) ; hat String in der Liste
      (cond
-       [(rel 1 2) (sort list string<?)] ; wenn kleiner als
-       [else (sort list string>?)])]    ; wenn grösser als
+       [(rel 1 2) (sort list string<?)]
+       [else (sort list string>?)])]
      
     [else (sort list rel)]
                   
 ))
-
-; (sort-a-list '(1 3 4 5 2 1 4) <)
-; (sort-a-list '(1 3 4 5 2 1 4) >)
-; (sort-a-list (list "dog" "cat" "house" "ant") >)
 
 ; Einfügen in sortierter Liste
 (define (insert item a-list)
