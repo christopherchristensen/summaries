@@ -1,0 +1,15 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-advanced-reader.ss" "lang")((modname scheme03) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #t #t none #f () #f)))
+(define mylist (list 'a 'b 'c 'd 'e 'f 'g))
+(define otherlist (list 'ab 'cd 'de 'ef))
+(define cheeselist (list 'cheese1 'cheese2 'cheese3 'cheese4))
+(define hatlist '(hat1 tophat hat3))
+
+(define (sum a-list)
+  (cond
+    [(empty? a-list) 0] ;Rekursionsbasis
+    [else (+ (first a-list) (sum (rest a-list)))]
+    )
+  )
+
