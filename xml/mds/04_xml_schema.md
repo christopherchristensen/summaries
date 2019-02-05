@@ -65,5 +65,41 @@
   (comparable to e.g. packages in Java defining new API)
 
 * If a class belongs to a package in Java, then this package is declared in the source code and must be imported for usage
-* Putting a class into a package in Java is not mandatory.
-  Likewise, putting a vocabulary into a namespace is not mandatory.
+* Putting a class into a package in Java is not mandatory. 
+* Putting a vocabulary into a namespace is not mandatory.
+
+* In the same way, if some vocabulary is part of a namespace, this namespace must be declared in the source code (XML Schema) and imported for usage (XML document)
+* A namespace assigned to a Schema is called target namespace
+
+
+
+## Do I need a Target Namespace?
+
+* No, just refer in your XML document to an XML schema, and your code can be validated
+* Sometimes your XML Schema is distributed over multiple files. Then, using a target namespace, you can signal that all this vocabulary belongs to the same language
+* If you want to combine several vocabularies in the same document there can be at most one vocabulary without a target namespace
+* Web languages like XHTML, SVG and MathML are often combined in the same document. Fortunately, they all have target namespaces
+
+
+
+## Binding without Target Namespaces 1
+
+
+
+## Binding without Target Namespaces 2
+
+
+
+## Binding with Target Namespaces 1
+
+
+
+## Binding with Target Namespaces 2
+
+
+
+
+
+
+
+## Skeleton Extension 
