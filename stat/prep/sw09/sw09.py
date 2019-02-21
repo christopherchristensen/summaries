@@ -9,6 +9,7 @@ Created on Thu Feb 21 11:06:27 2019
 import numpy as np
 from pandas import DataFrame
 from statsmodels.formula.api import ols
+from statsmodels.stats.anova import anova_lm
 
 df = DataFrame({
     "Treatment": np.repeat(["Kommerziell", "Vakuum", "Gemischt", "CO2"], 3),
@@ -25,3 +26,8 @@ fit.summary()
 # Die anderen Mittelwerte variieren um 
 # diesen Mittelwert (Gemisch = 3.36 + 3.90 = 7.26)
 fit.params
+
+
+fit = ols("steak_id~Treatment",data=df).fit() 
+anova_lm(fit)
+print(anova_lm(fit))
