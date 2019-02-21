@@ -161,3 +161,71 @@ plt.show()
 
 seasonal_decompose(np.log(AirP["Passengers"]), model="add").resid.plot() 
 plt.show()
+
+
+
+import matplotlib.pyplot as plt 
+import pandas as pd
+
+
+AirP = pd.read_csv("./AirPassengers.csv") 
+
+AirP.head()
+
+AirP["TravelDate"] = pd.DatetimeIndex(AirP["TravelDate"])
+AirP.set_index("TravelDate", inplace=True)
+AirP.head()
+AirP.plot()
+plt.xlabel("Reisedatum") 
+plt.ylabel("Anzahl Passagiere (in 1000)")
+plt.show()
+
+# Teilmenge von AirP
+AirP.loc["1949-3":"1955-3"].plot()
+plt.xlabel("Reisedatum 1949/3 bis 1955/3") 
+plt.ylabel("Anzahl Passagiere (in 1000)")
+plt.show()
+
+
+AusBeer = pd.read_csv("./AustralianBeer.csv",sep=";",header=0)
+AusBeer1 = AusBeer.copy() 
+AusBeer1.head()
+
+AusBeer1["Quarter"] = pd.DatetimeIndex(AusBeer1["Quarter"])
+AusBeer1.set_index("Quarter", inplace=True)
+AusBeer1.plot()
+plt.show()
+
+AusBeer1.describe()
+
+
+AusBeer = pd.read_csv("./AustralianBeer.csv",sep=";",header=0) 
+AusEl = pd.read_csv("./AustralianElectricity.csv",sep=";")
+
+AusBeer1 = AusBeer.copy()
+AusBeer1["kilowatt"] = AusEl["kilowatt"]
+
+AusBeer1["Quarter"] = pd.DatetimeIndex(AusBeer1["Quarter"])
+AusBeer1.set_index("Quarter", inplace=True)
+
+AusBeer1.plot(subplots=True)
+
+AirQ = pd.read_csv("./AirQualityUCI.csv", sep=";", decimal=",")
+AirQ["Time"] = AirQ["Time"].str.replace(".","-")
+AirQ["Date"] = pd.DatetimeIndex(AirQ["Date"]+" "+AirQ["Time"])
+AirQ.set_index("Date", inplace=True)
+AirQ1 = AirQ.copy()
+
+AirQ2 = AirQ1.loc["2004-03-10":"2004-03-30"]
+AirQ2 = AirQ2[AirQ2["T"] > -20]
+AirQ2["T"].plot()
+
+AirQ2.boxplot("T", by="Time")
+plt.xticks(rotation=45)
+plt.show()
+
+
+from statsmodels.tsa.seasonal import seasonal_decompose
+import numpy as np 
+
+seasonal_decompose(np.log(AirP["Passengers"]), model="add", freq=12).resid.plot()
