@@ -110,4 +110,5 @@ F = msg / mse
 
 # ANOVA
 fit = ols("Koagulationszeit~Behandlung", data=data).fit()
+fit.params
 anova_lm(fit)
