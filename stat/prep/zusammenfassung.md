@@ -34,18 +34,19 @@
 ## Median (Lage)
 
 * `data.median()`
-
 * Berechnung (ohne Python):
   1. Datensatz der Grösse nach sortieren
   2. Der **Median** ist Wert der mittleren Beobachtung (Messung) 
      $$\to$$ aus 5 Beobachtungen ist Median also 3. Beobachtung
   3. Bei ungerader Anzahl Beobachtungen mittlere Beobachtung nehmen
   4. Bei gerader Anzahl Beobachtungen Durchschnitt der mittleren beiden Beobachtungen nehmen
+  5. `sorted_data = data.sort_values(ascending=True)`
+  6. `sorted_data[np.round(sorted_data.size/2 + 0.5) - 1]`
 * Empirischer Median = $$50\%$$ - Quantil
 
 
 
-## $$\alpha$$ - Quantil / Quartil (Lage)
+## $\alpha$ - Quantil / Quartil (Lage)
 
 * Quantil: Bereich in dem bestimmter `[Prozentsatz]` ($$\alpha$$) aller Beobachtung sind
 * Quartil: Quantil, mit bestimmten Prozentsätzen (`25%` und `75%`)
@@ -87,10 +88,14 @@
 ## Histogramm
 
 * Werte graphisch darstellen
-*  `data.plot(kind="hist", bins=7, edgecolor="black")` 
+* `data.plot(kind="hist", bins=7, edgecolor="black")` 
 * Bei weniger als 50 Messungen ca. 5 - 7 Klassen
 * Bei mehr als 250 Messungen ca. 10 - 20 Klassen
 * Klasse erhält Balken mit Höhe proportional zur Anzahl Beobachtungen in dieser Klasse
+* Histogramm mit 20 Klassen von 0 - 100: 
+  `data.plot(kind="hist", bins=np.arange(0, 100, 5), edgecolor="black")`
+
+* **bimodal**: wenn zwei Peaks!
 
 
 
@@ -103,4 +108,9 @@
 * `data.plot(kind="hist", normed=True, edgecolor="black")` 
 
 
+
+## Kummulative Verteilungsfunktion
+
+* $$F_1(x) = \frac{1}{n} \text{ Anzahl }\{i | x_i \leq x\}$$
+* 
 
