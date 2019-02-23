@@ -6,6 +6,16 @@
 * QQ-Plot
 * Empirisches / Theoretisches Quantil
 
+
+
+## Vorgehen Statistik
+
+* Daten erfassen
+* Erwartungswert und Standardabweichung aus den Daten ermitteln
+* Eine Gauss-Verteilung annehmen, um Vorhersagen zu machen
+
+
+
 ## Normal-Plot
 
 Theoretisches Quantil der Standardnormalverteilung gegen die empirischen Quantile plotten: 
