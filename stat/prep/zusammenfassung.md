@@ -433,10 +433,12 @@ $$\uparrow$$
   * $$\displaystyle \overline{X}_n = \frac{1}{n} (X_1 + X_2 + … + X_n) = \frac{1}{n} \sum^n_{i=1} X_i = \frac{1}{n} S_n$$
   * $$E[\overline{X}_n] = \mu​$$
   * $$Var[\overline{X}_n] = \frac{\sigma^2_X}{n}$$
-    Je grösser $$n$$, desto kleiner Streuung der Augenzahl
-  * $$\sigma[\overline{X}_n] = \frac{\sigma_X}{\sqrt{n}}$$ (Standard-Fehler)
+  * oder auch: $$Var[\overline{X}_n] = \frac{1}{n} (Var[X])$$
+    (dann ganz old-school Varianz ausrechnen durch $$n$$)
+  * Je grösser $$n​$$, desto kleiner Streuung der Augenzahl
+  * $$\sigma[\overline{X}_n] = \frac{\sigma_X}{\sqrt{n}}​$$ (Standard-Fehler)
 * Gesetze
-  * $$E[X_1 + X_2] = E[X_1] + E[X_2]$$
+  * $$E[X_1 + X_2] = E[X_1] + E[X_2]​$$
   * $$Var[X_1 + X_2] = Var[X_1] + Var[X_2]$$
 
 
@@ -479,7 +481,7 @@ $$\uparrow$$
 
 
 
-## QQ-Plot
+## QQ-Plot (Normalplot / Probplot)
 
 - überprüfen, ob normalverteilt
 - miteinander vergleichen
@@ -526,6 +528,35 @@ $$\uparrow$$
 * SW05, 11/13
 * SW05, 12/13
 * SW05, 13/13
+
+
+
+## P-Wert
+
+* P-Wert ist ein Wert zwischen 0 und 1, der angibt, wie gut eine sogenannte Nullhypothese (z.B. hier die Behauptung des Sportamtes) und Daten zusammenpassen (0: passt gar nicht; 1: passt sehr gut)
+* die W’keit, unter Annahme der Nullhypothese das erhaltene Ergebnis oder ein extremeres zu erhalten
+* Je kleiner der P-Wert, desto mehr spricht das Ergebnis gegen die Nullhypothese
+
+
+
+## z-Test vs t-Test
+
+* $$\sigma_x$$ ist bekannt $$\to$$ z-Test
+* $$\sigma_x$$ wurde geschätzt $$\to$$ t-Test
+
+
+
+## z-Test
+
+* wir setzen unseren geschätzten Mittelwert ein unter der Annahme, dass `loc=nullhypothese`  der Mittelwert ihrer Nullhypothese stimmt
+* SW06, 9/17
+
+
+
+## t-Test
+
+* gleich wie bei z-Test einfach mit geschätztem $$\hat{\sigma}$$ 
+* 
 
 
 
