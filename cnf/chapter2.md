@@ -11,22 +11,6 @@
 
 
 
-## HAL
-
-* Hardware Abstraction Layer
-* Zwischenschicht Hardware / software
-* allows computer operating system to interact with 
-  * hardware device at a general or abstract level 
-  * rather than at a detailed hardware level
-
-
-
-## Warum wird OS geladen?
-
-* Um Daten von langsameren Flash-Karte ins RAM zu laden
-
-
-
 ## What does an operating system consist of?
 
 * OS Shell
@@ -59,12 +43,6 @@
 
 
 
-## K9
-
-* Secure Shell tauglich
-
-
-
 ## Types of Cisco IOS
 
 * IOS for switches, routers, and other Cisco networking devices
@@ -79,10 +57,11 @@
   * primarily for management purposes (initial configuration of router)
 * Secure Shell (SSH)
   * Inband method for remotely and securely establishing CLI session over network
-  * User authentication, passwords, and commands sent over the network are encrypted
-  * best practice, use SSH (Version 2) instead of Telnet whenever possible
+  * User authentication, passwords, and commands are sent encrypted
+  * best practice, use SSH (Version 2)
 * Telnet
-  *  Inband interfaces remotely establishing a CLI session through a virtual interface, over a network. User authentication, passwords, and commands are sent over the network in plaintext
+  *  Inband interfaces remotely establishing a CLI session through a virtual interface, over a network. 
+  *  User authentication, passwords, and commands are sent in plaintext
 * AUX port 
   * older method of establishing a CLI session remotely 
   * via a telephone dialup connection using a modem
@@ -91,7 +70,7 @@
 
 ## Terminal Emulation Program
 
-* give users ability to log on and get direct access to legacy programs in a mainframe operating system
+* enable users to log on and get direct access to legacy programs in a mainframe OS
 * Regardless of access method, a terminal emulation program will be required
 * (PuTTY, Tera Term, SecureCRT, and OS X Terminal)
 
@@ -99,31 +78,66 @@
 
 ## What are CISCO Operation Modes?
 
+* Modes used to 
+  * accomplish particular tasks 
+  * with a specific set of commands 
+  * that are available only to that mode
 * Cisco IOS modes use a hierarchical command structure
 * Each mode has a distinctive prompt
-* used to accomplish particular tasks with a specific set of commands that are available only to that mode
 
 
 
 ## Primary Command Modes
 
 * user EXEC `>`
-  * allows only a limited number of basic monitoring commands
-  * By default, there is no authentication required to access the user EXEC mode but it should be secured
+  * limited number of basic monitoring commands allowed
+  * By default, no authentication required, but should be secured
 * privileged EXEC `#`
-  * allows the execution of configuration and management commands
-  * referred to as “enable mode” because it requires the enable user EXEC command
-  * By default, there is no authentication required to access the user EXEC mode but it should be secured
+  * execution of configuration and management commands allowed
+  * also called “enable mode” because it requires the `enable` user EXEC command
+  * By default, no authentication required, but should be secured
 
 
 
 ## Configuration Command Modes
 
-* primary configuration mode is called global configuration or simply, global config
+* primary configuration mode 
+  * called global configuration or global config
+  * `configure terminal` to access mode
+  * changes affect operation of device
+* sub configuration modes can be accessed from global config mode
+* each of these modes allow config of particular part / function of the IOS device
 
 
 
-!Missing 12 - 27
+## Sub Configuration Modes
+
+* Interface mode: configure on of the network interfaces
+* Line mode: configure console, AUX, Telnet or SSH access
+
+
+
+## Navigate Between IOS Modes
+
+* `enable` : enter privileged EXEC mode
+* `configure terminal` : enter config mode
+* `interface fa0/1` : enter interface sub-config mode 
+  (e.g. **fa**st interface bank **0 / 1**. interface)
+* `exit` : exit out of any mode (from specific to previous more general mode)
+* `end` : exit a sub-config mode and return to privileged EXEC mode
+* `^z` : exit a sub-config mode and return to privileged EXEC mode
+
+
+
+## Basic IOS Command Structure
+
+
+
+
+
+15 - 28!
+
+
 
 
 

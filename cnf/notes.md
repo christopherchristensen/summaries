@@ -2,27 +2,46 @@
 
 
 
+## Why do we need to load the OS on boot?
+
+- To load the data from the slower flash card into the RAM
+
+
+
+## HAL
+
+- hardware abstraction layer
+- a layer of programming that 
+  - allows an operating system to interact with a hardware device 
+  - at a general or abstract level 
+  - rather than at a detailed hardware level
+
+
+
 ## Cisco Server Monitoring
 
-* haben eine monitoring layer
+* Cisco Server have a monitoring layer
 
 
 
+## Persisting Server Settings after Configuration
 
-
-## Nicht vergessen auszuführen nach Konfiguration
-
-* `copy run config`
-
-* `startup config`
-* im RAM steht ganze Konfiguration
-* beim ein und ausstecken geht Konfiguration im RAM (oder alles ) verloren
-* nach Konfiguration diese beiden Befehl ausführen
-* festlegen einer Konfiguration auf ein nicht-flüchtiges Speichermedium
+* Run these two commands
+  * `copy run config`
+  * `startup config`
+* configuration is in RAM
+* when unpluggin or power cut all configurations in RAM are lost
+* running commands above save configuration in non-volatile memory
 
 
 
-## Ablegen der Konfiguration
+## Tipp: Manual Backup of Server Configuration
 
-* Konfiguration wird im File abgespeichert
-* Kann man in ein Text-File ablegen im Falle des Verlusts
+* Configuration is saved in a text file
+* Copy and paste text file to another computer (TADAA!)
+
+
+
+## K9
+
+- secure shell supported
