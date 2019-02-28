@@ -89,3 +89,78 @@
 
 
 
+## Terminal Emulation Program
+
+* give users ability to log on and get direct access to legacy programs in a mainframe operating system
+* Regardless of access method, a terminal emulation program will be required
+* (PuTTY, Tera Term, SecureCRT, and OS X Terminal)
+
+
+
+## What are CISCO Operation Modes?
+
+* Cisco IOS modes use a hierarchical command structure
+* Each mode has a distinctive prompt
+* used to accomplish particular tasks with a specific set of commands that are available only to that mode
+
+
+
+## Primary Command Modes
+
+* user EXEC `>`
+  * allows only a limited number of basic monitoring commands
+  * By default, there is no authentication required to access the user EXEC mode but it should be secured
+* privileged EXEC `#`
+  * allows the execution of configuration and management commands
+  * referred to as “enable mode” because it requires the enable user EXEC command
+  * By default, there is no authentication required to access the user EXEC mode but it should be secured
+
+
+
+## Configuration Command Modes
+
+* primary configuration mode is called global configuration or simply, global config
+
+
+
+!Missing 12 - 27
+
+
+
+## Encrypt Passwords
+
+* startup-config and running-config files display most passwords in plaintext
+* This is a security threat because anyone can see the passwords if they have access to these files
+* `service password-encryption` 
+  * global config command to encrypt all passwords
+* The command applies weak encryption to all unencrypted passwords
+* However, it does stop “shoulder surfing”
+
+
+
+## Banner Messages
+
+* displayed when someone attempts to gain access to a device
+* important part of the legal process in the event that someone is prosecuted for breaking into a device
+* `banner motd delimiter message delimiter`
+
+
+
+Missing! 30
+
+
+
+## Save Running Configuration File
+
+* Cisco devices use a running configuration file and a startup configuration file
+* `show running-config`
+* TODO
+
+
+
+## Alter Running Configuration
+
+* TODO
+
+
+
