@@ -402,3 +402,18 @@
   (shorter than single mode)
 * LEDs as light source
 * Commonly used with LANs or distances of couple 100m within a campus network
+
+
+
+## Fiber-Optic Connectors
+
+>  light only travels in one direction, therefore two fibers are always required
+
+* Straight-Tip (ST) Connectors
+  * One of the first connector types used
+  * Locks securely with a "twist-on/twist-off"
+* Subscriber Connectors (SC)
+  * Also square or standard connector
+  * Push-pull mechanism for positive insertion
+  * Used with multimode and single-mode fiber
+* 
