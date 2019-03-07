@@ -341,7 +341,7 @@ $$\uparrow$$
 * einfachste Modell für
   * Wartezeiten auf Ausfälle, 
   * also für die Lebensdauer
-* $$X \sim \text{Exp}(\lambda)$$
+* $$X \sim \text{Exp}(\lambda)​$$
 * $$\displaystyle f(x) = \begin{cases} \lambda \cdot \text{exp}(-\lambda x), \quad \text{falls } x \geq 0 \\ 0 \quad \quad \quad \quad \quad \quad \quad \text{sonst} \end{cases}​$$
 * $$ \displaystyle F(x) = \begin{cases} 1 - e^{-\lambda x}, \quad \text{falls } x \geq 0 \\ 0 \quad \quad \quad \quad \quad \text{falls } x < 0 \end{cases}​$$
 * $$E[X] = \frac{1}{\lambda}​$$
