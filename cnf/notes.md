@@ -2,6 +2,18 @@
 
 
 
+## In Terms of what do Network Infrastructures vary?
+
+* Size of the area covered
+
+- Number of users connected
+
+- Number and types of services available
+
+- Area of responsibility
+
+
+
 ## Why do we need to load the OS on boot?
 
 - To load the data from the slower flash card into the RAM
@@ -45,3 +57,6 @@
 ## K9
 
 - secure shell supported
+
+
+
