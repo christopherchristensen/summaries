@@ -73,3 +73,33 @@
 
 
 
+## Normalapproximation
+
+> Wie gross ist die W’keit, dass bei 10 000 Würfen mit einer Münze maximal 5100 mal Kopf erscheint?
+
+* Anzahl Würfe mit Kopf ist $$Bin(10000, 0.5)$$-verteilt
+* Diese Verteilung mit einer Normalverteilung approximieren:
+  * $$\pi = 0.5$$ (Wahrscheinlich, dass die eine Situation eintrifft)
+  * $$X \sim \mathcal{N}(\mu, \sigma^2)$$
+  * $$\mu = n\pi = 10000 \cdot 0.5 = 5000$$
+  * $$\sigma^2 = n\pi(1 - \pi) = 10000 \cdot 0.5 \cdot (1-0.5) = 2500$$
+  * `norm.cdf(k=5100, loc=5000, scale=np.sqrt(2500))`
+* Vergleich mit Annahme Binomverteilung
+  * `binom.cdf(k=5100, n=10000, p=0.5)`
+* Übereinstimmung ist ziemlich gut
+
+
+
+## Zentraler Grenzwertsatz
+
+> Was ist die W’keit, dass das Casino Gewinn macht, wenn 10’000 (unabhängige) Spiele betrachtet werden?
+>
+> * 18 rote Felder
+> * 18 schwarze Felder
+> * 1 grünes Feld
+> * SW04F28ff
+
+
+
+
+

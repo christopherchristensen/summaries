@@ -424,15 +424,15 @@ $$\uparrow$$
 * für grosse $$n$$ ist arithmetisches Mittel $$\overline{X}_n$$ sehr nahe an $$E[\overline{X}_n]$$
   (Gesetz der grossen Zahlen)
 * Kennzahlen $$S_n​$$ (Augensumme)
-  * $$\displaystyle S_n = X_1 + … + X_n = \sum^n_{i=1} X_i$$
+  * $$\displaystyle S_n = X_1 + … + X_n = \sum^n_{i=1} X_i​$$
   * $$E[S_n] = n\mu$$
   * $$Var[S_n] = n\ Var[X]$$
     Je grösser $$n$$, desto grösser Streuung der Augensumme
-  * $$\sigma[S_n] = \sqrt{n} \sigma_x$$
+  * $$\sigma[S_n] = \sqrt{n} \sigma_x​$$
 * Kennzahlen $$\overline{X}_n$$ (mittlere Augenzahl)
   * $$\displaystyle \overline{X}_n = \frac{1}{n} (X_1 + X_2 + … + X_n) = \frac{1}{n} \sum^n_{i=1} X_i = \frac{1}{n} S_n$$
   * $$E[\overline{X}_n] = \mu​$$
-  * $$Var[\overline{X}_n] = \frac{\sigma^2_X}{n}$$
+  * $$Var[\overline{X}_n] = \frac{\sigma^2_X}{n}​$$
   * oder auch: $$Var[\overline{X}_n] = \frac{1}{n} (Var[X])$$
     (dann ganz old-school Varianz ausrechnen durch $$n$$)
   * Je grösser $$n​$$, desto kleiner Streuung der Augenzahl
@@ -448,7 +448,7 @@ $$\uparrow$$
 * $$S_n \sim \mathcal{N}(n\mu,n\sigma^2_X )​$$
 * $$\overline{X}_n \sim \mathcal{N}(\mu, \frac{\sigma^2_X}{n})$$
 * Binomialverteilung $$\approx$$ Normalverteilung für $$n$$ gross
-* Poissonverteilung $$\approx$$ Normalverteilung für $$\lambda$$ gross
+* Poissonverteilung $$\approx​$$ Normalverteilung für $$\lambda​$$ gross
 
 
 
@@ -458,8 +458,8 @@ $$\uparrow$$
   * $$\pi$$ ist eine Variable (nicht Wert $$\pi$$)
 * $$\mu = E[X] = n\pi$$
 * $$\sigma^2 = Var[X] = n \pi (1-\pi)​$$
-* Als Approximation Normalverteilung $$\mathcal{N}(\mu, \sigma^2)$$ nehmen
-* $$\displaystyle P[X \leq x] \approx \Phi \left( \frac{x - n\pi}{\sqrt{n\pi(1-\pi)}} \right)$$
+* Als Approximation Normalverteilung $$\mathcal{N}(\mu, \sigma^2)​$$ nehmen
+* $$\displaystyle P[X \leq x] \approx \Phi \left( \frac{x - n\pi}{\sqrt{n\pi(1-\pi)}} \right)​$$
 
 
 
@@ -469,7 +469,7 @@ $$\uparrow$$
 * $$\mu = E[X] = \lambda​$$
 * $$\sigma^2 = Var[X] = \lambda$$
 * Als Approximation Normalverteilung $$\mathcal{N}(\mu, \sigma^2)$$ nehmen
-* $$\displaystyle P[X \leq x] \approx \Phi \left( \frac{x - \lambda}{\sqrt{\lambda}} \right)$$
+* $$\displaystyle P[X \leq x] \approx \Phi \left( \frac{x - \lambda}{\sqrt{\lambda}} \right)​$$
 
 
 
@@ -477,7 +477,7 @@ $$\uparrow$$
 
 * $$\displaystyle s_{\overline{x}_n} = \frac{s_x}{\sqrt{n}}​$$ 
 * $$\displaystyle \overline{x}_n \pm s_{\overline{x}_n}​$$ (absolute Fehler)
-* $$\displaystyle \overline{x}_n \pm \frac{s_{\overline{x}_n}}{\overline{x}_n} \cdot 100\% $$  (relativer Fehler)
+* $$\displaystyle \overline{x}_n \pm \frac{s_{\overline{x}_n}}{\overline{x}_n} \cdot 100\% ​$$  (relativer Fehler)
 
 
 

@@ -42,3 +42,30 @@
 
 
 
+## Beispiele wann Bernoulli
+
+* https://math.stackexchange.com/questions/838107/what-is-the-difference-and-relationship-between-the-binomial-and-bernoulli-distr
+
+* Wenn zwei mögliche Ergebnisse (z.B. $$0$$ oder $$1$$)
+
+* $$X_i$$ bezeichnet das $$i$$-te Los und hat den Wert $$1$$ bei einem Gewinn, sonst $$0$$
+  * $$X_i \sim \text{ Bernoulli}(\pi)​$$ und $$X_1, …, X_n \text{ i.i.d.}​$$ 
+  * Da ein Gewinn unabhängig von den anderen Losen ist
+
+
+
+## Beispiele wann Binomialverteilung
+
+* https://math.stackexchange.com/questions/838107/what-is-the-difference-and-relationship-between-the-binomial-and-bernoulli-distr
+* Eine Binomialverteilung ist die Summe von i.i.d. Bernoulli-verteilte Zufallszahlen
+* Sprich: Bernoulli, falls das Gesetz der Grossen Zahlen gilt
+
+
+
+## Beispiele wann GGZ gilt
+
+* Betrachtung einer Messung, die aus der Summe von mehreren Einzelmessungen besteht (SW04F14) TODO
+* Oftmals hat einzelne Messung eine andere Verteilung
+  * z.B. der Messfehler von der Arbeitsdauer (täglich) eines Mitarbeiters ist uniform verteilt
+  * Jetzt miss man aber den Messfehler von 5000 Arbeitern
+
