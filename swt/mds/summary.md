@@ -325,9 +325,54 @@ TODO
 
 
 
+## Was machen wenn zu vieles Priorität 1?
+
+* Testumfang und Testtiefe variieren
+* Weitere Unterteilungen
+
+
+
 ## Branchenspezifische Teststrategie
 
 * Je nach Branche notwendig verschiedene Schwerpunkte für Teststrategie zu setzen
+
+
+
+## Beispiele für branchenspezifische Schwerpunkte
+
+> Kommt an der Prüfung!
+
+* Bank
+  * Korrekt / Genau
+  * Tempo / Performance
+  * [  ]
+* Schreinerei
+  * Perfekt
+  * Kein Ausfall
+  * [V]
+* Gesundheit
+  * Ausfall-Sicherheit
+  * Zuverlässig
+  * [  ]
+* Öffentlicher Bereich / Kunden
+  * Usability
+  * [V]
+* Rüstung
+  * Korrektheit
+  * [  ]
+* Tourismus
+  * Usability
+  * Stabilität
+  * [X]
+* Marketing
+  * Schnell beim Kunde
+  * [X]
+
+> [x] Time-To-Market vor Sicherheit
+>
+> [V] Vielleicht Time-To-Market vor Sicherheit
+>
+> [  ] Sicherheit vor Time-To-Market
 
 
 
