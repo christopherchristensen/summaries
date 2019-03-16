@@ -10,6 +10,7 @@ Created on Fri Mar 15 08:02:53 2019
 # =============================================================================
 import numpy as np
 import matplotlib.pyplot as plt
+from pandas import DataFrame, Series
 from scipy.stats import norm, binom, uniform
 
 
@@ -144,3 +145,29 @@ p2 = uniform.cdf()
 # =============================================================================
 
 p3 = norm.cdf(2, loc=1, scale=2)
+p4 = norm.cdf(x=[49, 51], loc=50, scale=np.sqrt(200))
+p4 = p4[1] - p4[0]
+p5 = norm.cdf(2, loc=1, scale=np.sqrt(2)/5)
+
+
+# =============================================================================
+# 4.5
+# =============================================================================
+methode_A = Series([79.98, 80.04, 80.02, 
+                    80.04, 80.03, 80.03, 
+                    80.04, 79.97, 80.05, 
+                    80.03, 80.02, 80.00, 
+                    80.02])
+
+methode_B = Series([80.02, 79.94, 79.98, 
+                    79.97, 79.97, 80.03, 
+                    79.95, 79.97])
+
+mean_A = methode_A.mean()
+mean_B = methode_B.mean()
+
+stf_A = methode_A.std() / np.sqrt(methode_A.size)
+stf_B = methode_B.std() / np.sqrt(methode_B.size)
+
+rel_A = stf_A / mean_A * 100
+rel_B = stf_B / mean_B * 100
