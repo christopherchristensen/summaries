@@ -445,10 +445,12 @@ $$\uparrow$$
 
 ## Zentraler Grenzwertsatz $S_n$ und $\overline{X}_n$
 
+* Je grösser $$n$$, desto stärker normalverteilt
+
 * $$S_n \sim \mathcal{N}(n\mu,n\sigma^2_X )​$$
-* $$\overline{X}_n \sim \mathcal{N}(\mu, \frac{\sigma^2_X}{n})$$
+* $$\overline{X}_n \sim \mathcal{N}(\mu, \frac{\sigma^2_X}{n})​$$
 * Binomialverteilung $$\approx$$ Normalverteilung für $$n$$ gross
-* Poissonverteilung $$\approx​$$ Normalverteilung für $$\lambda​$$ gross
+* Poissonverteilung $$\approx$$ Normalverteilung für $$\lambda​$$ gross
 
 
 
@@ -485,7 +487,7 @@ $$\uparrow$$
 
 - überprüfen, ob normalverteilt
 - miteinander vergleichen
-  - theoretische Quantile $$\Phi^{-1}(\alpha_k)$$ [$$-1.9600$$ bis $$1.9600$$]
+  - theoretische Quantile $$\Phi^{-1}(\alpha_k)$$ [$$-1.9600$$ bis $$1.9600​$$]
   - empirische Quantile (aus Datensatz)
 - `st.probplot(x, plot=plt)`
 
@@ -562,4 +564,4 @@ $$\uparrow$$
 
 ## DataFrame
 
-* Alle enthaltenen Arrays müssen dieselbe Länge besitzen
+* Alle enthaltenen Arrays müssen dieselbe Länge besitzenop
