@@ -1,5 +1,10 @@
-* Servermigration: Eher Werkvertrag
+# Notizen aus der Vorlesung
 
+
+
+## Arbeitsverträge
+
+* Servermigration: Eher Werkvertrag
 * Serverunterhalt: Dienstleistungsvertrag
 
 
