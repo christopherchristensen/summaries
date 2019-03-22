@@ -135,6 +135,7 @@ plt.show()
 # Chi-verteilte Zufallszahlen
 # mit 1 Freiheitsgrad
 
+
 # n = 20
 plt.subplot(221)
 x = st.t.rvs(size=20, df=1)
@@ -220,7 +221,114 @@ plt.title("Normal Q-Q Plot")
 plt.show()
 
 
+# 10 Durchführungen von X
+n = 10
+
+# X_1,...,X_n simulieren
+sim = np.random.choice(werte, size=n*1000, replace=True) 
+
+# In einer n-spaltigen
+# Matrix (mit 1000 Zeilen) anordnen
+sim = DataFrame(np.reshape(sim,(n,1000)))
+
+#In jeder Matrixzeile Mittelwert berechnen
+sim_mean = sim.mean()
+plt.subplot(4,2,3) 
+sim_mean.hist(edgecolor="black") 
+plt.title("Mittelwerte von 5 Beobachtungen")
+
+plt.subplot(4,2,4) 
+st.probplot(sim_mean,plot=plt) 
+plt.title("Normal Q-Q Plot")
+
+plt.show()
+
+
+# 200 Durchführungen von X
+n = 200
+
+# X_1,...,X_n simulieren
+sim = np.random.choice(werte, size=n*1000, replace=True) 
+
+# In einer n-spaltigen
+# Matrix (mit 1000 Zeilen) anordnen
+sim = DataFrame(np.reshape(sim,(n,1000)))
+
+#In jeder Matrixzeile Mittelwert berechnen
+sim_mean = sim.mean()
+plt.subplot(4,2,3) 
+sim_mean.hist(edgecolor="black") 
+plt.title("Mittelwerte von 5 Beobachtungen")
+
+plt.subplot(4,2,4) 
+st.probplot(sim_mean,plot=plt) 
+plt.title("Normal Q-Q Plot")
+
+plt.show()
+
+print(sim_mean.mean())
+print(sim_mean.std())
+
+
 # =============================================================================
 # 5.3
 # =============================================================================
+iron = DataFrame(pd.read_table("ironF3.dat", sep=" ", index_col=False))
+
+# a.)
+
+# Sie unterscheiden sich in der Lage und
+# in der Streuung.
+
+# High: Kleine Streuung, Lage bei unter 5 
+#       (wenig Eisen zurückgeblieben)
+# Medium: Mittlere Streuung, Linksseitige Verteilung
+# Low: Grösste Streuung, Linksseitige Verteilung,
+#      höherer Anteil Eisen zurückgeblieben
+iron.plot(kind="box")
+
+#b.)
+
+# Streuung wurde stabilisiert
+np.log(iron).plot(kind="box")
+
+# c.)
+
+plt.subplot(221)
+st.probplot(iron['high'], plot=plt)
+
+plt.subplot(222)
+st.probplot(iron['medium'], plot=plt)
+
+plt.subplot(223)
+st.probplot(iron['low'], plot=plt)
+plt.show()
+
+
+# Stärker normalverteilt
+plt.subplot(221)
+st.probplot(np.log(iron['high']), plot=plt)
+
+plt.subplot(222)
+st.probplot(np.log(iron['medium']), plot=plt)
+
+plt.subplot(223)
+st.probplot(np.log(iron['low']), plot=plt)
+
+plt.show()
+
+
+# d.)
+iron_mu  = iron['medium'].mean()
+iron_var = iron['medium'].var()
+
+# 1 - 62.92 %
+iron_p10 = st.norm.cdf(10, loc=iron_mu, scale=np.sqrt(iron_var))
+
+# e.)
+
+#  1 - 72.89 % 
+iron_log_p10 = st.norm.cdf(np.log(10), loc=np.log(iron['medium']).mean(), scale=np.log(iron['medium']).std())
+
+
 
