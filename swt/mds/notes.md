@@ -51,3 +51,31 @@
 * Ein Entscheid ist besser als keiner
 * Was ist im / aus dem Test-Scope mit Begründung
 
+
+
+## Essentials 4 (Recap)
+
+* Word-Dokumente sind besser verständlich als Code
+* Je nach Branche notwendig verschiedene Schwerpunkte für Teststrategie zu setzen
+* Priorisierungsmethoden
+* Agiler Quadrat
+* NFA und NFA-Tests (ISO 9126 resp. 25'000)
+* Teststrategie gibt die Priorisierung vor
+* Negativ-, Positiv-, Grenzwert-, Exeptiontest
+* Testbreite und Testtiefe
+
+
+
+## Essentials 5 (Recap)
+
+* Granularität kann lebenswichtig sein
+* Jede Prüfung kostet Zeit und Geld, Durchlaufkosten pro Prüfung
+* Prüfung nur sinnvoll, wenn Veränderung möglich / erwartet
+* Eine Prüfung muss vereinbart und bestellt werden
+* Dies muss Teil der Strategie sein, Risikobetrachtung
+* Wir gehen davon aus, dass wir getestete, resp. überprüfte Voraussetzungen antreffen
+* Voraussetzungen können / dürfen sich nicht verändern
+* Jede Änderung bedingt zwingend ein ChangeManagement
+
+
+

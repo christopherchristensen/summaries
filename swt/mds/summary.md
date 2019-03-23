@@ -461,7 +461,7 @@ TODO
 * Testbedingung ist ein Zustandsautomat
   * Je nach gewünschter Testtiefe ($$\to$$ Teststrategie) sind Testüberdeckungselemente einzelne Zustande, Übergänge zwischen den Zustanden oder bestimmte Sequenzen von Übergängen
 * Testbedingung ist eine Grenze eines Wertebereichs
-  * Je nach Testtiefe (→ Teststrategie) können Testüberdeckungselemente hier entweder die zwei Grenzwerte (erster Wert innerhalb und erster Wert ausserhalb des Bereichs an dieser Grenze) oder zusätzlich noch die Nachbarwerte dieser Grenzwerte sein
+  * Je nach Testtiefe ($$\to​$$ Teststrategie) können Testüberdeckungselemente hier entweder die zwei Grenzwerte (erster Wert innerhalb und erster Wert ausserhalb des Bereichs an dieser Grenze) oder zusätzlich noch die Nachbarwerte dieser Grenzwerte sein
 * Oft benennen Normen typische Testüberdeckungselemente
 
 
@@ -476,6 +476,10 @@ TODO: bessere Erläuterung
   * Viele verschiedene Testarten / -kategorien
 * Testtiefe
   * Von bestimmten Testarten sehr viele oder detaillierte Tests
+
+
+
+* Könnte an der Prüfung kommen mit einem Beispiel, wo wir sagen müssen mit welcher Strategie und welcher Testbreite / -tiefe man vorgehen soll
 
 
 
@@ -510,10 +514,10 @@ TODO: Auflösung in Klasse notieren
 
 * Weil, Fehler treten häufig an den „Rändern“ der Äquivalenzklassen auf
 * Simples Beispiel
-  * 0,00 € (ungültige Eingabe)
-  * 0,01 € (gültige Eingabe)
-  * 500,00 € (gültige Eingabe)
-  * 500,01 € (ungültige Eingabe)
+  * 0,00 CHF (ungültige Eingabe)
+  * 0,01 CHF (gültige Eingabe)
+  * 500,00 CHF (gültige Eingabe)
+  * 500,01 CHF (ungültige Eingabe)
 
 
 
@@ -554,24 +558,24 @@ TODO
                              Business-Facing
 Automated & |-------------------------|--------------------------| Manual
      Manual |                         |                          |
-            |  						  |		  Alpha / Beta		 |
+            |  						  				  |		  Alpha / Beta		     |
             |     Functional Tests    |    Exploratory Testing   |
             |        Examples         |         Scenarios        |
             |       Story Tests       |     Usability Testing    |
             |        Prototypes       |  User Acceptance Testing |
-  			|                         |                          | 
+  			    |                         |                          | 
  Supporting |                      Q2 | Q3                       | Critique
    the Team |-------------------------|--------------------------| Product
-            |                      Q1 |	Q4						 |
-            |						  |							 |
-            |	     				  |       Performance &      |
+            |                      Q1 |	Q4						           |
+            |	              					|							             |
+            |	     				            |       Performance &      |
             |     	Unit Tests	      |       Load Testing       |
-            |     Component Tests	  |     Security Testing     |
-            |						  |		 "ility" Testing	 |
-            |						  |							 |
-  		    |                         |   						 |
+            |     Component Tests	    |     Security Testing     |
+            |						              |		   "ility" Testing	   |
+            |						              |							             |
+  		      |                         |   		                   |
   Automated |-------------------------|--------------------------| Tools
-  							Technology-Facing
+  							               Technology-Facing
 ```
 
 
@@ -711,4 +715,4 @@ TODO wie wird entschieden ob Tests gut oder schlecht?
 
 
 
-F106
+F10
