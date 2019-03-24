@@ -331,4 +331,58 @@ iron_p10 = st.norm.cdf(10, loc=iron_mu, scale=np.sqrt(iron_var))
 iron_log_p10 = st.norm.cdf(np.log(10), loc=np.log(iron['medium']).mean(), scale=np.log(iron['medium']).std())
 
 
+# =============================================================================
+# 5.4
+# =============================================================================
+f1 = DataFrame([16.9, 4.20, 6.70, 8.83, 10.7, 22.4, 1.37, 3.00, 4.82, 4.53, 6.77, 4.81])
 
+# [((f1.index + 1) - 0.5)/f1.size] ist das alpha_k
+# Danach wird es angepasst an die Verteilung mit -np.log(1-alpha_k)
+f2 = DataFrame({
+    "Theoretical Quantiles": -np.log(1 - (((f1.index + 1) - 0.5)/f1.size)),
+    "Ordered Values": f1.sort_values(by=0).loc[:,0].reset_index(drop=True)
+})
+f2.describe()
+f2.plot(kind="scatter", x="Theoretical Quantiles", y="Ordered Values")
+
+b, a = np.polyfit(f2["Theoretical Quantiles"], f2["Ordered Values"], deg=1)
+x = np.linspace(f2["Theoretical Quantiles"].min(), f2["Theoretical Quantiles"].max())
+
+plt.plot(x, a + b * x, c='orange')
+
+plt.show()
+
+
+# =============================================================================
+# 5.5
+# =============================================================================
+n = 1000
+
+unif = st.uniform.rvs(size=n, loc=0, scale=1)
+x = Series(-np.log(1-unif) / 2)
+x_expon = Series(st.expon.rvs(size=n, loc=2))
+
+plt.subplot(121)
+x.hist(bins=30)
+
+plt.subplot(122)
+x_expon.hist(bins=30)
+
+plt.show()
+
+alpha_k = (x.index - 0.5) / x.size
+x_quantile = -np.log(1 - alpha_k) / 2
+
+qq = DataFrame({
+    "Ordered Values": x.sort_values(axis=0).reset_index(drop=True),
+    "Theoretical Quantiles": x_quantile
+})
+
+qq.plot(kind="scatter", x="Theoretical Quantiles", y="Ordered Values")
+
+b, a = np.polyfit(x=qq["Theoretical Quantiles"], y=qq["Ordered Values"], deg=1)
+x = np.linspace(qq["Theoretical Quantiles"].min(), qq["Theoretical Quantiles"].max())
+
+plt.plot(x, a + b * x, c='orange')
+
+plt.show()
