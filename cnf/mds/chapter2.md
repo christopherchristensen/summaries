@@ -4,24 +4,30 @@
 
 ## Operating System
 
-* low-level software that 
-  * supports a computer's basic functions
-  * such as scheduling tasks and controlling peripherals
-  * all devices require an operating system
+* Low-level software that 
+  * Supports a computer's basic functions
+  * Such as scheduling tasks and controlling peripherals
+* All devices require an operating system
 
 
 
-## What does an operating system consist of?
+## Network Operating System
+
+* OS for switches, routers, access points, and firewalls
+
+
+
+## What does an Operating System consist of?
 
 * OS Shell
-  * command-line interface (CLI) or 
-  * a graphical user interface (GUI) 
-  * enables a user to interface with applications
+  * Command-line interface (CLI) or 
+  * Graphical user interface (GUI, e.g. Windows, OS X) 
+  * Enables a user to interact with the system
 * OS Kernel
-  * communicates directly with the hardware
-  * manages how hardware resources are used to meet software requirement
+  * Communicates directly with hardware
+  * Manages how hardware resources are used to meet software requirement
 * Hardware
-  * physical part of a computer including underlying electronics
+  * Physical part of a computer including underlying electronics
 
 
 
@@ -30,16 +36,26 @@
 * GUI enables user to
   * Use a mouse to make selections and run programs
   * Enter text and text-based commands
+  * View output on a monitor
 * CLI enables network technician to
+  * Use keyboard to run CLI-based network programs
+  * Use keyboard to enter text and text-based commands
+  * View output on a monitor
   * e.g. on a Cisco IOS switch or router 
-  * use keyboard to run CLI-based network programs
-  * use keyboard to enter text and text-based commands
 
 
 
 > * All devices come with default IOS and feature set
-> * It is possible to upgrade the IOS version or feature set 
+> * It's possible to upgrade the IOS version or feature set 
 >   (e.g. download from cisco.com)
+
+
+
+## Why are Network Devices typically accessed via CLI?
+
+* GUIs don't always provide all of features available
+* GUIs can also fail, crash, or simply not operate as specified
+* CLI is less resource intensive and very stable when compared to a GUI
 
 
 
@@ -54,7 +70,7 @@
 
 * Console Port
   * Out-of-band serial port 
-  * primarily for management purposes (initial configuration of router)
+  * Primarily for management purposes (initial configuration of router)
 * Secure Shell (SSH)
   * Inband method for remotely and securely establishing CLI session over network
   * User authentication, passwords, and commands are sent encrypted
@@ -70,7 +86,7 @@
 
 ## Terminal Emulation Program
 
-* enable users to log on and get direct access to legacy programs in a mainframe OS
+* Enable users to log on and get direct access to legacy programs in a mainframe OS
 * Regardless of access method, a terminal emulation program will be required
 * (PuTTY, Tera Term, SecureCRT, and OS X Terminal)
 
@@ -89,24 +105,24 @@
 
 ## Primary Command Modes
 
-* user EXEC `>`
-  * limited number of basic monitoring commands allowed
+* User EXEC `>`
+  * Limited number of basic monitoring commands allowed
   * By default, no authentication required, but should be secured
-* privileged EXEC `#`
-  * execution of configuration and management commands allowed
-  * also called “enable mode” because it requires the `enable` user EXEC command
+* Privileged EXEC `#`
+  * Execution of configuration and management commands allowed
+  * Also called “enable mode” because it requires the `enable` user EXEC command
   * By default, no authentication required, but should be secured
 
 
 
 ## Configuration Command Modes
 
-* primary configuration mode 
-  * called global configuration or global config
+* Primary configuration mode 
+  * Called global configuration or global config
   * `configure terminal` to access mode
-  * changes affect operation of device
-* sub configuration modes can be accessed from global config mode
-* each of these modes allow config of particular part / function of the IOS device
+  * Changes affect operation of device
+* Sub configuration modes can be accessed from global config mode
+* Each of these modes allow config of particular part / function of the IOS device
 
 
 
@@ -119,25 +135,61 @@
 
 ## Navigate Between IOS Modes
 
-* `enable` : enter privileged EXEC mode
+* `enable` : Enter privileged EXEC mode
+* `disable` : Return to user EXEC mode
 * `configure terminal` : enter config mode
 * `interface fa0/1` : enter interface sub-config mode 
   (e.g. **fa**st interface bank **0 / 1**. interface)
-* `exit` : exit out of any mode (from specific to previous more general mode)
-* `end` : exit a sub-config mode and return to privileged EXEC mode
-* `^z` : exit a sub-config mode and return to privileged EXEC mode
+* `exit` : Exit out of any mode (from specific to previous more general mode)
+* `end` : Exit a sub-config mode and return to privileged EXEC mode
+* `^z` : Exit a sub-config mode and return to privileged EXEC mode
 
 
 
 ## Basic IOS Command Structure
 
+* `Switch>show ip protocols`
+* Prompt: `Switch>`
+* Command: `show`
+* Keyword / Argument: `protocols`
 
 
 
+## Keyword
 
-15 - 28!
+* Specific parameter defined in the OS
 
 
+
+## Argument
+
+* Not predefined
+* Value or variable defined by the user
+
+
+
+## IOS Command Convention
+
+> Used when describing the use of commands
+
+* **boldface**: Commands / keywords you enter literally as shown
+* *italics*: Arguments for which you supply values
+* \[x\]: Optional element
+* \{x\}: Required element
+* \[x \{y | z}]: Required choice in optional element
+
+
+
+## IOS Help Features
+
+* Context-Sensitive Help
+    * Quickly find available commands
+    * Varies in each command mode
+    * Type `?` in the CLI
+* Command Syntax Check
+    * Verifies that valid command was entered
+    * When command entered, CLI interpreter validates command
+    * From left to right
 
 
 

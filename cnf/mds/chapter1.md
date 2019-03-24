@@ -384,11 +384,50 @@
 
 ## Quality of Service (QoS)
 
-* Description / measurement of overall **performance** of a service
+* Description / measurement of overall performance of a service
 * Quality of delivered services over a network
 * Primary mechanism for 
     * congestion
     * reliable delivery of content to all users
+
+
+
+## Security
+
+* Refers to protecting information 
+    * Contained within packets being transmitted
+    * Stored on network attached devices
+
+* Network infrastructure and information security
+* Securing network infrastructures includes
+    * Physical securing of devices that provide network connectivity
+    * Preventing unauthorized access to management software
+
+
+
+## 3 Primary Security Requirements
+
+* Confidentiality
+* Integrity
+* Availability
+
+
+
+## Confidentiality
+
+* Only intended and authorized recipient can access and read data
+
+
+
+## Integrity
+
+* Assurance that information has not been altered in transmission
+
+
+
+## Availability
+
+* Assurance of timely and reliable access to data services for authorized users
 
 
 
@@ -420,4 +459,154 @@
     * Demand for bandwidth (bits per second) exceeds amount available
     * Simultaneous communications attempted at same time
 * Devices then queue or hold packets in memory until transmission available
-* Prioritization can help against 
+* Prioritization can help against congestion
+    * Low priority: Web pages
+    * High priority: Streaming media
+* QoS policy to manage the flow of data and traffic
+
+
+
+## New Trends according to CISCO
+
+* BYOD
+* Online Collaboration
+* Video Communication
+* Cloud Computing
+* Smart Home Technology
+
+
+
+## BYOD
+
+> Bring your own device
+
+* Any device, to any content, in any manner
+* A *new* trend according to CNF
+* The freedom of end users to use personal tools to access information and communicate across a business or campus network
+* e.g. Student doesn't need to access campus network via school computer
+
+
+
+## Online Collaboration
+
+* Collaborate across applications
+* e.g. Cisco WebEx
+
+
+
+## Cloud Computing
+
+* Store files on servers over the internet
+* Four primary types of Clouds
+    * Public Clouds (e.g. cloud based app)
+    * Private Clouds (strict access security, e.g. for organization)
+    * Hybrid Clouds (e.g. two, or more clouds that are connected)
+    * Custom Clouds (e.g. healthcare, government)
+* Made possible by data centers
+
+
+
+## Data Center
+
+* Facility (room or building) to house computer systems and associated components
+* Typically expensive to build and maintain
+* Only large organizations use privately built data centers
+* Smaller organizations lease server and storage services from large data center organizations
+
+
+
+## Smart Home Technology
+
+* Technology integrated into every-day appliances interconnected with other devices
+* e.g. connect to oven with smartphone to make adjustments
+
+
+
+## Powerline Networking
+
+* Trend for home networking
+* Ability to connect a device to network wherever there is an electrical outlet
+* Saves cost of installing data cables without additional cost to electrical bill
+* Powerline networking sends data on certain frequencies using same wiring that delivers electricity
+* Useful when wireless access points can't be used or can't reach all devices in home
+* Alternative when data network cables or wireless communications not possible
+
+
+
+## WISP
+
+> Wireless Internet Service Provider
+
+* ISP that connects subscriber to designaged access point via similar wireless technologies in found in home WLANs
+* Small dish / antenna installed on subscriber’s roof in range of WISP transmitter
+
+* Subscriber’s access unit connected to the wired network inside the home
+* Main difference to DSL: connection from home to ISP is wireless instead of a physical cable
+* Often used in rural environments where DSL or cable service not available
+
+
+
+## Wireless Broadband
+
+* Same cellular technology to access internet via smartphone or tablet
+* Antenna installed outside home providing either wireless or wired connectivity for devices in the home
+* In some areas competing directly with DSL and cable services
+
+
+
+## Common External Security Threats
+
+* Viruses, Worms and Trojan Horses
+* Spyware and Adware
+* Zero-day attacks
+* Hacker attacks
+* Denial of service attacks
+* Data interception and theft
+* Identity theft
+
+
+
+## Internal Security Threats
+
+* Data breaches because of internal users of the network
+    * Lost or stolen devices
+    * Accidental misuse by employees
+    * Malicious employees
+    * Corporate data much more vulnerable since BYOD
+
+
+
+## Required Security Components for Home or Small Office Network
+
+* Antivirus and Antispyware
+    * Protection against infection by malicious software
+* Firewall filtering
+    * Block unauthorized access
+    * May include host-based firewall system
+    * May include basic filtering system
+
+
+
+## Required Security Components for Larger Networks
+
+* Dedicated Firewall System
+    * More advanced firewall capabilities
+    * Filter large amounts of traffic with higher granularity
+* Access Control Lists (ACL)
+    * Filter access and traffic forwarding
+* Intrusion Prevention Systems (IPS)
+    * Identify fast-spreading threats
+    * e.g. Zero-day attacks
+* Virtual Private Networks (VPN)
+    * Provide secure access to remote workers
+
+
+
+## What does a well-planned Network Technology Architecture ensure?
+
+* Connection of any device across any combination of networks
+* Higher cost efficiency by integrating network security and management
+* Improved business processes
+
+
+
