@@ -329,7 +329,95 @@
 
 
 
+## Traditional Separate Networks
+
+* Multiple services running on multiple networks
+* Encapsulated from eachother
+* Each network used different technologies to carry the communication signal
+* Each network had own set of rules / standards to ensure communication
+* z.B. separate computer, telephone and broadcast network
 
 
 
+## Converging Network
 
+* Multiple services running on one network
+
+* Today networks are converging
+* Converged networks capable of delivering data, voice and video over same network infrastructure
+* Infrastructure uses same set of rules, agreements, implementation standards
+
+
+
+## (Supporting) Network Architecture
+
+* Technologies supporting the infrastructure, services and rules that move data across the network
+
+
+
+## 4 Characteristics for Reliable Networks
+
+* Fault Tolerance
+* Scalability
+* Quality of Service (QoS)
+* Security
+
+
+
+## Fault Tolerance
+
+* Fault tolerant network is one that limits impact of a failure, so that fewest number of devices are affected
+* Quick recovery
+* Multiple (redundant) paths to divert when one fails
+* Redundancy often by implementing a packet-switched network
+
+
+
+## Scalability
+
+* Scalable network can expand quickly to support more users / apps without performance loss
+* Networks also scalable if designers follow standards and protocols
+    * Soft-/hardware vendors can focus on improving products / services
+    * Without worrying about reinventing the wheel
+
+
+
+## Quality of Service (QoS)
+
+* Description / measurement of overall **performance** of a service
+* Quality of delivered services over a network
+* Primary mechanism for 
+    * congestion
+    * reliable delivery of content to all users
+
+
+
+## Packet Switched Network
+
+- Splits traffic into packets that are routed over shared network
+- Messages, emails, etc. broken into packets
+- Each packet has addressing info of source and destination
+- Routers switch packets based on network conditions at that moment
+- User unaware / unaffected by router dynamically changing routes when a link fails
+
+
+
+## Circuit-Switched Network
+
+* Establishes dedicated circuit between source and destination before users can communicate
+* Traditionally used for voice communication
+* If call unexpectedly terminated, new connection needed
+* User aware / affected if link fails
+
+
+
+## When does Congestion occur?
+
+> Congestion: reduced quality of service
+
+*  When 
+    * Network node or link carrying more data than it can handle
+    * Demand for bandwidth (bits per second) exceeds amount available
+    * Simultaneous communications attempted at same time
+* Devices then queue or hold packets in memory until transmission available
+* Prioritization can help against 
