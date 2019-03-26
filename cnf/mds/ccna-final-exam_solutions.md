@@ -7,26 +7,26 @@
     -   a network that protects confidential information from unauthorized access
     -   a network that can expand quickly to support new users and applications without impacting the performance of the service delivered to existing users
     -   a network that supports a mechanism for managing congestion and ensuring reliable delivery of content to all users
-    -   **a network that recovers quickly when a failure occurs and depends on redundancy to limit the impact of a failure\***
+    -   *a network that recovers quickly when a failure occurs and depends on redundancy to limit the impact of a failure\**
 
 2.  **Three bank employees are using the corporate network. The first employee uses a web browser to view a company web page in order to read some announcements. The second employee accesses the corporate database to perform some financial transactions. The third employee participates in an important live audio conference with other corporate managers in branch offices. If QoS is implemented on this network, what will be the priorities from highest to lowest of the different data types?**
 
     -   financial transactions, audio conference, web page
-    -   **audio conference, financial transactions, web page\***
+    -   *audio conference, financial transactions, web page\**
     -   audio conference, web page, financial transactions
     -   financial transactions, web page, audio conference
 
 3.  **What is a benefit of using cloud computing in networking?**
 
     -   End users have the freedom to use personal tools to access information and communicate across a business network.
-    -   **Network capabilities are extended without requiring investment in new infrastructure, personnel, or software.\***
+    -   *Network capabilities are extended without requiring investment in new infrastructure, personnel, or software.\**
     -   Technology is integrated into every-day appliances allowing them to interconnect with other devices, making them more ‘smart’ or automated.
     -   Home networking uses existing electrical wiring to connect devices to the network wherever there is an electrical outlet, saving the cost of installing data cables.
 
 4.  **What is the function of the shell in an OS?**
 
     -   It interacts with the device hardware.
-    -   **It interfaces between the users and the kernel.\***
+    -   *It interfaces between the users and the kernel.\**
     -   It provides dedicated firewall services.
     -   It provides the intrusion protection services for the device.
 
@@ -35,11 +35,11 @@
     -   a console connection
     -   an AUX connection
     -   a Telnet connection
-    -   **an SSH connection\***
+    -   *an SSH connection\**
 
 6.  **A network technician is attempting to configure an interface by entering the following command: SanJose(config)# ip address 192.168.2.1 255.255.255.0. The command is rejected by the device. What is the reason for this?**
 
-    -   **The command is being entered from the wrong mode of operation.\***
+    -   *The command is being entered from the wrong mode of operation.\**
     -   The command syntax is wrong.
     -   The subnet mask information is incorrect.
     -   The interface is shutdown and must be enabled before the switch will accept the IP address.
@@ -47,7 +47,7 @@
 7.  **An administrator uses the Ctrl-Shift-6 key combination on a switch after issuing the ping command. What is the purpose of using these keystrokes?**
 
     -   to restart the ping process
-    -   **to interrupt the ping process\***
+    -   *to interrupt the ping process\**
     -   to exit to a different configuration mode
     -   to allow the user to complete the command
 
@@ -55,125 +55,125 @@
 
       ![2017-05-28_200126](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_8.png)
 
-    -   letmein
-    -   secretin
-    -   linevtyin
-    -   **lineconin\***
+      -   letmein
+      -   secretin
+      -   linevtyin
+      -   *lineconin\**
 
 9.  **On which switch interface would an administrator configure an IP address so that the switch can be managed remotely?**
 
     -   FastEthernet0/1
-    -   **VLAN 1\***
+    -   *VLAN 1\**
     -   vty 0
     -   console 0
 
 10.  **What protocol is responsible for controlling the size of segments and the rate at which segments are exchanged between a web client and a web server?**
 
-    -   **TCP\***
-    -   IP
-    -   HTTP
-    -   Ethernet
+   -   *TCP\**
+   -   IP
+   -   HTTP
+   -   Ethernet
 
 11.  **What is an advantage to using a protocol that is defined by an open standard?**
 
      -   A company can monopolize the market.
      -   The protocol can only be run on equipment from a specific vendor.
      -   An open standard protocol is not controlled or regulated by standards organizations.
-     -   **It encourages competition and promotes choices.\***
+     -   *It encourages competition and promotes choices.\**
 
 12.  **What are two benefits of using a layered network model? (Choose two.)**
 
-     -   **It assists in protocol design. \***
+     -   *It assists in protocol design. \**
      -   It speeds up packet delivery.
      -   It prevents designers from creating their own model.
-     -   **It prevents technology in one layer from affecting other layers.\***
+     -   *It prevents technology in one layer from affecting other layers.\**
      -   It ensures a device at one layer can function at the next higher layer.
 
-13.  Which two OSI model layers have the same functionality as two layers of the TCP/IP model? (Choose two.)
+13.  **Which two OSI model layers have the same functionality as two layers of the TCP/IP model? (Choose two.)**
 
      -   data link
-     -   **network\***
+     -   *network\**
      -   physical
      -   session
-     -   **transport\***
+     -   *transport\**
 
-14.  Which name is assigned to the transport layer PDU?
+14.  **Which name is assigned to the transport layer PDU?**
 
      -   bits
      -   data
      -   frame
      -   packet
-     -   **segment\***
+     -   *segment\**
 
-15.  A network engineer is measuring the transfer of bits across the company backbone for a mission critical database application. The engineer notices that the network throughput appears lower than the bandwidth expected. Which three factors could influence the differences in throughput? (Choose three.)
+15.  **A network engineer is measuring the transfer of bits across the company backbone for a mission critical database application. The engineer notices that the network throughput appears lower than the bandwidth expected. Which three factors could influence the differences in throughput? (Choose three.)**
 
-     -   **the amount of traffic that is currently crossing the network\***
+     -   *the amount of traffic that is currently crossing the network\**
      -   the sophistication of the encapsulation method applied to the data
-     -   **the type of traffic that is crossing the network\***
-     -   **the latency that is created by the number of network devices that the data is crossing\***
+     -   *the type of traffic that is crossing the network\**
+     -   *the latency that is created by the number of network devices that the data is crossing\**
      -   the bandwidth of the WAN connection to the Internet
      -   the reliability of the gigabit Ethernet infrastructure of the backbone
 
-16.  A network administrator is troubleshooting connectivity issues on a server. Using a tester, the administrator notices that the signals generated by the server NIC are distorted and not usable. In which layer of the OSI model is the error categorized?
+16.  **A network administrator is troubleshooting connectivity issues on a server. Using a tester, the administrator notices that the signals generated by the server NIC are distorted and not usable. In which layer of the OSI model is the error categorized?**
 
      -   presentation layer
      -   network layer
-     -   **physical layer\***
+     -   *physical layer\**
      -   data link layer
 
-17.  Which type of UTP cable is used to connect a PC to a switch port?
+17.  **Which type of UTP cable is used to connect a PC to a switch port?**
 
      -   console
      -   rollover
      -   crossover
-     -   **straight-through\****
+     -   *straight-through\**
 
-18.  A network administrator is measuring the transfer of bits across the company backbone for a mission critical financial application. The administrator notices that the network throughput appears lower than the bandwidth expected. Which three factors could influence the differences in throughput? (Choose three.)
+18.  **A network administrator is measuring the transfer of bits across the company backbone for a mission critical financial application. The administrator notices that the network throughput appears lower than the bandwidth expected. Which three factors could influence the differences in throughput? (Choose three.)**
 
-     -   **the amount of traffic that is currently crossing the network\***
+     -   *the amount of traffic that is currently crossing the network\**
      -   the sophistication of the encapsulation method applied to the data
-     -   **the type of traffic that is crossing the network \***
-     -   **the latency that is created by the number of network devices that the data is crossing\***
+     -   *the type of traffic that is crossing the network \**
+     -   *the latency that is created by the number of network devices that the data is crossing\**
      -   the bandwidth of the WAN connection to the Internet
      -   the reliability of the gigabit Ethernet infrastructure of the backbone
 
-19.  What is a characteristic of UTP cabling?
+19.  **What is a characteristic of UTP cabling?**
 
-     -   **cancellation\***
+     -   *cancellation*\*
      -   cladding
      -   immunity to electrical hazards
      -   woven copper braid or metallic foil
 
-20.  What are two characteristics of fiber-optic cable? (Choose two.)
+20.  **What are two characteristics of fiber-optic cable? (Choose two.)**
 
-     -   **It is not affected by EMI or RFI.\***
+     -   *It is not affected by EMI or RFI.\**
      -   Each pair of cables is wrapped in metallic foil.
      -   It combines the technique of cancellation, shielding, and twisting to protect data.
      -   It typically contains 4 pairs of fiber-optic wires.
-     -   **It is more expensive than UTP cabling is.\***
+     -   *It is more expensive than UTP cabling is.\**
 
-21.  What is a characteristic of the LLC sublayer?
+21.  **What is a characteristic of the LLC sublayer?**
 
      -   It provides the logical addressing required that identifies the device.
      -   It provides delimitation of data according to the physical signaling requirements of the medium.
-     -   **It places information in the frame allowing multiple Layer 3 protocols to use the same network interface and media.\***
+     -   *It places information in the frame allowing multiple Layer 3 protocols to use the same network interface and media.\**
      -   It defines software processes that provide services to the physical layer.
 
-22.  A network team is comparing physical WAN topologies for connecting remote sites to a headquarters building. Which topology provides high availability and connects some, but not all, remote sites?
+22.  **A network team is comparing physical WAN topologies for connecting remote sites to a headquarters building. Which topology provides high availability and connects some, but not all, remote sites?**
 
      -   mesh
-     -   **partial mesh\***
+     -   *partial mesh\**
      -   hub and spoke
      -   point-to-point
 
-23.  What method is used to manage contention-based access on a wireless network?
+23.  **What method is used to manage contention-based access on a wireless network?**
 
      -   CSMA/CD
      -   priority ordering
-     -   **CSMA/CA\***
+     -   *CSMA/CA\**
      -   token passing
 
-24.  What are the three primary functions provided by Layer 2 data encapsulation? (Choose three.)
+24.  **What are the three primary functions provided by Layer 2 data encapsulation? (Choose three.)**
 
      -   error correction through a collision detection method
      -   session control using port numbers
@@ -183,76 +183,76 @@
      -   **delimiting groups of bits into frames\***
      -   conversion of bits into data signals
 
-25.  What will a host on an Ethernet network do if it receives a frame with a destination MAC address that does not match its own MAC address?
+25.  **What will a host on an Ethernet network do if it receives a frame with a destination MAC address that does not match its own MAC address?**
 
-     -   **It will discard the frame.\***
+     -   *It will discard the frame.\**
      -   It will forward the frame to the next host.
      -   It will remove the frame from the media.
      -   It will strip off the data-link frame to check the destination IP address.
 
-26.  What are two examples of the cut-through switching method? (Choose two.)
+26.  **What are two examples of the cut-through switching method? (Choose two.)**
 
      -   store-and-forward switching
-     -   **fast-forward switching\***
+     -   *fast-forward switching\**
      -   CRC switching
-     -   **fragment-free switching\***
+     -   *fragment-free switching\**
      -   QOS switching
 
-27.  What are two actions performed by a Cisco switch? (Choose two.)
+27.  **What are two actions performed by a Cisco switch? (Choose two.)**
 
      -   building a routing table that is based on the first IP address in the frame header
-     -   **using the source MAC addresses of frames to build and maintain a MAC address table\***
+     -   *using the source MAC addresses of frames to build and maintain a MAC address table\**
      -   forwarding frames with unknown destination IP addresses to the default gateway
-     -   **utilizing the MAC address table to forward frames via the destination MAC address\***
+     -   *utilizing the MAC address table to forward frames via the destination MAC address\**
      -   examining the destination MAC address to add new entries to the MAC address table
 
-28.  Which frame forwarding method receives the entire frame and performs a CRC check to detect errors before forwarding the frame?
+28.  **Which frame forwarding method receives the entire frame and performs a CRC check to detect errors before forwarding the frame?**
 
      -   cut-through switching
-     -   **store-and-forward switching\***
+     -   *store-and-forward switching\**
      -   fragment-free switching
      -   fast-forward switching
 
-29.  Refer to the exhibit. If host A sends an IP packet to host B, what will the destination address be in the frame when it leaves host A?
+29.  **Refer to the exhibit. If host A sends an IP packet to host B, what will the destination address be in the frame when it leaves host A?**
 
-        
-
-        
+     ​       ![2017-05-28_195511](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_29.png)
 
      -   DD:DD:DD:DD:DD:DD
      -   172.168.10.99
      -   CC:CC:CC:CC:CC:CC
      -   172.168.10.65
-     -   **BB:BB:BB:BB:BB:BB\***
+     -   *BB:BB:BB:BB:BB:BB\**
      -   AA:AA:AA:AA:AA:AA
 
-30.  What addresses are mapped by ARP?
+30.  **What addresses are mapped by ARP?** 
 
-     -   **destination MAC address to a destination IPv4 address\***
+     >   Address Resolution Protocol
+
+     -   *destination MAC address to a destination IPv4 address\**
      -   destination IPv4 address to the source MAC address
      -   destination IPv4 address to the destination host name
      -   destination MAC address to the source IPv4 address
 
-31.  What information is added during encapsulation at OSI Layer 3?
+31.  **What information is added during encapsulation at OSI Layer 3?**
 
      -   source and destination MAC
      -   source and destination application protocol
      -   source and destination port number
-     -   **source and destination IP address\***
+     -   *source and destination IP address\**
 
-32.  What are two services provided by the OSI network layer? (Choose two.)
+32.  **What are two services provided by the OSI network layer? (Choose two.)**
 
      -   performing error detection
-     -   **routing packets toward the destination \***
-     -   **encapsulating PDUs from the transport layer\***
+     -   *routing packets toward the destination \**
+     -   *encapsulating PDUs from the transport layer\** (Protocol Data Unit)
      -   placement of frames on the media
      -   collision detection
 
 33.  Refer to the exhibit. The network administrator for a small advertising company has chosen to use the 192.168.5.96/27 network for internal LAN addressing. As shown in the exhibit, a static IP address is assigned to the company web server. However, the web server cannot access the Internet. The administrator verifies that local workstations with IP addresses that are assigned by a DHCP server can access the Internet, and the web server is able to ping local workstations. Which component is incorrectly configured?
 
-        
+     ​      
 
-        
+     ​      
 
      -   subnet mask
      -   DNS address
@@ -276,9 +276,9 @@
 
 36.  Refer to the exhibit. What will be the result of entering this configuration the next time a network administrator connects a console cable to the router and no additional commands have been entered?
 
-        
+     ​      
 
-        
+     ​      
 
      -   The administrator will be required to enter Cisco123.
      -   The administrator will be required to enter Cisco234.
@@ -344,9 +344,9 @@
 
 44.  Refer to the exhibit. On the basis of the output, which two statements about network connectivity are correct? (Choose two.)
 
-        
+     ​      
 
-        
+     ​      
 
      -   **There is connectivity between this device and the device at 192.168.100.1.\***
      -   The connectivity between these two hosts allows for videoconferencing calls.
@@ -433,9 +433,9 @@
 
 54.  Refer to the exhibit. Consider the IP address of 192.168.10.0/24 that has been assigned to a high school building. The largest network in this building has 100 devices. If 192.168.10.0 is the network number for the largest network, what would be the network number for the next largest network, which has 40 devices?
 
-        
+     ​      
 
-        
+     ​      
 
      -   192.168.10.0
      -   **192.168.10.128\***
@@ -591,9 +591,9 @@
 
 75.  Refer to the exhibit. Match the packets with their destination IP address to the exiting interfaces on the router. (Not all targets are used.)
 
-        
+     ​      
 
-        
+     ​      
 
      -   Question
          ![CCNA1 Final Exam v5.1 004 Question](https://itexamanswers.net/wp-content/uploads/2016/03/CCNA1-Final-Exam-v5.1-004-Question-01.png)
@@ -602,9 +602,9 @@
 
 76.  Refer to the exhibit. An administrator is testing connectivity to a remote device with the IP address 10.1.1.1. What does the output of this command indicate?
 
-        
+     ​      
 
-        
+     ​      
 
      -   Connectivity to the remote device was successful.
      -   **A router along the path did not have a route to the destination.\***
@@ -656,9 +656,9 @@
 
 83.  Refer to the exhibit. A network administrator is configuring access control to switch SW1. If the administrator has already logged into a Telnet session on the switch, which password is needed to access privileged EXEC mode?
 
-        
+     ​      
 
-        
+     ​      
 
      -    letmein
      -    **secretin\***
@@ -782,10 +782,10 @@
 
 100.  Which service provides dynamic global IPv6 addressing to end devices without using a server that keeps a record of available IPv6 addresses?
 
-     -   stateful DHCPv6
-     -   **SLAAC\***
-     -   static IPv6 addressing
-     -   stateless DHCPv6
+    -   stateful DHCPv6
+    -   **SLAAC\***
+    -   static IPv6 addressing
+    -   stateless DHCPv6
 
 101.  What is the purpose of the command ping ::1?
 
@@ -1796,16 +1796,17 @@
 
 100.  Launch PT – Hide and Save PT
 
-  ​    
+   ​    
 
-      Open the PT Activity. Perform the tasks in the activity instructions and then answer the question. Which IPv6 address is assigned to the Serial0/0/0 interface on RT2?
+       Open the PT Activity. Perform the tasks in the activity instructions and then answer the question. Which IPv6 address is assigned to the Serial0/0/0 interface on RT2?
 
-      
 
-      -   2001:db8:abc:1::1
-      -   **2001:db8:abc:5::1\***
-      -   2001:db8:abc:5::2
-      -   2001:db8:abc:10::15
+   ​    
+
+       -   2001:db8:abc:1::1
+       -   **2001:db8:abc:5::1\***
+       -   2001:db8:abc:5::2
+       -   2001:db8:abc:10::15
 
 101.  What must be configured to enable Cisco Express Forwarding (CEF) on most Cisco devices that perform Layer 3 switching?
 
