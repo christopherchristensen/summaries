@@ -69,10 +69,10 @@
 
 10.  **What protocol is responsible for controlling the size of segments and the rate at which segments are exchanged between a web client and a web server?**
 
-   -   TCP
-   -   IP
-   -   HTTP
-   -   Ethernet
+  *   TCP
+  *   IP
+  *   HTTP
+  *   Ethernet
 
 11.  **What is an advantage to using a protocol that is defined by an open standard?**
 
@@ -246,7 +246,7 @@
      -   placement of frames on the media
      -   collision detection
 
-33.  Refer to the exhibit. The network administrator for a small advertising company has chosen to use the 192.168.5.96/27 network for internal LAN addressing. As shown in the exhibit, a static IP address is assigned to the company web server. However, the web server cannot access the Internet. The administrator verifies that local workstations with IP addresses that are assigned by a DHCP server can access the Internet, and the web server is able to ping local workstations. Which component is incorrectly configured?
+33.  **Refer to the exhibit. The network administrator for a small advertising company has chosen to use the 192.168.5.96/27 network for internal LAN addressing. As shown in the exhibit, a static IP address is assigned to the company web server. However, the web server cannot access the Internet. The administrator verifies that local workstations with IP addresses that are assigned by a DHCP server can access the Internet, and the web server is able to ping local workstations. Which component is incorrectly configured?**
 
      ​     ![i274685v1n1_38117](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_33.png)
 
@@ -255,14 +255,14 @@
      -   host IP address
      -   default gateway address
 
-34.  Why does a Layer 3 device perform the ANDing process on a destination IP address and subnet mask?
+34.  **Why does a Layer 3 device perform the ANDing process on a destination IP address and subnet mask?**
 
      -   to identify the broadcast address of the destination network
      -   to identify the host address of the destination host
      -   to identify faulty frames
      -   to identify the network address of the destination network
 
-35.  What are two functions of NVRAM? (Choose two.)
+35.  **What are two functions of NVRAM? (Choose two.)**
 
      -   to store the routing table
      -   to retain contents when power is removed
@@ -270,7 +270,7 @@
      -   to contain the running configuration file
      -   to store the ARP table
 
-36.  Refer to the exhibit. What will be the result of entering this configuration the next time a network administrator connects a console cable to the router and no additional commands have been entered?
+36.  **Refer to the exhibit. What will be the result of entering this configuration the next time a network administrator connects a console cable to the router and no additional commands have been entered?**
 
      ​      ![2017-05-28_195821](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_36.png)
 
@@ -279,14 +279,14 @@
      -   The administrator will be required to enter Cisco789
      -   The administrator will be presented with the R1> prompt
 
-37.  What is the dotted decimal representation of the IPv4 address 11001011.00000000.01110001.11010011?
+37.  **What is the dotted decimal representation of the IPv4 address 11001011.00000000.01110001.11010011?**
 
      -   192.0.2.199
      -   198.51.100.201
      -   203.0.113.211
      -   209.165.201.223
 
-38.  What are three characteristics of multicast transmission? (Choose three.)
+38.  **What are three characteristics of multicast transmission? (Choose three.)**
 
      -   The source address of a multicast transmission is in the range of 224.0.0.0 to 224.0.0.255
      -   A single packet can be sent to a group of hosts
@@ -295,7 +295,7 @@
      -   Computers use multicast transmission to request IPv4 addresses.
      -   Multicast messages map lower layer addresses to upper layer addresses.
 
-39.  What are the three ranges of IP addresses that are reserved for internal private use? (Choose three.)
+39.  **What are the three ranges of IP addresses that are reserved for internal private use? (Choose three.)**
 
      -   10.0.0.0/8
      -   64.100.0.0/14
@@ -304,7 +304,7 @@
      -   192.31.7.0/24
      -   192.168.0.0/16
 
-40.  What purpose does NAT64 serve in IPv6?
+40.  **What purpose does NAT64 serve in IPv6?**
 
      -   It converts IPv6 packets into IPv4 packets
      -   It translates private IPv6 addresses into public IPv6 addresses
@@ -312,46 +312,44 @@
      -   It converts regular IPv6 addresses into 64-bit addresses that can be used on the Internet
      -   It converts the 48-bit MAC address into a 64-bit host address that can be used for automatic host addressing
 
-41.  What is the most compressed representation of the IPv6 address 2001:0000:0000:abcd:0000:0000:0000:0001?
+41.  **What is the most compressed representation of the IPv6 address 2001:0000:0000: abcd:0000:0000:0000:0001?**
 
-     -   2001:0:abcd::1
-     -   **2001:0:0:abcd::1\***
-     -   2001::abcd::1
-     -   2001:0000:abcd::1
-     -   2001::abcd:0:1
+     -   2001:0​: abcd:​:1
+     -   2001:0:0​: abcd:​:1
+     -   2001:​: abcd:​:1
+     -   2001:0000​: abcd:​:1
+     -   2001:​: abcd:​0:1
 
-42.  Which range of link-local addresses can be assigned to an IPv6-enabled interface?
+42.  **Which range of link-local addresses can be assigned to an IPv6-enabled interface?**
 
      -   FEC0::/10
      -   FDEE::/7
-     -   **FE80::/10\***
+     -   FE80::/10
      -   FF00::/8
 
-43.  Which three addresses are valid public addresses? (Choose three.)
+43.  **Which three addresses are valid public addresses? (Choose three.)**
 
-     -   **198.133.219.17\***
+     -   198.133.219.17
      -   192.168.1.245
      -   10.15.250.5
-     -   **128.107.12.117\***
+     -   128.107.12.117
      -   192.15.301.240
-     -   **64.104.78.227 \***
+     -   64.104.78.227
 
-44.  Refer to the exhibit. On the basis of the output, which two statements about network connectivity are correct? (Choose two.)
+44.  **Refer to the exhibit. On the basis of the output, which two statements about network connectivity are correct? (Choose two.)**
 
-     ​      
+     ​     ![question_44](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_44.jpg)
 
-     ​      
-
-     -   **There is connectivity between this device and the device at 192.168.100.1.\***
-     -   The connectivity between these two hosts allows for videoconferencing calls.
-     -   **There are 4 hops b\******etween this device and the device at 192.168.100.1.\***
+     -   There is connectivity between this device and the device at 192.168.100.1
+     -   The connectivity between these two hosts allows for videoconferencing calls
+     -   There are 4 hops between this device and the device at 192.168.100.1
      -   The average transmission time between the two hosts is 2 milliseconds.
      -   This host does not have a default gateway configured.
 
-45.  What type of IPv6 address is FE80::1?
+45.  **What type of IPv6 address is FE80::1?**
 
      -   loopback
-     -   **link-local\***
+     -   link-local
      -   multicast
      -   global unicast
 
@@ -360,13 +358,13 @@
      -   254
      -   190
      -   192
-     -   **62\***
+     -   62
      -   64
 
 47.  A site administrator has been told that a particular network at the site must accommodate 126 hosts. Which subnet mask would be used that contains the required number of host bits?
 
      -   255.255.255.0
-     -   **255.255.255.128\***
+     -   255.255.255.128
      -   255.255.255.224
      -   255.255.255.240
 
@@ -380,14 +378,14 @@
      
 
      -   255.255.255.0
-     -   **255.255.255.240\***
+     -   255.255.255.240
      -   255.255.255.248
      -   255.255.255.252
 
 49.  How many hosts are addressable on a network that has a mask of 255.255.255.248?
 
      -   2
-     -   **6\***
+     -   6
      -   8
      -   14
      -   16
@@ -395,7 +393,7 @@
 
 50.  Which subnet would include the address 192.168.1.96 as a usable host address?
 
-     -   **192.168.1.64/26\***
+     -   192.168.1.64/26
      -   192.168.1.32/27
      -   192.168.1.32/28
      -   192.168.1.64/29
@@ -404,7 +402,7 @@
 
      -   255.255.255.0
      -   255.255.255.128
-     -   **255.255.255.192\***
+     -   255.255.255.192
      -   255.255.255.224
      -   255.255.255.240
 
@@ -776,10 +774,10 @@
 
 100.  Which service provides dynamic global IPv6 addressing to end devices without using a server that keeps a record of available IPv6 addresses?
 
-    -   stateful DHCPv6
-    -   **SLAAC\***
-    -   static IPv6 addressing
-    -   stateless DHCPv6
+   -   stateful DHCPv6
+   -   **SLAAC\***
+   -   static IPv6 addressing
+   -   stateless DHCPv6
 
 101.  What is the purpose of the command ping ::1?
 
