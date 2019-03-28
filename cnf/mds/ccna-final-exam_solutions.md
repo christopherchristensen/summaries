@@ -353,122 +353,120 @@
      -   multicast
      -   global unicast
 
-46.  How many valid host addresses are available on an IPv4 subnet that is configured with a /26 mask?
+46.  **How many valid host addresses are available on an IPv4 subnet that is configured with a /26 mask?**
 
      -   254
      -   190
      -   192
-     -   **62\***
+     -   *62\**
      -   64
 
-47.  A site administrator has been told that a particular network at the site must accommodate 126 hosts. Which subnet mask would be used that contains the required number of host bits?
+47.  **A site administrator has been told that a particular network at the site must accommodate 126 hosts. Which subnet mask would be used that contains the required number of host bits?**
 
      -   255.255.255.0
-     -   **255.255.255.128\***
+     -   *255.255.255.128\**
      -   255.255.255.224
      -   255.255.255.240
 
-48.  A network administrator wants to have the same subnet mask for three subnetworks at a small site. The site has the following networks and numbers of devices:
-     Subnetwork A: IP phones – 10 addresses
-     Subnetwork B: PCs – 8 addresses
-     Subnetwork C: Printers – 2 addresses
+48.  **A network administrator wants to have the same subnet mask for three subnetworks at a small site. The site has the following networks and numbers of devices:**
+     **Subnetwork A: IP phones – 10 addresses**
+     **Subnetwork B: PCs – 8 addresses**
+     **Subnetwork C: Printers – 2 addresses**
 
-     What single subnet mask would be appropriate to use for the three subnetworks?
-
-     
+     **What single subnet mask would be appropriate to use for the three subnetworks?**
 
      -   255.255.255.0
-     -   **255.255.255.240\***
+     -   *255.255.255.240\**
      -   255.255.255.248
      -   255.255.255.252
 
-49.  How many hosts are addressable on a network that has a mask of 255.255.255.248?
+49.  **How many hosts are addressable on a network that has a mask of 255.255.255.248?**
 
      -   2
-     -   **6\***
+     -   *6\**
      -   8
      -   14
      -   16
      -   254
 
-50.  Which subnet would include the address 192.168.1.96 as a usable host address?
+50.  **Which subnet would include the address 192.168.1.96 as a usable host address?**
 
-     -   **192.168.1.64/26\***
+     -   *192.168.1.64/26\**
      -   192.168.1.32/27
      -   192.168.1.32/28
      -   192.168.1.64/29
 
-51.  What subnet mask is needed if an IPv4 network has 40 devices that need IP addresses and address space is not to be wasted?
+51.  **What subnet mask is needed if an IPv4 network has 40 devices that need IP addresses and address space is not to be wasted?**
 
      -   255.255.255.0
      -   255.255.255.128
-     -   **255.255.255.192\***
+     -   *255.255.255.192\**
      -   255.255.255.224
      -   255.255.255.240
 
-52.  What are two characteristics shared by TCP and UDP? (Choose two.)
+52.  **What are two characteristics shared by TCP and UDP? (Choose two.)**
 
      -   default window size
      -   connectionless communication
-     -   **port numbering\***
+     -   *port numbering\**
      -   3-way handshake
      -   ability to to carry digitized voice
-     -   **use of checksum\***
+     -   *use of checksum\**
 
-53.  Why are port numbers included in the TCP header of a segment?
+53.  **Why are port numbers included in the TCP header of a segment?**
 
      -   to indicate the correct router interface that should be used to forward a segment
      -   to identify which switch ports should receive or forward the segment
      -   to determine which Layer 3 protocol should be used to encapsulate the data
-     -   **to enable a receiving host to forward the data to the appropriate application\***
+     -   *to enable a receiving host to forward the data to the appropriate application\**
      -   to allow the receiving host to assemble the packet in the proper order
 
-54.  Refer to the exhibit. Consider the IP address of 192.168.10.0/24 that has been assigned to a high school building. The largest network in this building has 100 devices. If 192.168.10.0 is the network number for the largest network, what would be the network number for the next largest network, which has 40 devices?
+54.  **Refer to the exhibit. Consider the IP address of 192.168.10.0/24 that has been assigned to a high school building. The largest network in this building has 100 devices. If 192.168.10.0 is the network number for the largest network, what would be the network number for the next largest network, which has 40 devices?**
 
-     ​      
+     ![question_54](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_54.jpg)
 
      ​      
 
      -   192.168.10.0
-     -   **192.168.10.128\***
+     -   *192.168.10.128\**
      -   192.168.10.192
      -   192.168.10.224
      -   192.168.10.240
 
-55.  Which statement is true about variable-length subnet masking?
+55.  **Which statement is true about variable-length subnet masking?**
 
      -   Each subnet is the same size.
-     -   **The size of each subnet may be different, depending on requirements.\***
+     -   *The size of each subnet may be different, depending on requirements.\**
      -   Subnets may only be subnetted one additional time.
      -   Bits are returned, rather than borrowed, to create additional subnets.
 
-56.  In what two situations would UDP be the preferred transport protocol over TCP? (Choose two.)
+56.  **In what two situations would UDP be the preferred transport protocol over TCP? (Choose two.)**
 
      -   when applications need to guarantee that a packet arrives intact, in sequence, and unduplicated
-     -   **when a faster delivery mechanism is needed\***
+     -   *when a faster delivery mechanism is needed\**
      -   when delivery overhead is not an issue
-     -   **when applications do not need to guarantee delivery of the data\***
+     -   *when applications do not need to guarantee delivery of the data\**
      -   when destination port numbers are dynamic
 
-57.  What important information is added to the TCP/IP transport layer header to ensure communication and connectivity with a remote network device?
+57.  **What important information is added to the TCP/IP transport layer header to ensure communication and connectivity with a remote network device?**
 
      -   timing and synchronization
-     -   **destination and source port numbers\***
+     -   *destination and source port numbers\**
      -   destination and source physical addresses
      -   destination and source logical network addresses
 
-58.  What is the TCP mechanism used in congestion avoidance?
+58.  **What is the TCP mechanism used in congestion avoidance?**
 
      -   three-way handshake
      -   socket pair
      -   two-way handshake
-     -   **sliding window\***
+     -   *sliding window\**
 
-59.  Which scenario describes a function provided by the transport layer?
+59.  **Which scenario describes a function provided by the transport layer?**
 
      -   A student is using a classroom VoIP phone to call home. The unique identifier burned into the phone is a transport layer address used to contact another network device on the same network.
      -   A student is playing a short web-based movie with sound. The movie and sound are encoded within the transport layer header.
-     -   **A student has two web browser windows open in order to access two web sites. The transport layer ensures the correct web page is delivered to the correct browser window.\***
+     -   *A student has two web browser windows open in order to access two web sites. The transport layer ensures the correct web page is delivered to the correct browser window.\**
      -   A corporate worker is accessing a web server located on a corporate network. The transport layer formats the screen so the web page appears properly no matter what device is being used to view the web site.
 
 60.  A user opens three browsers on the same PC to access www.cisco.com to search for certification course information. The Cisco web server sends a datagram as a reply to the request from one of the web browsers. Which information is used by the TCP/IP protocol stack in the PC to identify which of the three web browsers should receive the reply?

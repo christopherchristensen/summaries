@@ -353,7 +353,7 @@
      -   multicast
      -   global unicast
 
-46.  How many valid host addresses are available on an IPv4 subnet that is configured with a /26 mask?
+46.  **How many valid host addresses are available on an IPv4 subnet that is configured with a /26 mask?**
 
      -   254
      -   190
@@ -361,28 +361,26 @@
      -   62
      -   64
 
-47.  A site administrator has been told that a particular network at the site must accommodate 126 hosts. Which subnet mask would be used that contains the required number of host bits?
+47.  **A site administrator has been told that a particular network at the site must accommodate 126 hosts. Which subnet mask would be used that contains the required number of host bits?**
 
      -   255.255.255.0
      -   255.255.255.128
      -   255.255.255.224
      -   255.255.255.240
 
-48.  A network administrator wants to have the same subnet mask for three subnetworks at a small site. The site has the following networks and numbers of devices:
-     Subnetwork A: IP phones – 10 addresses
-     Subnetwork B: PCs – 8 addresses
-     Subnetwork C: Printers – 2 addresses
+48.  **A network administrator wants to have the same subnet mask for three subnetworks at a small site. The site has the following networks and numbers of devices:**
+     **Subnetwork A: IP phones – 10 addresses**
+     **Subnetwork B: PCs – 8 addresses**
+     **Subnetwork C: Printers – 2 addresses**
 
-     What single subnet mask would be appropriate to use for the three subnetworks?
-
-     
+     **What single subnet mask would be appropriate to use for the three subnetworks?**
 
      -   255.255.255.0
      -   255.255.255.240
      -   255.255.255.248
      -   255.255.255.252
 
-49.  How many hosts are addressable on a network that has a mask of 255.255.255.248?
+49.  **How many hosts are addressable on a network that has a mask of 255.255.255.248?**
 
      -   2
      -   6
@@ -391,14 +389,14 @@
      -   16
      -   254
 
-50.  Which subnet would include the address 192.168.1.96 as a usable host address?
+50.  **Which subnet would include the address 192.168.1.96 as a usable host address?**
 
      -   192.168.1.64/26
      -   192.168.1.32/27
      -   192.168.1.32/28
      -   192.168.1.64/29
 
-51.  What subnet mask is needed if an IPv4 network has 40 devices that need IP addresses and address space is not to be wasted?
+51.  **What subnet mask is needed if an IPv4 network has 40 devices that need IP addresses and address space is not to be wasted?**
 
      -   255.255.255.0
      -   255.255.255.128
@@ -406,100 +404,98 @@
      -   255.255.255.224
      -   255.255.255.240
 
-52.  What are two characteristics shared by TCP and UDP? (Choose two.)
+52.  **What are two characteristics shared by TCP and UDP? (Choose two.)**
 
      -   default window size
      -   connectionless communication
-     -   **port numbering\***
+     -   port numbering
      -   3-way handshake
      -   ability to to carry digitized voice
-     -   **use of checksum\***
+     -   use of checksum
 
-53.  Why are port numbers included in the TCP header of a segment?
+53.  **Why are port numbers included in the TCP header of a segment?**
 
      -   to indicate the correct router interface that should be used to forward a segment
      -   to identify which switch ports should receive or forward the segment
      -   to determine which Layer 3 protocol should be used to encapsulate the data
-     -   **to enable a receiving host to forward the data to the appropriate application\***
+     -   to enable a receiving host to forward the data to the appropriate application
      -   to allow the receiving host to assemble the packet in the proper order
 
-54.  Refer to the exhibit. Consider the IP address of 192.168.10.0/24 that has been assigned to a high school building. The largest network in this building has 100 devices. If 192.168.10.0 is the network number for the largest network, what would be the network number for the next largest network, which has 40 devices?
+54.  **Refer to the exhibit. Consider the IP address of 192.168.10.0/24 that has been assigned to a high school building. The largest network in this building has 100 devices. If 192.168.10.0 is the network number for the largest network, what would be the network number for the next largest network, which has 40 devices?**
 
-     ​      
-
-     ​      
+     ![question_54](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_54.jpg)
 
      -   192.168.10.0
-     -   **192.168.10.128\***
+     -   192.168.10.128
      -   192.168.10.192
      -   192.168.10.224
      -   192.168.10.240
 
-55.  Which statement is true about variable-length subnet masking?
+55.  **Which statement is true about variable-length subnet masking?**
 
-     -   Each subnet is the same size.
-     -   **The size of each subnet may be different, depending on requirements.\***
-     -   Subnets may only be subnetted one additional time.
-     -   Bits are returned, rather than borrowed, to create additional subnets.
+     -   Each subnet is the same size
+     -   The size of each subnet may be different, depending on requirements
+     -   Subnets may only be subnetted one additional time
+     -   Bits are returned, rather than borrowed, to create additional subnets
 
-56.  In what two situations would UDP be the preferred transport protocol over TCP? (Choose two.)
+56.  **In what two situations would UDP be the preferred transport protocol over TCP? (Choose two.)**
 
      -   when applications need to guarantee that a packet arrives intact, in sequence, and unduplicated
-     -   **when a faster delivery mechanism is needed\***
+     -   when a faster delivery mechanism is needed
      -   when delivery overhead is not an issue
-     -   **when applications do not need to guarantee delivery of the data\***
+     -   when applications do not need to guarantee delivery of the data
      -   when destination port numbers are dynamic
 
-57.  What important information is added to the TCP/IP transport layer header to ensure communication and connectivity with a remote network device?
+57.  **What important information is added to the TCP/IP transport layer header to ensure communication and connectivity with a remote network device?**
 
      -   timing and synchronization
-     -   **destination and source port numbers\***
+     -   destination and source port numbers
      -   destination and source physical addresses
      -   destination and source logical network addresses
 
-58.  What is the TCP mechanism used in congestion avoidance?
+58.  **What is the TCP mechanism used in congestion avoidance?**
 
      -   three-way handshake
      -   socket pair
      -   two-way handshake
-     -   **sliding window\***
+     -   sliding window
 
-59.  Which scenario describes a function provided by the transport layer?
+59.  **Which scenario describes a function provided by the transport layer?**
 
      -   A student is using a classroom VoIP phone to call home. The unique identifier burned into the phone is a transport layer address used to contact another network device on the same network.
      -   A student is playing a short web-based movie with sound. The movie and sound are encoded within the transport layer header.
-     -   **A student has two web browser windows open in order to access two web sites. The transport layer ensures the correct web page is delivered to the correct browser window.\***
+     -   A student has two web browser windows open in order to access two web sites. The transport layer ensures the correct web page is delivered to the correct browser window.
      -   A corporate worker is accessing a web server located on a corporate network. The transport layer formats the screen so the web page appears properly no matter what device is being used to view the web site.
 
-60.  A user opens three browsers on the same PC to access www.cisco.com to search for certification course information. The Cisco web server sends a datagram as a reply to the request from one of the web browsers. Which information is used by the TCP/IP protocol stack in the PC to identify which of the three web browsers should receive the reply?
+60.  **A user opens three browsers on the same PC to access www.cisco.com to search for certification course information. The Cisco web server sends a datagram as a reply to the request from one of the web browsers. Which information is used by the TCP/IP protocol stack in the PC to identify which of the three web browsers should receive the reply?**
 
      -   the destination IP address
-     -   **the destination port number\***
+     -   the destination port number
      -   the source IP address
      -   the source port number
 
 61.  What are two ways that TCP uses the sequence numbers in a segment? (Choose two.)
 
-     -   **to identify missing segments at the destination \***
-     -   **to reassemble the segments at the remote location\***
+     -   to identify missing segments at the destination
+     -   to reassemble the segments at the remote location
      -   to specify the order in which the segments travel from source to destination
      -   to limit the number of segments that can be sent out of an interface at one time
      -   to determine if the packet changed during transit
 
 62.  Which two tasks are functions of the presentation layer? (Choose two.)
 
-     -   **compression\***
+     -   compression
      -   addressing
-     -   **encryption\***
+     -   encryption
      -   session control
      -   authentication
 
 63.  Which three statements characterize UDP? (Choose three.)
 
-     -   **UDP provides basic connectionless transport layer functions.\***
+     -   UDP provides basic connectionless transport layer functions.
      -   UDP provides connection-oriented, fast transport of data at Layer 3.
-     -   **UDP relies on application layer protocols for error detection. \***
-     -   **UDP is a low overhead protocol that does not provide sequencing or flow control mechanisms.\***
+     -   UDP relies on application layer protocols for error detection.
+     -   UDP is a low overhead protocol that does not provide sequencing or flow control mechanisms.
      -   UDP relies on IP for error detection and recovery.
      -   UDP provides sophisticated flow control mechanisms.
 
@@ -508,32 +504,32 @@
      -   wireless networking
      -   social networking without the Internet
      -   network printing using a print server
-     -   **resource sharing without a dedicated server\***
+     -   resource sharing without a dedicated server
 
 65.  A technician can ping the IP address of the web server of a remote company but cannot successfully ping the URL address of the same web server. Which software utility can the technician use to diagnose the problem?
 
      -   tracert
      -   ipconfig
      -   netstat
-     -   **nslookup\***
+     -   nslookup
 
 66.  Which domain name would be an example of a top-level domain?
 
      -   www.cisco.com
      -   cisco.com
-     -   **.com\***
+     -   .com
      -   root.cisco.com
 
 67.  A PC obtains its IP address from a DHCP server. If the PC is taken off the network for repair, what happens to the IP address configuration?
 
      -   The configuration is permanent and nothing changes.
      -   The address lease is automatically renewed until the PC is returned.
-     -   **The address is returned to the pool for reuse when the lease expires.\***
+     -   The address is returned to the pool for reuse when the lease expires.
      -   The configuration is held by the server to be reissued when the PC is returned.
 
 68.  When planning for network growth, where in the network should packet captures take place to assess network traffic?
 
-     -   **on as many different network segments as possible\***
+     -   on as many different network segments as possible
      -   only at the edge of the network
      -   between hosts and the default gateway
      -   only on the busiest network segment
@@ -542,13 +538,13 @@
 
      -   FTP
      -   HTTP
-     -   **DHCP\***
+     -   DHCP
      -   ICMP
      -   SNMP
 
 70.  Which example of malicious code would be classified as a Trojan horse?
 
-     -   **malware that was written to look like a video game\***
+     -   malware that was written to look like a video game
      -   malware that requires manual user intervention to spread between systems
      -   malware that attaches itself to a legitimate program and spreads to other programs when launched
      -   malware that can automatically spread from one system to another by exploiting a vulnerability in the target
@@ -558,19 +554,19 @@
      -   exec-timeout 30
      -   service password-encryption
      -   banner motd $Max failed logins = 5$
-     -   **login block-for 60 attempts 5 within 60\***
+     -   login block-for 60 attempts 5 within 60
 
 72.  A network technician suspects that a particular network connection between two Cisco switches is having a duplex mismatch. Which command would the technician use to see the Layer 1 and Layer 2 details of a switch port?
 
      -   show mac-address-table
      -   show ip interface brief
-     -   **show interfaces\***
+     -   show interfaces
      -   show running-config
 
 73.  Where are Cisco IOS debug output messages sent by default?
 
      -   Syslog server
-     -   **console line\***
+     -   console line
      -   memory buffers
      -   vty lines
 
@@ -589,8 +585,6 @@
 
      -   Question
          ![CCNA1 Final Exam v5.1 004 Question](https://itexamanswers.net/wp-content/uploads/2016/03/CCNA1-Final-Exam-v5.1-004-Question-01.png)
-     -   Answer
-         ![CCNA1 Final Exam v5.1 004 Question](https://itexamanswers.net/wp-content/uploads/2016/03/CCNA1-Final-Exam-v5.1-004-Question.png)
 
 76.  Refer to the exhibit. An administrator is testing connectivity to a remote device with the IP address 10.1.1.1. What does the output of this command indicate?
 
@@ -599,7 +593,7 @@
      ​      
 
      -   Connectivity to the remote device was successful.
-     -   **A router along the path did not have a route to the destination.\***
+     -   A router along the path did not have a route to the destination.
      -   A ping packet is being blocked by a security device along the path.
      -   The connection timed out while waiting for a reply from the remote device.
 
@@ -608,18 +602,18 @@
      -   default gateway
      -   DHCP
      -   TCP/IP protocol stack
-     -   **DNS \***
+     -   DNS
 
 78.  A company is expanding its business to other countries. All branch offices must remain connected to corporate headquarters at all times. Which network technology is required to support this requirement?
 
      -   LAN
      -   MAN
-     -   **WAN\***
+     -   WAN
      -   WLAN
 
 79.  A home user is looking for an ISP connection that provides high speed digital transmission over regular phone lines. What ISP connection type should be used?
 
-     -   **DSL\***
+     -   DSL
      -   dial-up
      -   satellite
      -   cell modem
@@ -629,7 +623,7 @@
 
      -   by limiting the impact of a network failure
      -   by allowing quick recovery from network failures
-     -   **by providing mechanisms to manage congested network traffic\***
+     -   by providing mechanisms to manage congested network traffic
      -   by providing the ability for the network to grow to accommodate new users
 
 81.  What source IP address does a router use by default when the traceroute command is issued?
@@ -637,12 +631,12 @@
      -   the highest configured IP address on the router
      -   the lowest configured IP address on the router
      -   a loopback IP address
-     -   **the IP address of the outbound interface\***
+     -   the IP address of the outbound interface
 
 82.  After making configuration changes on a Cisco switch, a network administrator issues a copy running-config startup-config command. What is the result of issuing this command?
 
      -   The new configuration will be stored in flash memory.
-     -   **The new configuration will be loaded if the switch is restarted.\***
+     -   The new configuration will be loaded if the switch is restarted.
      -   The current IOS file will be replaced with the newly configured file.
      -   The configuration changes will be removed and the original configuration will be restored.
 
@@ -653,31 +647,30 @@
      ​      
 
      -    letmein
-     -    **secretin\***
+     -    secretin
      -    lineconin
      -    linevtyin
 
 84.  **Match each item to the type of topology diagram on which it is typically identified. (Not all options are used.)**Question
-     ![CCNA1 Final Exam v5.1 005 Question](https://itexamanswers.net/wp-content/uploads/2016/03/CCNA1-Final-Exam-v5.1-005-Question.png)Answer
-     ![CCNA1 Final Exam v5.1 005 Answer](https://itexamanswers.net/wp-content/uploads/2016/03/CCNA1-Final-Exam-v5.1-005-Answer.png)
+     ![CCNA1 Final Exam v5.1 005 Question](https://itexamanswers.net/wp-content/uploads/2016/03/CCNA1-Final-Exam-v5.1-005-Question.png)
 
 85.  Which connection provides a secure CLI session with encryption to a Cisco network device?
 
      -   a console connection
      -   an AUX connection
      -   a Telnet connection
-     -   **an SSH connection\***
+     -   an SSH connection
 
 86.  What function does pressing the Tab key have when entering a command in IOS?
 
      -   It aborts the current command and returns to configuration mode.
      -   It exits configuration mode and returns to user EXEC mode.
      -   It moves the cursor to the beginning of the next line.
-     -   **It completes the remainder of a partially typed word in a command.\***
+     -   It completes the remainder of a partially typed word in a command.
 
 87.  What layer is responsible for routing messages through an internetwork in the TCP/IP model?
 
-     -   **internet\***
+     -   internet
      -   transport
      -   network access
      -   session
@@ -686,21 +679,21 @@
 
      -   Data is sent from the internet layer to the network access layer.
      -   Packets are sent from the network access layer to the transport layer.
-     -   **Segments are sent from the transport layer to the internet layer.\***
+     -   Segments are sent from the transport layer to the internet layer.
      -   Frames are sent from the network access layer to the internet layer.
 
 89.  What unique address is embedded in an Ethernet NIC and used for communication on an Ethernet network?
 
      -   host address
      -   IP address
-     -   **MAC address\***
+     -   MAC address
      -   network address
      -   k layer
 
 90.  Which procedure is used to reduce the effect of crosstalk in copper cables?
 
      -   requiring proper grounding connections
-     -   **twisting opposing circuit wire pairs together\***
+     -   twisting opposing circuit wire pairs together
      -   wrapping the bundle of wires with metallic shielding
      -   designing a cable infrastructure to avoid crosstalk interference
      -   avoiding sharp bends during installation
@@ -709,28 +702,28 @@
 
      -   An IP address is added.
      -   The logical address is added.
-     -   **The physical address is added.\***
+     -   The physical address is added.
      -   The process port number is added.
 
 92.  What are two characteristics of Ethernet MAC addresses? (Choose two.)
 
-     -   **They are globally unique.\***
+     -   They are globally unique.
      -   They are routable on the Internet.
-     -   **They are expressed as 12 hexadecimal digits.\***
+     -   They are expressed as 12 hexadecimal digits.
      -   MAC addresses use a flexible hierarchical structure.
      -   MAC addresses must be unique for both Ethernet and serial interfaces on a device.
 
 93.  If a device receives an Ethernet frame of 60 bytes, what will it do?
 
-     -   **drop the frame\***
+     -   drop the frame
      -   process the frame as it is
      -   send an error message to the sending device
      -   add random data bytes to make it 64 bytes long and then forward it
 
 94.  Under which two circumstances will a switch flood a frame out of every port except the port that the frame was received on? (Choose two.)
 
-     -   **The frame has the broadcast address as the destination address. \***
-     -   **The destination address is unknown to the switch.\***
+     -   The frame has the broadcast address as the destination address.
+     -   The destination address is unknown to the switch.
      -   The source address in the frame header is the broadcast address.
      -   The source address in the frame is a multicast address.
      -   The destination address in the frame is a known unicast address.
@@ -740,34 +733,34 @@
      -   cut-through
      -   store-and-forward
      -   fragment-free
-     -   **fast-forward\***
+     -   fast-forward
 
 96.  Which two commands can be used on a Windows host to display the routing table? (Choose two.)
 
      -   netstat -s
-     -   **route print\***
+     -   route print
      -   show ip route
-     -   **netstat -r\***
+     -   netstat -r
      -   tracert
 
 97.  Which two functions are primary functions of a router? (Choose two.)
 
-     -   **packet forwarding\***
+     -   packet forwarding
      -   microsegmentation
      -   domain name resolution
-     -   **path selection\***
+     -   path selection
      -   flow control
 
 98.  What is the binary representation of 0xCA?
 
      -   10111010
      -   11010101
-     -   **11001010\***
+     -   11001010
      -   11011010
 
 99.  At a minimum, which address is required on IPv6-enabled interfaces?
 
-     -   **link-local\***
+     -   link-local
      -   unique local
      -   site local
      -   global unicast
@@ -775,13 +768,13 @@
 100.  Which service provides dynamic global IPv6 addressing to end devices without using a server that keeps a record of available IPv6 addresses?
 
    -   stateful DHCPv6
-   -   **SLAAC\***
+   -   SLAAC
    -   static IPv6 addressing
    -   stateless DHCPv6
 
 101.  What is the purpose of the command ping ::1?
 
-      -   **It tests the internal configuration of an IPv6 host.\***
+      -   It tests the internal configuration of an IPv6 host.
       -   It tests the broadcast capability of all hosts on the subnet.
       -   It tests the multicast connectivity to all hosts on the subnet.
       -   It tests the reachability of the default gateway for the network.
@@ -791,13 +784,13 @@
       -   256
       -   254
       -   62
-      -   **30\***
+      -   30
       -   16
       -   32
 
 103.  What is the process of dividing a data stream into smaller pieces before transmission?
 
-      -   **segmentation\***
+      -   segmentation
       -   encapsulation
       -   encoding
       -   flow control
@@ -805,37 +798,37 @@
 104.  When IPv4 addressing is manually configured on a web server, which property of the IPv4 configuration identifies the network and host portion for an IPv4 address?
 
       -   DNS server address
-      -   **subnet mask\***
+      -   subnet mask
       -   default gateway
       -   DHCP server address
 
 105.  Which two roles can a computer assume in a peer-to-peer network where a file is being shared between two computers? (Choose two.)
 
-      -   **client\***
+      -   client
       -   master
-      -   **server\***
+      -   server
       -   slave
       -   transient
 
 106.  Which two protocols operate at the highest layer of the TCP/IP protocol stack? (Choose two.)
 
-      -   **DNS\***
+      -   DNS
       -   Ethernet
       -   IP
-      -   **POP\***
+      -   POP
       -   TCP
       -   UDP
 
 107.  What is one difference between the client-server and peer-to-peer network models?
 
       -   Only in the client-server model can file transfers occur.
-      -   **Every device in a peer-to-peer network can function as a client or a server.\***
+      -   Every device in a peer-to-peer network can function as a client or a server.
       -   A peer-to-peer network transfers data faster than a transfer using a client-server network.
       -   A data transfer that uses a device serving in a client role requires that a dedicated server be present.
 
 108.  What is the function of the HTTP GET message?
 
-      -   **to request an HTML page from a web server\***
+      -   to request an HTML page from a web server
       -   to send error information from a web server to a web client
       -   to upload content to a web server from a web client
       -   to retrieve client email from an email server using TCP port 110
@@ -844,12 +837,12 @@
 
       -   peer-to-peer
       -   master-slave
-      -   **client/server\***
+      -   client/server
       -   point-to-point
 
 110.  What network service resolves the URL entered on a PC to the IP address of the destination server?
 
-      -   **DNS\***
+      -   DNS
       -   DHCP
       -   FTP
       -   SNMP
@@ -858,12 +851,12 @@
 
       -   a change in the bandwidth according to the show interfaces output
       -   a next-hop timeout from a traceroute
-      -   **an increase in host-to-host ping response times\***
+      -   an increase in host-to-host ping response times
       -   a change in the amount of RAM according to the show version output
 
 112.  Which firewall feature is used to ensure that packets coming into a network are legitimate responses to requests initiated from internal hosts?
 
-      -   **stateful packet inspection\***
+      -   stateful packet inspection
       -   URL filtering
       -   application filtering
       -   packet filtering
@@ -872,25 +865,25 @@
 
       -   The computer cannot ping 127.0.0.1.
       -   Windows displays a DHCP timeout message.
-      -   **The computer receives an IP address that starts with 169.254\***
+      -   The computer receives an IP address that starts with 169.254
       -   The computer cannot ping other devices on the same network with IP addresses in the 169.254.0.0/16 range.
 
 114.  Which command can an administrator issue on a Cisco router to send debug messages to the vty lines?
 
-      -   **terminal monitor\***
+      -   terminal monitor
       -   logging console
       -   logging buffered
       -   logging synchronous
 
 115.  **Fill in the blank.**
-      During data communications, a host may need to send a single message to a specific group of destination hosts simultaneously. This message is in the form of a **Multicast \***message.
+      During data communications, a host may need to send a single message to a specific group of destination hosts simultaneously. This message is in the form of a _______________________________________________________ message.
 
 116.  A medium-sized business is researching available options for connecting to the Internet. The company is looking for a high speed option with dedicated, symmetric access. Which connection type should the company choose?
 
       -   DSL
       -   dialup
       -   satellite
-      -   **leased line\***
+      -   leased line
       -   cable modem
 
 117.  What is the purpose of having a converged network?
@@ -898,12 +891,12 @@
       -   to provide high speed connectivity to all end devices
       -   to make sure that all types of data packets will be treated equally
       -   to achieve fault tolerance and high availability of data network infrastructure devices
-      -   **to reduce the cost of deploying and maintaining the communication infrastructure\***
+      -   to reduce the cost of deploying and maintaining the communication infrastructure
 
 118.  What characteristic of a network enables it to quickly grow to support new users and applications without impacting the performance of the service being delivered to existing users?
 
       -   reliability
-      -   **scalability\***
+      -   scalability
       -   quality of service
       -   accessibility
 
@@ -911,7 +904,7 @@
 
       -   flash
       -   ROM
-      -   **NVRAM\***
+      -   NVRAM
       -   RAM
       -   the configuration register
       -   a TFTP server
@@ -923,18 +916,18 @@
       ​    
 
       -   The banner message is too long.
-      -   **The delimiting character appears in the banner message.\***
+      -   The delimiting character appears in the banner message.
       -   The symbol “!” signals the end of a banner message.
       -   Message-of-the-day banners will only appear when a user logs in through the console port.
 
 121.  What are three characteristics of an SVI? (Choose three.)
 
       -   It is designed as a security protocol to protect switch ports.
-      -   **It is not associated with any physical interface on a switch.\***
+      -   It is not associated with any physical interface on a switch.
       -   It is a special interface that allows connectivity by different types of media.
       -   It is required to allow connectivity by any device at any location.
-      -   **It provides a means to remotely manage a switch. \***
-      -   **It is associated with VLAN1 by default.\***
+      -   It provides a means to remotely manage a switch.
+      -   It is associated with VLAN1 by default.
 
 122.  A technician configures a switch with these commands:
 
