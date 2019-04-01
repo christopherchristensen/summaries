@@ -53,7 +53,7 @@
 
 8.  **Refer to the exhibit. A network administrator is configuring access control to switch SW1. If the administrator uses a console connection to connect to the switch, which password is needed to access user EXEC mode?**
 
-      ![2017-05-28_200126](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_8.png)
+      ![2017-05-28_200126](img/question_8.png)
 
       -   letmein
       -   secretin
@@ -215,7 +215,7 @@
 
 29.  **Refer to the exhibit. If host A sends an IP packet to host B, what will the destination address be in the frame when it leaves host A?**
 
-     ​      ![2017-05-28_195511](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_29.png)
+     ​      ![2017-05-28_195511](img/question_29.png)
 
      -   DD:DD:DD:DD:DD:DD
      -   172.168.10.99
@@ -248,7 +248,7 @@
 
 33.  **Refer to the exhibit. The network administrator for a small advertising company has chosen to use the 192.168.5.96/27 network for internal LAN addressing. As shown in the exhibit, a static IP address is assigned to the company web server. However, the web server cannot access the Internet. The administrator verifies that local workstations with IP addresses that are assigned by a DHCP server can access the Internet, and the web server is able to ping local workstations. Which component is incorrectly configured?**
 
-     ​     ![i274685v1n1_38117](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_33.png)
+     ​     ![i274685v1n1_38117](img/question_33.png)
 
      -   subnet mask
      -   DNS address
@@ -272,7 +272,7 @@
 
 36.  **Refer to the exhibit. What will be the result of entering this configuration the next time a network administrator connects a console cable to the router and no additional commands have been entered?**
 
-     ​      ![2017-05-28_195821](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_36.png)
+     ​      ![2017-05-28_195821](img/question_36.png)
 
      -   The administrator will be required to enter Cisco123
      -   The administrator will be required to enter Cisco234
@@ -338,7 +338,7 @@
 
 44.  **Refer to the exhibit. On the basis of the output, which two statements about network connectivity are correct? (Choose two.)**
 
-     ​     ![question_44](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_44.jpg)
+     ​     ![question_44](img/question_44.jpg)
 
      -   There is connectivity between this device and the device at 192.168.100.1
      -   The connectivity between these two hosts allows for videoconferencing calls
@@ -423,7 +423,7 @@
 
 54.  **Refer to the exhibit. Consider the IP address of 192.168.10.0/24 that has been assigned to a high school building. The largest network in this building has 100 devices. If 192.168.10.0 is the network number for the largest network, what would be the network number for the next largest network, which has 40 devices?**
 
-     ![question_54](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_54.jpg)
+     ![question_54](img/question_54.jpg)
 
      -   192.168.10.0
      -   192.168.10.128
@@ -584,7 +584,7 @@
 
 76.  **Refer to the exhibit. An administrator is testing connectivity to a remote device with the IP address 10.1.1.1. What does the output of this command indicate?**
 
-     ![i204753v1n2_Question-9](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_76.jpg)      
+     ![i204753v1n2_Question-9](img/question_76.jpg)      
 
      -   Connectivity to the remote device was successful.
      -   A router along the path did not have a route to the destination.
@@ -636,7 +636,7 @@
 
 83.  **Refer to the exhibit. A network administrator is configuring access control to switch SW1. If the administrator has already logged into a Telnet session on the switch, which password is needed to access privileged EXEC mode?**
 
-     ![i223580v1n1_208237](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_83.jpg)      
+     ![i223580v1n1_208237](img/question_83.jpg)      
 
      -    letmein
      -    secretin
@@ -905,7 +905,7 @@
 
 120.  **Refer to the exhibit. From global configuration mode, an administrator is attempting to create a message-of-the-day banner by using the command banner motd V Authorized access only! Violators will be prosecuted! V When users log in using Telnet, the banner does not appear correctly. What is the problem?**
 
-      ![36489](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_120.jpg)
+      ![36489](img/question_120.jpg)
 
       -   The banner message is too long.
       -   The delimiting character appears in the banner message.
