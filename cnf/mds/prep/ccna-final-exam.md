@@ -270,9 +270,9 @@
      -   to contain the running configuration file
      -   to store the ARP table
 
-36.  **Refer to the exhibit. What will be the result of entering this configuration the next time a network administrator connects a console cable to the router and no additional commands have been entered?**
+36.  **Refer to the exhibit. What will be the result of entering this configuration be the next time a network administrator connects a console cable to the router and no additional commands have been entered?**
 
-     ​      ![2017-05-28_195821](img/question_36.png)
+     ![2017-05-28_195821](img/question_36.png)
 
      -   The administrator will be required to enter Cisco123
      -   The administrator will be required to enter Cisco234
@@ -314,11 +314,11 @@
 
 41.  **What is the most compressed representation of the IPv6 address 2001:0000:0000: abcd:0000:0000:0000:0001?**
 
-     -   2001:0​: abcd:​:1
-     -   2001:0:0​: abcd:​:1
-     -   2001:​: abcd:​:1
-     -   2001:0000​: abcd:​:1
-     -   2001:​: abcd:​0:1
+     -   `2001:0​:abcd:​:1`
+     -   `2001:0:0​:abcd:​:1`
+     -   `2001:​:abcd:​:1`
+     -   `2001:0000​:abcd:​:1`
+     -   `2001:​:abcd:​0:1`
 
 42.  **Which range of link-local addresses can be assigned to an IPv6-enabled interface?**
 
@@ -573,14 +573,12 @@
 74.  **Match the description with the associated IOS mode. (not all options are used.)**
 
      -   Question
-         ![img](./img/question_74.jpg)
+         ![img](img/question_74.jpg)
 
-75.  **Refer to the exhibit. Match the packets with their destination IP address to the exiting interfaces on the router. (Not all targets are used.**
+75.  **Refer to the exhibit. Match the packets with their destination IP address to the existing interfaces on the router. (Not all targets are used).**
+     ![Screen Shot 2019-04-01 at 08.20.46](img/Screen Shot 2019-04-01 at 08.20.46-4099677.png)
 
-     ![i206417v1n2_2064172](./img/question_75.1.jpg)
-
-     -   Question
-         ![CCNA1 Final Exam v5.1 004 Question](./img/question_75.2.png)
+     -   Question![Screen Shot 2019-04-01 at 08.21.40](img/Screen Shot 2019-04-01 at 08.21.40.png)
 
 76.  **Refer to the exhibit. An administrator is testing connectivity to a remote device with the IP address 10.1.1.1. What does the output of this command indicate?**
 
@@ -646,7 +644,7 @@
 84.  **Match each item to the type of topology diagram on which it is typically identified. (Not all options are used.)**
 
      *   Question
-         ![CCNA1 Final Exam v5.1 005 Question](./img/question_84.png)
+         ![CCNA1 Final Exam v5.1 005 Question](img/question_84.png)
 
 85.  **Which connection provides a secure CLI session with encryption to a Cisco network device?**
 
@@ -761,10 +759,10 @@
 
 100.  **Which service provides dynamic global IPv6 addressing to end devices without using a server that keeps a record of available IPv6 addresses?**
 
-  -   stateful DHCPv6
-  -   SLAAC
-  -   static IPv6 addressing
-  -   stateless DHCPv6
+   -   stateful DHCPv6
+   -   SLAAC
+   -   static IPv6 addressing
+   -   stateless DHCPv6
 
 101.  **What is the purpose of the command ping ::1?**
 

@@ -53,7 +53,7 @@
 
 8.  **Refer to the exhibit. A network administrator is configuring access control to switch SW1. If the administrator uses a console connection to connect to the switch, which password is needed to access user EXEC mode?**
 
-      ![2017-05-28_200126](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_8.png)
+      ![2017-05-28_200126](img/question_8.png)
 
       -   letmein
       -   secretin
@@ -177,10 +177,10 @@
 
      -   error correction through a collision detection method
      -   session control using port numbers
-     -   **data link layer addressing\***
+     -   *data link layer addressing\**
      -   placement and removal of frames from the media
-     -   **detection of errors through CRC calculations \***
-     -   **delimiting groups of bits into frames\***
+     -   *detection of errors through CRC calculations \**
+     -   *delimiting groups of bits into frames\**
      -   conversion of bits into data signals
 
 25.  **What will a host on an Ethernet network do if it receives a frame with a destination MAC address that does not match its own MAC address?**
@@ -215,7 +215,7 @@
 
 29.  **Refer to the exhibit. If host A sends an IP packet to host B, what will the destination address be in the frame when it leaves host A?**
 
-     ​       ![2017-05-28_195511](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_29.png)
+     ​       ![2017-05-28_195511](img/question_29.png)
 
      -   DD:DD:DD:DD:DD:DD
      -   172.168.10.99
@@ -270,9 +270,8 @@
      -   to contain the running configuration file
      -   to store the ARP table
 
-36.  **Refer to the exhibit. What will be the result of entering this configuration the next time a network administrator connects a console cable to the router and no additional commands have been entered?**
-
-     ​      ![2017-05-28_195821](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_36.png)
+36.  **Refer to the exhibit. What will be the result of entering this configuration be the next time a network administrator connects a console cable to the router and no additional commands have been entered?**
+     ![2017-05-28_195821](img/question_36.png)
 
      -   The administrator will be required to enter Cisco123.
      -   The administrator will be required to enter Cisco234.
@@ -288,6 +287,16 @@
 
 38.  **What are three characteristics of multicast transmission? (Choose three.)**
 
+     >   […] The multicast addresses are in the range
+     >   224.0.0.0 through 239.255.255.255. Address assignments are listed below.
+     >
+     >   The range of addresses between 224.0.0.0 and 224.0.0.255, inclusive,
+     >   is reserved for the use of routing protocols and other low-level
+     >   topology discovery or maintenance protocols, such as gateway discovery
+     >   and group membership reporting.  Multicast routers should not forward
+     >   any multicast datagram with destination addresses in this range,
+     >   regardless of its TTL. ([IANA | IPv4 Multicast Address Space Registry](<https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml>))
+
      -   The source address of a multicast transmission is in the range of 224.0.0.0 to 224.0.0.255.
      -   *A single packet can be sent to a group of hosts. \**
      -   *Multicast transmission can be used by routers to exchange routing information. \**
@@ -296,6 +305,7 @@
      -   Multicast messages map lower layer addresses to upper layer addresses.
 
 39.  **What are the three ranges of IP addresses that are reserved for internal private use? (Choose three.)**
+     [Wikipedia | Private IPv4 Adresses](<https://en.wikipedia.org/wiki/Private_network#Private_IPv4_addresses>)
 
      -   *10.0.0.0/8\**
      -   64.100.0.0/14
@@ -306,21 +316,29 @@
 
 40.  **What purpose does NAT64 serve in IPv6?**
 
-     -   ***It converts IPv6 packets into IPv4 packets.\****
+     >   **NAT64** [(network address translation 64bit)] is an [IPv6 transition mechanism](https://en.wikipedia.org/wiki/IPv6_transition_mechanism) that facilitates communication between IPv6 and IPv4 hosts by using a form of [network address translation](https://en.wikipedia.org/wiki/Network_address_translation) (NAT). The NAT64 gateway is a translator between IPv4 and IPv6 protocols, […].
+
+     -   *It converts IPv6 packets into IPv4 packets.\**
      -   It translates private IPv6 addresses into public IPv6 addresses.
      -   It enables companies to use IPv6 unique local addresses in the network.
      -   It converts regular IPv6 addresses into 64-bit addresses that can be used on the Internet.
      -   It converts the 48-bit MAC address into a 64-bit host address that can be used for automatic host addressing.
 
-41.  **What is the most compressed representation of the IPv6 address 2001:0000:0000​: abcd:​0000:0000:0000:0001?**
+41.  **What is the most compressed representation of the IPv6 address **
+     **`2001:0000:0000​:abcd:​0000:0000:0000:0001`?**
 
-     -   2001:0​: abcd:​:1
-     -   *2001:0:0: abcd::1\**
-     -   2001:​: abcd:​:1
-     -   2001:0000​: abcd:​:1
-     -   2001:​: abcd:​0:1
+     >   1.  Remove leading zeros (`00FA` $\to$ `FA`)
+     >   2.  Compress three consecutive zeros (`0000:0000:0000` $\to$ `0:0:0` $\to$ `::`)
+
+     -   `2001:0​:abcd:​:1`
+     -   `2001:0:0​:abcd:​:1` *\**
+     -   `2001:​:abcd:​:1`
+     -   `2001:0000​:abcd:​:1`
+     -   `2001:​:abcd:​0:1`
 
 42.  **Which range of link-local addresses can be assigned to an IPv6-enabled interface?**
+
+     >   A link-local address is an IPv6 unicast address that can be automatically configured on any interface using the link-local prefix FE80::/10 (1111 1110 10) and the interface identifier in the modified EUI-64 format. Link-local addresses are not necessarily bound to the MAC address (configured in a EUI-64 format). Link-local addresses can also be manually configured in the FE80::/10 format using the **ipv6 address link-local** command. [Cisco](<https://www.cisco.com/c/en/us/support/docs/ip/ip-version-6-ipv6/113328-ipv6-lla.html>)
 
      -   FEC0::/10
      -   FDEE::/7
@@ -338,7 +356,7 @@
 
 44.  **Refer to the exhibit. On the basis of the output, which two statements about network connectivity are correct? (Choose two.)**
 
-     ![question_44](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_44.jpg)
+     ![question_44](img/question_44.jpg)
 
      -   *There is connectivity between this device and the device at 192.168.100.1.\**
      -   The connectivity between these two hosts allows for videoconferencing calls.
@@ -349,7 +367,7 @@
 45.  **What type of IPv6 address is FE80::1?**
 
      -   loopback
-     -   link-local\*
+     -   *link-local\**
      -   multicast
      -   global unicast
 
@@ -423,7 +441,7 @@
 
 54.  **Refer to the exhibit. Consider the IP address of 192.168.10.0/24 that has been assigned to a high school building. The largest network in this building has 100 devices. If 192.168.10.0 is the network number for the largest network, what would be the network number for the next largest network, which has 40 devices?**
 
-     ![question_54](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_54.jpg)
+     ![question_54](img/question_54.jpg)
 
      ​      
 
@@ -445,7 +463,7 @@
      -   when applications need to guarantee that a packet arrives intact, in sequence, and unduplicated
      -   *when a faster delivery mechanism is needed\**
      -   when delivery overhead is not an issue
-     -   *when applications do not need to guarantee delivery of the data\**
+     -   *when applications do **not** **need** to guarantee delivery of the data\**
      -   when destination port numbers are dynamic
 
 57.  **What important information is added to the TCP/IP transport layer header to ensure communication and connectivity with a remote network device?**
@@ -456,6 +474,8 @@
      -   destination and source logical network addresses
 
 58.  **What is the TCP mechanism used in congestion avoidance?**
+
+     >   For each connection, TCP maintains a [congestion window](https://en.wikipedia.org/wiki/TCP_congestion_control#Congestion_window), limiting the total number of unacknowledged packets that may be in transit end-to-end. This is somewhat analogous to TCP's [sliding window](https://en.wikipedia.org/wiki/Sliding_window) used for [flow control](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Flow_control). [Wikipedia | TCP congestions control](<https://en.wikipedia.org/wiki/TCP_congestion_control>)
 
      -   three-way handshake
      -   socket pair
@@ -570,7 +590,7 @@
 73.  **Where are Cisco IOS debug output messages sent by default?**
 
      -   Syslog server
-     -   **console line\***
+     -   *console line\**
      -   memory buffers
      -   vty lines
 
@@ -586,7 +606,7 @@
 
      -   Question
          ![CCNA1 Final Exam v5.1 004 Question](https://itexamanswers.net/wp-content/uploads/2016/03/CCNA1-Final-Exam-v5.1-004-Question-01.png)
-     -   Answer
+     -   Answer (`172.17.8.20` $\to$ default gateway)
          ![CCNA1 Final Exam v5.1 004 Question](https://itexamanswers.net/wp-content/uploads/2016/03/CCNA1-Final-Exam-v5.1-004-Question.png)
 
 76.  **Refer to the exhibit. An administrator is testing connectivity to a remote device with the IP address 10.1.1.1. What does the output of this command indicate?**
@@ -643,7 +663,10 @@
 
 83.  **Refer to the exhibit. A network administrator is configuring access control to switch SW1. If the administrator has already logged into a Telnet session on the switch, which password is needed to access privileged EXEC mode?**
 
-     ![i223580v1n1_208237](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_83.jpg)      
+     >   *   enable password: unencrypted password
+     >   *   secret password: encrypted password
+
+     ![i223580v1n1_208237](img/question_83.jpg)      
 
      ​      
 
@@ -769,10 +792,10 @@
 
 100.  **Which service provides dynamic global IPv6 addressing to end devices without using a server that keeps a record of available IPv6 addresses?**
 
-  -   stateful DHCPv6
-  -   **SLAAC\***
-  -   static IPv6 addressing
-  -   stateless DHCPv6
+   -   stateful DHCPv6
+   -   *SLAAC*\*
+   -   static IPv6 addressing
+   -   stateless DHCPv6
 
 101.  **What is the purpose of the command ping ::1?**
 
@@ -918,7 +941,7 @@
       -   a TFTP server
 
 120.  **Refer to the exhibit. From global configuration mode, an administrator is attempting to create a message-of-the-day banner by using the command banner motd V Authorized access only! Violators will be prosecuted! V When users log in using Telnet, the banner does not appear correctly. What is the problem?**
-      ![36489](/Users/christopher/Development/studies/github/summaries-me/cnf/mds/img/question_120.jpg)
+      ![36489](img/question_120.jpg)
 
       -   The banner message is too long.
       -   *The delimiting character appears in the banner message.\**
@@ -993,7 +1016,7 @@
       -   *255.255.255.128\**
       -   255.255.252.0
 
-129.  **A DHCP server is used to IP addresses dynamically to the hosts on a network. The address pool is configured with 10.29.244.0/25. There are 19 printers on this network that need to use reserve static IP addresses from the pool. How many IP address in the pool are left to be assign to other hosts?**
+129.  **A DHCP server is used to assign IP addresses dynamically to the hosts on a network. The address pool is configured with 10.29.244.0/25. There are 19 printers on this network that need to use reserve static IP addresses from the pool. How many IP address in the pool are left to be assign to other hosts?**
 
       -   210
       -   60
