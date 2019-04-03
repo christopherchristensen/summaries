@@ -8,7 +8,7 @@ author: Christopher J. Christensen
 
 # Summary
 
-Agile Software Development is known as an approach in developing software by putting the collaborative efforts of the collective team in the forefront. It was biggly popularized by the Manifesto for Agile Software Development (Wikipedia 2019) that was defined by a group of authors in the software development community (Beck 2001C). Those authors main values are as follows and quoted:
+Agile Software Development is known as an approach for developing software by putting the collaborative efforts of the team and all other stakeholders of a project in the forefront. It was largely popularized by the Manifesto for Agile Software Development (Wikipedia 2019) that was defined by a group of authors in the software development community back in 2001 (Beck 2001C). The authors main values are as follows and quoted:
 
 *   Individuals and interactions over processes and tools
 *   Working software over comprehensive documentation
