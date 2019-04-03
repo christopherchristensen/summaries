@@ -245,7 +245,6 @@
 * OAuth 2.0 defines no cryptographic methods (unlike OAuth 1.0)
 * OAuth 2.0 is also not a single protocol
   * split into multiple definitions and flows (with own set of use cases)
-  * 
 
 
 
