@@ -114,8 +114,8 @@
      *   **T**ampering: Daten ändern (z.B. Kontonummer des Lieferanten ändern, im SAP Rechnungen ändern)
      *   **R**epudiation: Abstreitbarkeit (versuchen Möglichkeiten zu finden, abzustreiten, dass ich es nicht war, $\to$ Login des Mitarbeiters verwenden, elektronische Wahlen)
      *   **I**nformation disclosure
-     *   **D**enial of service
-     *   **E**levation of privilege
+     *   **D**enial of service: Rechner überlasten
+     *   **E**levation of privilege: Höhere Rechte aneignen
 
 21.  Erklären Sie diese 6 Elemente einzeln.
 
