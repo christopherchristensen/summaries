@@ -1,4 +1,3 @@
-% \documentclass[a4paper]{extreport}
 \documentclass[a4paper]{scrartcl}
 
 % set language and font styling
@@ -72,6 +71,15 @@
 % include package for images
 \usepackage{graphicx}
 \usepackage{float}
+
+% style quotes
+\usepackage{framed}
+\usepackage{xcolor}
+\let\oldquote=\quote
+\let\endoldquote=\endquote
+\colorlet{shadecolor}{gray!5}
+\renewenvironment{quote}{\begin{shaded}\begin{oldquote}}{\end{oldquote}\end{shaded}}
+\FrameSep0pt
 
 % start document
 \begin{document}

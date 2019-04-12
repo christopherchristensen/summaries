@@ -1,103 +1,68 @@
 # Security Requirements
 
-
-
 ## Security
-
 * Defense of computers against
     * instrusion
     * unauthorized use of resources
     * humans with malicious or criminal intent
 
-
-
 ## Safety
-
 * Avoiding hazardous situations
 * Alerting the correct systems if situation becomes unsafe
 * Defending humans / environment against malfunctioning systems
 
-
-
 ## Important Notes about Security
-
-Security
-
-- is not a programming problem only
-- must be considered from the beginning on
-- is relevant in all phases of software development
-- can't be fixed by using special methods / tools
-- can't be seen isolated from deployment / operations
-
-
+- Security
+    - is not a programming problem only
+    - must be considered from the beginning on
+    - is relevant in all phases of software development
+    - can't be fixed by using special methods / tools
+    - can't be seen isolated from deployment / operations
 
 ## Security vs. Safety
-
 * No strict borderline between both concepts
 * Security breaches may have serious safety consequences
 
-
-
 ## Perimeter Security
-
 * Measures to protect external perimeter of a system
     * Access Control
     * Firewalls
     * Anti Virus Software
 * Not sufficient by today's standards (medieval concept of yesterday)
 
-
-
 ## Why is Perimeter Security not sufficient anymore?
-
 * More applications offer direct access to external users
-* Modern applications often considered to be doors into OS ($$\sim$$ wall)
-
-
+* Modern applications often considered to be doors into OS ($\sim$ wall)
 
 ## Why Perimeter Security often focused on before Insecurities in Software?
-
 > Bad Practice
 
 * Secure coding often not considered to be important in the past
-* Often, security professionals $$\neq$$ software developers (full insight into software vulnerabilities missing)
+* Often, security professionals $\neq$ software developers (full insight into software vulnerabilities missing)
 * Functionality often focus of software developers
 * Vendors want quick time to market, often no time for proper security architecture, design and testing
 * Customers used to flaws and regular security updates (patches)
 * Customers can't control software flaws, therefore depend upon perimeter protection
 
-
-
 ## How to Intrusion happens
-
 1. Infection
 2. Exploit
 3. Payload
 
-
-
 ## Malware
-
 > **Mal**icious Soft**ware**
 
 * Software doing something the user / owner of the computer doesn't like
-
 * Special forms of malware
     * Virus
     * Worm
     * Trojan
 
-
-
 ## Infection
-
 * How malware gets into system
 * When user trusts a piece of software (with malware)
 
-
-
 ## Exploit
-
 > "to use something to one's own advantage"
 
 * Taking advantage of weak points in systems / applications
@@ -105,52 +70,34 @@ Security
     * that takes advantage of a bug / vulnerability 
     * to cause unintended / unanticipated behavior on computer software, hardware, or something electronic
 
-
-
 ## Vulnerabilities
-
 * Programming errors (direct or indirect)
 * Vulnerabilities lead to exploits
 * Attacker must have applicable tool / technique that can connect to a system weakness (attack surface)
 
-
-
 ## Example of an Indirect Error
-
 * Flawed handling of memory management
     * may render a system vulnerable to denial-of-service attacks
     * doesn't effect system's functionality therefore may remain undetected during testing
 
-
-
 ## Can Vulnerabilities and Exploits be prevented?
-
 * Every system of minimum complexity contains errors
 * No way of completely preventing it
 * Relative security can be reached by
     * clean and intelligent software development
     * including security considerations in all phases of a system
 
-
-
 ## Ways to improve Security
-
 * Security and functionality need to be designed and integrated into the individual phases of a development life cycle
 * Security considerations need to be interlaced into product core
 * Understand security needs, implement the right controls and test thoroughly
 
-
-
 ## Security Cost Considerations
-
 * The higher the security efforts, the lower the costs for security breaches
 * The higher the security efforts, the higher the costs for security measures
 * With the right amount of security efforts the total costs can be kept at a minimum
 
-
-
 ## Attributes of Software Security
-
 * Quality
 * Correctness
 * Availability
@@ -159,10 +106,7 @@ Security
 * Reliability
 * Safety
 
-
-
 ## What does Software Engineering deal with?
-
 * Cost-effective development of high-quality software
 * …of software systems
     * Construction...
@@ -170,10 +114,7 @@ Security
     * Rollout...
     * Operation and maintenance...
 
-
-
 ## Scales of Software Project
-
 * Trivial
     * Staff: 1, 4-6 Weeks, Lines of code < 500
     * e.g. Simple administrative programs
@@ -193,10 +134,7 @@ Security
     * Staff: 2'000-5'000, 5-10 years, Lines of code > 10'000'000
     * e.g. Air traffic control
 
-
-
 ## Attributes of Software Quality
-
 * Correctness / Verifiability
 * Reliability
 * Robustness
@@ -212,7 +150,7 @@ Security
 * Importance of features dependant on project
 
 ## Development- vs. Maintenance-Costs
-* Cost-effective $$=$$ ca. 20% Dev / 80% Maintenance
+* Cost-effective $=$ ca. 20% Dev / 80% Maintenance
 
 ## Where do bugs come from?
 * 56% Analysis and Specification
@@ -228,6 +166,7 @@ Security
 
 ## Process Models
 > Description of a process
+
 * Activities must be 
     * defined exactly
     * arranged along a time scale
@@ -273,10 +212,10 @@ Security
 
 ## Agile Development
 * Agile Values
-    * Individuals / Interactions $$>$$ Processes / Tools
-    * Working Programs $$>$$ Elaborate Documentation
-    * Constant Cooperations with Customer $$>$$ Contracts
-    * Courage / Openness for Change $$>$$ Obeying fixed plans
+    * Individuals / Interactions $>$ Processes / Tools
+    * Working Programs $>$ Elaborate Documentation
+    * Constant Cooperations with Customer $>$ Contracts
+    * Courage / Openness for Change $>$ Obeying fixed plans
 * Agile Principles
     * Reuse existing ressources
     * KISS
@@ -303,6 +242,7 @@ Security
 
 ## DREAD
 > Methodology for risk rating
+
 * Damage
 * Reproducibility
 * Exploitability
@@ -373,6 +313,7 @@ Security
 
 ## Why don't all organizations include Discoverability in DREAD?
 > DREAD-D, "DREAD minus D"
+
 * They feel Discoverability rewards "Security through Obscurity"
 * They then ignore it or always assume Discoverability at maximum rating (3)
 
@@ -387,6 +328,7 @@ Security
 
 ## OWASP Risk Rating
 > Part of Threat Modelling
+
 * Threat Agent
 * Vulnerability
 * Technical Impact
@@ -394,6 +336,7 @@ Security
 
 ## Attack Tree
 > Part of Threat Modelling
+
 * Conceptual diagrams showing how an asset, or target, might be attacked
 * Nodes combined by AND / OR
     * OR: Represents different ways to achieve same goal
@@ -419,5 +362,148 @@ Security
 
 ## UML
 > Unified Modeling Language
+
 * Modeling requirements during system analysis
-* 
+* Standard language for...
+    - specifying,
+    - visualising,
+    - constructing,
+    - documenting
+* ...software systems
+
+## 9 UML Diagrams
+* (Use case diagram)
+* Class diagram
+* Object diagram
+* State diagram
+* Activity diagram
+* Sequence diagram
+* Collaboration diagram
+* Component diagram
+* Deployment diagram
+* Timing diagram
+
+## Use Case Diagram
+> UCD
+
+* To identify primary elements (actors) and processes (use cases) of system
+* Shows which actors interact with each use case
+* Actions described from actor's view
+
+## 4 Elements of UCD
+* Actors (elements that interact with system)
+* System
+* Use Cases (services that system performs)
+* Lines (relationships)
+
+## Use Case
+- Distinct business functionality or behaviour of system
+- Sequence of related activities done by actor together with system
+- Represents some action the user might perform to complete a task
+
+## Actor
+- External interface of system
+- Any entity that performs certain roles in system
+- Activates flow of actions in system and influences them
+
+## User Cases vs. User-Stories
+- User-Stories 
+    - common in Agile Dev. / Scrum
+    - used for planning Use Cases
+    - cut into pieces until they are implemented in one iteration
+- Use Cases
+    - bigger, more context information
+    - define and document functionality
+
+## Analysis with Use Cases
+- Draw a context model
+- Write a glossary
+- Detail the context model
+- Define scenarios with sequence diagrams
+- Use activity diagrams to generalize
+
+## Context Model
+- Draw one Use Case for whole system
+- Includes all actors that interact with system
+- For each actor all functions shown
+
+## Analysis with Use Cases including Security
+- (Steps above)
+- Add Misuse Cases
+
+## Misuse Cases
+- Based on Use-Case terminology
+- Defined and completed by Mitigation Cases
+- Process
+    - Insert Misuse Cases
+    - Describe Misuse Cases
+    - Find Mitigation Use Case
+
+## Misuse Case Description Elements
+- Misuse Case Name
+- Misuser Profile
+- Description
+- Basic Path
+- Alternative Paths
+- Triggers
+- Assumptions
+- Mitigation
+
+## Why are Systems Vulnerable?
+> Interfaces as Special Problems
+
+- Systems consist of components
+    - developed independently
+    - have input data
+    - exchange data
+- Components need interfaces
+    - rules for input data define a language
+    - language must be defined exactly
+    - language must be interpreted exactly in same way on both sides of interface
+
+[missing content here ... (interface types)] 
+
+## Goals when securing Interfaces
+- Secure Input Validation
+    - Accept only valid input
+    - Always interpret input the same way
+    - No unforeseen reactions on any input
+- Identical interpretation on both sides of interface
+    - Language of sender must equal language of receiver
+    - Design contracts must be defined explicitly
+    - Design contracts must be followed in provable way
+
+## Communication Model by Shannon
+> 1948
+
+- Sender: sends Message M that is Encoded(M) and send over a Channel
+- Receiver: receives Encoded(M), then message is Decoded(Encoded(M))
+
+## Problem with Communication Model by Shannon
+- The decoded message can be wrong
+- Receiver can react differently as expected by sender,
+- Because implementation of Decoded(...) may be wrong
+
+## How can Attacker exploit the above Problem?
+- Find a combination of M, Encoded(...), Decoded(...) with these properties:
+    - M $\neq$ Decoded(Encoded(M))
+    - M is semantically valid for sender
+    - Decoded(Encoded(M)) is semantically valid for receiver
+    - Processing of M at receiver is not equal to processing of Decoded(Encoded(M)) at receiver
+
+## Typical Exploit-Techniques used by Malware
+- SQL Injection
+- Command Injection
+- XSS
+- Buffer Overflows
+- String Overflows
+
+## Means to mitigate Exploits
+- Check all Input Data
+    - Which data, where, when
+- Problems
+    - Amount
+    - Efficiency
+    - Bypassing
+    - Streaming
+
