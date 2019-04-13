@@ -1,4 +1,3 @@
-% \documentclass[a4paper]{extreport}
 \documentclass[a4paper]{scrartcl}
 
 % set language and font styling
@@ -17,11 +16,9 @@
 
 % set some variable
 \newcommand{\Title}{$title$}
-\newcommand{\Modul}{$modul$}
-\newcommand{\Author}{\url{$author$}}
+\newcommand{\Author}{\url{https://github.com/christopherchristensen}}
+\newcommand{\Template}{Latex template by https://github.com/chefe}
 \newcommand{\Date}{\today}
-\newcommand{\Template}{$template$}
-
 
 % set document properties
 \title{\Title}
@@ -41,7 +38,7 @@
 \pagestyle{fancy}
 \lhead{\Title}
 \rhead{\Author}
-\lfoot{\Date}
+\cfoot{\Date}
 \cfoot{\Template}
 \rfoot{Seite \thepage\ von \zpageref{LastPage}}
 
@@ -75,13 +72,34 @@
 \usepackage{graphicx}
 \usepackage{float}
 
-% quote styling
+% style quotes
 \usepackage{framed}
 \usepackage{xcolor}
 \let\oldquote=\quote
 \let\endoldquote=\endquote
-\colorlet{shadecolor}{orange!15}
-\renewenvironment{quote}{\begin{shaded*}\begin{oldquote}}{\end{oldquote}\end{shaded*}}
+\colorlet{shadecolor}{blue!2}
+\renewenvironment{quote}{\begin{shaded}\begin{oldquote}}{\end{oldquote}\end{shaded}}
+\FrameSep0pt
+
+% remove first level indent of numbered lists
+\usepackage{enumitem}
+\setlist[enumerate,1]{label=\arabic*),leftmargin=1em}
+\setlist[enumerate,2]{label=\alph*)}
+\setlist[enumerate,3]{label=\roman*)}
+
+% remove first level indent of lists
+\setlist[itemize,1]{leftmargin=1em}
+\setlist[itemize,2]{align=left, leftmargin=*}
+\setlist[itemize,3]{align=left, leftmargin=*}
+
+% resolve code block issue
+\usepackage{textcomp}
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+% code block styling
+% TODO
 
 % start document
 \begin{document}
