@@ -1,3 +1,4 @@
+a
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
@@ -41,3 +42,4 @@ s3   = st.norm.ppf(q=0.95, loc=nh_m, scale=nh_std/np.sqrt(16))
 p3_0 = 1 - st.norm.cdf(x=204.2, loc=nh_m, scale=nh_std/np.sqrt(16))
 p3_1 = 1 - st.norm.cdf(x=204.2, loc=205, scale=nh_std/np.sqrt(16))
 s4   = st.t.ppf(q=0.95, loc=200, scale=10/np.sqrt(16), df=16-1)
+

@@ -1,0 +1,132 @@
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Apr 25 15:16:37 2019
+
+@author: cj
+"""
+
+import numpy as np
+import pandas as pd
+import scipy.stats as st
+from pandas import Series
+
+# =============================================================================
+# 01
+# =============================================================================
+
+# 50% der Daten sind in der Box enthalten.
+# Die Box geht von min. 0.2 aus bis knapp unter 1.0.
+# Deswegen ist die erste Aussage falsch.
+
+# Da wir keine genauen Daten sehen, wäre es falsch anzunehmen,
+# dass sich das Stichprobenmittel deutlich unter 0.5 befindet
+# Deswegen ist die zweite Aussage falsch.
+
+# 50% der Daten sind in der Box enthalten.
+# Die Box ist deutlich unter 1.0.
+# Somit sind bereits 50% der Daten unter 1.0.
+# Deswegen ist die dritte Aussage falsch.
+
+# 50% der Daten sind in der Box enthalten.
+# Deswegen ist es plausibel anzunehmen, dass sich 50% der Daten 
+# ausserhalb dieser Box befinden.
+# Deswegen ist die vierte Aussage richtig.
+
+# =============================================================================
+# 02
+# =============================================================================
+
+# Missing
+
+# =============================================================================
+# 03a
+# =============================================================================
+
+# Der relative Fehler vom gamma ist gesucht.
+gamma = pd.read_table(r'gamma.txt', delim_whitespace=True).iloc[:,1]
+gamma_mean = gamma.mean()
+gamma_std = gamma.std() / np.sqrt(gamma.size)
+gamma_rel = gamma_std / gamma_mean * 100
+print(gamma_rel)
+# 0.9869149943313213
+
+# =============================================================================
+# 03b
+# =============================================================================
+
+# Nullhypothese: gamma = 1
+# Alternativhypothese: gamma kleiner als 1 (sprich 0)
+gamma_p = st.t.cdf(x=gamma_mean, loc=1, scale=gamma_std, df=gamma.size-1)
+# p-Wert: 0.15321670790410435
+# Liegt nicht im Verwerfungsbereich, deswegen Alternativhypothese verwerfen
+
+# =============================================================================
+# 03c
+# =============================================================================
+
+gamma_ovi = st.t.ppf(q=0.95, loc=gamma_mean, scale=gamma_std, df=gamma.size-1)
+# 1.0074897353860763
+
+# =============================================================================
+# 04
+# =============================================================================
+
+# Erläuterung fehlt...
+# Die Normalverteilung eignet sich. Erwartete Überzeit für 100d ist 750min.
+
+# =============================================================================
+# 05
+# =============================================================================
+
+# In der Abbildung A sieht man, dass die meisten Daten links verteilt sind.
+# In der Abbildung 3 sieht man, dass die meisten Daten links verteilt sind.
+
+# In der Abbildung B sieht man, dass die Daten um 1.5 verteilt sind.
+# In der Abbildung 1 liegt die 0.5 Marke ebenfalls bei 1.5.
+
+# In der Abbildung C sieht man, dass die meisten Daten rechts verteilt sind.
+# In der Abbidlung 2 sieht man, dass die meisten Daten rechts verteilt sind.
+
+# Lösung: A3, B1, C2
+
+# =============================================================================
+# 06
+# =============================================================================
+schoko = pd.read_csv(r'Schokolade_Nobelpreis.txt', delim_whitespace=True)
+schoko.corr()
+# 0.75859
+
+# =============================================================================
+# 07
+# =============================================================================
+
+# Nobelpreisträger lieben Schokolade: muss nicht sein 
+# (nur linearer Zusammenhang festgestellt) -> falsch
+
+# Schokolade erhöht Erfolgschancen auf Nobelpreis: muss nicht sein 
+# (nur linearer Zusammenhang festgestellt) -> falsch
+
+# Es gibt keinen Zusammenhang zwischen Schokoladenkonsum und Anzahl
+# Nobelpreise pro Einwohner: doch, es gibt einen linearen Zusammenhang
+# jedoch keinen kausalen Zusammenhang -> falsch
+
+# Aus einem linearen Zusammenhang lässt sich nicht direkt einen kausalen
+# Zusammenhang ziehen: korrekt -> richtig
+
+# =============================================================================
+# 08
+# =============================================================================
+
+# Bevor wir Parameter schätzen können, müssen wir Verteilungsfamilie wählen:
+# Wir können die Parameter auch ohne Verteilung schätzen. Frage ist nur, ob
+# wir nicht viel länger haben bis wir den Parameter geschätzt haben -> falsch
+
+# Die Maximierung liefert eine Parameterschätzung: korrekt -> richtig
+
+# Ein Parameterschätzer kann immer auch als Zufallsvariable interpretiert
+# werden: Erläuterung ... -> falsch
+
+# Bei der Momentenmethode gilt für die gewählte Parameter immer, dass der
+# Erwartungswert der Verteilung dem arithmetischen Mittel der Beobachtung
+# entspricht: muss nicht sein -> falsch
