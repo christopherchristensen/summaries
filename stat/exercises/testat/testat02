@@ -44,7 +44,7 @@ from pandas import Series
 # =============================================================================
 
 # Der relative Fehler vom gamma ist gesucht.
-gamma = pd.read_table(r'gamma.txt', delim_whitespace=True).iloc[:,1]
+gamma = pd.read_table(r'gamma2.txt', delim_whitespace=True).iloc[:,1]
 gamma_mean = gamma.mean()
 gamma_std = gamma.std() / np.sqrt(gamma.size)
 gamma_rel = gamma_std / gamma_mean * 100
@@ -65,7 +65,7 @@ gamma_p = st.t.cdf(x=gamma_mean, loc=1, scale=gamma_std, df=gamma.size-1)
 # 03c
 # =============================================================================
 
-gamma_ovi = st.t.ppf(q=0.95, loc=gamma_mean, scale=gamma_std, df=gamma.size-1)
+gamma_ovi = st.t.ppf(q=0.99, loc=gamma_mean, scale=gamma_std, df=gamma.size-1)
 # 1.0074897353860763
 
 # =============================================================================
@@ -93,7 +93,7 @@ gamma_ovi = st.t.ppf(q=0.95, loc=gamma_mean, scale=gamma_std, df=gamma.size-1)
 # =============================================================================
 # 06
 # =============================================================================
-schoko = pd.read_csv(r'Schokolade_Nobelpreis.txt', delim_whitespace=True)
+schoko = pd.read_csv(r'Schokolade_Nobelpreis2.txt', delim_whitespace=True)
 schoko.corr()
 # 0.75859
 

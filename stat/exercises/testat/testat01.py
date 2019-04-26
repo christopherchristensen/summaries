@@ -14,7 +14,7 @@ import scipy.stats as st
 # 3a
 # =============================================================================
 
-gamma = pd.read_table(r"./gamma.txt", delim_whitespace=True)
+gamma = pd.read_table(r"./gamma2.txt", delim_whitespace=True)
 
 gamma.describe()
 
