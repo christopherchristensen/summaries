@@ -121,5 +121,81 @@
 ## Wozu dient das Testkonzept
 - Ermöglicht es, Testen risikobasiert zu Priorisieren und Gruppieren
 - Bildet Basis für erfolgreiches Testen
+- Gibt Auskunft, wie umfassend und mit welchen Schwerpunkten getestet werden soll
+- Beschreibt, wie sich mit zunehmendem Entwicklungsfortschritt der Testfokus verändert
 
-## 
+## Testkonzept/-strategie in 15min
+1. WAS: Welche Testaktivitäten sind notwendig?
+    - Qualitätsanforderungen
+    - Ableitung relevanter Testaufgaben
+2. WIE: Wie intensiv muss getestet werden? 
+    - Kritikalität
+    - Bewertung und Ableitung angemessener Testmethoden
+3. WANN: Wie viel Zeit/Budget steht zur Verfügung?
+    - Termin/Budget
+    - Planung der Tests
+
+## Erste Schritte beim Erstellen von Testkonzept/-strategie
+- Akzeptierbares Risiko bestimmen
+- Prioritäten festlegen
+- Einzelne Testobjekte definieren / abgrenzen
+- Notwendiges Testvorgehen vorgeben
+- Pro Testobjekt erwartete Testtypen und -arten definieren
+- Erforderliche Testtiefe festlegen
+- Führungskonzepte etablieren
+- Angepasste Testorganisation mit verbindlichen Verantwortlichkeiten festlegen
+
+## SCRUM und Testkonzept
+- Testkonzept kommt oft zu kurz
+- Testkonzept trotzdem notwendig
+- Testaspekte müssen vorgängig mit Product Owner geklärt werden
+- Testmanagement als Ansprechperson für Product Owner und SCRUM-Master
+- Vor Sprint überprüfen, ob an SCRUM angepasstes Testkonzept besteht
+
+## Experimentieren vs. Testen
+- Testen: Es existiert eine Erwartung, die belegt werden soll
+- Experimentieren: Ergebnis offen oder wird nur vermutet
+
+## Wichtige Fragen beim Erstellen von Testkonzept
+- Soll zugunsten einer kurzen Testdurchlaufzeit auf tiefes Testen verzichtet werden?
+- Wie relevant ist die Sicherheit, benötigt dieser Aspekt zusätzliche Testfälle?
+- Wie wichtig sind Bedienbarkeit, Ergonomie sowie Aufbau und Farbgebung?
+- Benötigt es zusätzliche "sehr kreative Spezialfälle"?
+- Wie wichtig sind Performance, Geschwindigkeit, Wartezeiten, Verfügbarkeit, etc.?
+- Was passiert im Fehlerfall, was ist der "WORST CASE"?
+- Wie ist die Haftung und Garantie geregelt, was passiert im Fehlerfall?
+- Wie lange "lebt" das Produkt?
+- In welchem Umfeld wird das Produkt eingesetzt?
+- Wie "komplex" ist das Produkt?
+- Was kostet das Produkt?
+- Gibt es Gesetze, Vorschriften, Normen?
+- Welchen "Standard" haben vergleichbare Produkte?
+
+## Lösungsansatz für zunehmender Testaufwand pro Iteration
+- Testautomatisierung
+
+## Qualitätsmerkmale nach ISO 25000
+- Funktionale Eignung
+- Zuverlässigkeit
+- Benutzbarkeit
+- Leistungseffizienz
+- Wartbarkeit
+- Übertragbarkeit
+- Sicherheit
+- Kompatibilität
+
+## Funktionale Eignung nach ISO 25000
+- Angemessenheit
+- Richtigkeit
+- Interoperabilität
+- Ordnungsmässigkeit
+- Ist die geforderte Funktionalität in der Software gegeben?
+
+## Zuverlässigkeit nach ISO 25000
+- Reife
+- Fehlertoleranz
+- Wiederherstellbarkeit
+- Wie zuverlässig arbeitet Software?
+
+## Benutzbarkeit nach ISO 25000
+- Verständlichkeit
