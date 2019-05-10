@@ -173,6 +173,7 @@
 
 ## Lösungsansatz für zunehmender Testaufwand pro Iteration
 - Testautomatisierung
+- Risikobasiertes Testen
 
 ## Qualitätsmerkmale nach ISO 25000
 - Funktionale Eignung
@@ -183,6 +184,7 @@
 - Übertragbarkeit
 - Sicherheit
 - Kompatibilität
+- Eselsbrücke: Für seine Brüder würde Lukas über Zäune klettern.
 
 ## Funktionale Eignung nach ISO 25000
 - Angemessenheit
@@ -199,3 +201,80 @@
 
 ## Benutzbarkeit nach ISO 25000
 - Verständlichkeit
+- Erlernbarkeit
+- Bedienbarkeit
+- Ist die Software einfach bedienbar?
+
+## Leistungseffizienz nach ISO 25000
+- Zeitverhalten
+- Verbrauchsverhalten
+- Wie effizient arbeitet die Software?
+
+## Wartbarkeit nach ISO 25000
+- Analysierbarkeit
+- Modifizierbarkeit
+- Stabilität
+- Prüfbarkeit
+- Anpassbarkeit
+- Wie leicht lässt sich die Software modifizieren?
+
+## Übertragbarkeit nach ISO 25000
+- Anpassbarkeit
+- Installierbarkeit
+- Konformität
+- Austauschbarkeit
+- Wie leicht lässt sich die Software auf ein anderes System portieren?
+
+## Sicherheit nach ISO 25000
+- Zugriffssicherheit
+- Datenverschlüsselung
+- Wie sicher sind unsere Daten und Programme vor nicht autorisiertem Zugriff?
+
+## Kompatibilität nach ISO 25000
+- Austauschbarkeit
+- Erweiterbarkeit
+- Abwärtskompatibilität
+- Wie kompatibel ist die Software beim Austausch und der Verarbeitng von Daten mit und von anderen Systemen
+
+## Wie weiss man was getestet werden soll?
+- Testobjekte bilden und nach verschiedenster Kriterien gruppieren
+
+## Typische Kriterien, um Testobjekte zu gruppieren
+- Funktionale Aspekte
+- Architektur-Layer
+- Aspekte der Zuständigkeit von Schlüsselpersonen
+- Abhängigkeiten von Umsystemen
+- Gruppen von unterschiedlichen nichtfunktionalen Tests
+- Manuelle und automatische Tests
+- Grenzwert- und Negativtests
+- Quick- oder Smoketests
+
+## Was macht gute Testobjekte aus?
+- Untereinander ausgewogen
+- Unabhängig voneinander testbar
+
+## Testvielfalt
+- Tests müssen auch in die Breite gehen
+
+## Testaspekte, um Testbreite zu vergrössern
+- Formale Eintrittskriterien
+- Vitalität
+- Neue Funktionen
+- Gefixte Bugs
+- Retest / Regression
+- Nur leicht modifiziert
+- Monkey-, Negativ- und Grenzwerttests
+- Unvorhergesehenes
+
+## RPI
+- Risiko Prioritäts Index (Most Critical First)
+- Weil mit wachsendem Testaufwand nicht alles getestet werden kann
+- Systematische Priorisierung zur massvollen Reduktion notwendiger Tests
+
+## Wie werden Anforderungen mit RPI bewertet?
+- Business Relevanz
+    - Auswirkung im Fehlerfall
+- Auffindbarkeit
+    - Wie offensichtlich / schnell kann Fehler entdeckt werden
+- Komplexität
+    - Wie 
