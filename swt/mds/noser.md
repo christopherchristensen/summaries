@@ -1,14 +1,24 @@
 # Summary: Noser Way of Testing
 
-## Warum unterstützt Testen das Management?
-- Probleme und unnötige Kosten vermeiden
-- Fehler früh im Software-Lebenszyklus erkennen und beheben
-- Management und Projektleitung hat dadurch kompetente Ansprechperson (Testmanager/in)
+## Warum unterstüzt Testen das Management?
+- Steuerungsinstrument für nachhaltige Systemqualität
+- Probleme und unnötige Kosten vermeiden
+- Fehler früh und rechtzeitig erkennen
+- TestmanagerIn = kompetente Ansprechperson für Management
+- TestmanagerIn erabeitet verlässliche, faktenbasierte Entscheidungsgrundlagen
 - Schafft Transparenz
 - Beschleunigt Entscheidungsprozess
-- Sichert Entscheidungsgrundlagen ab
+- Sichert Entscheidungen ab
+
+## Der Nutzen vom Testen
 - Testbudget kann eingeplant werden
-- Klare Unterscheidung von Fehler, Änderungen und Neuanforderungen
+- Testen spart Geld
+- Bessere Beschreibung der Anforderungen
+- Bessere Anforderungen führt zu schnellere Entwicklung
+- Besser Unterscheidung
+    - Fehler
+    - Änderungen
+    - Neuanforderungen
 
 ## 3 Erfolgsfaktoren fürs Testing
 - Tools
@@ -16,21 +26,24 @@
 - Prozess
 
 ## Kriterien für gute Testing-Tools
-- Einfach zu bedienen, gut gepflegt
+- Einfach zu bedienen
+- Gut gepflegt
 - Zugewiesene Verantwortlichkeit (für Pflege)
-- von allen Projektbeteiligten akzeptiert
-- pro Projekt individuell anpassbar
+- Von allen Projektbeteiligten akzeptiert
+- Pro Projekt individuell anpassbar
 - Benötigen offene und einfache Schnittstellen
-- einfach dem Prozess angepassbar
+- Einfach dem Prozess anpassbar
 
 ## Kriterien für gute Test-Prozesse
-- Einfach, verständlich, übersichtlich
+- Einfach
+- Verständlich
+- Übersichtlich
 - Muss gelebt und gepflegt werden
 - Zugewiesene Verantwortlichkeit (Pflege, Schulung, Durchsetzung)
-- breit akzeptiert
-- nötige Freiräume geben
-- wichtige Details definieren
-- Projekt unterstützen nicht behindern
+- Breit akzeptiert
+- Nötige Freiräume geben
+- Wichtige Details definieren
+- Projekt unterstützen, nicht behindern
 
 ## Kriterien für gute Testmanager/in
 - gute, solide Ausbildung in Anwendung und Entwicklung
@@ -39,9 +52,17 @@
 - Softskills
 - Leidenschaft und Motivation
 
+## "Agiles" Testen
+- keine fixen Rollen verteilt
+- Team organisieren sich selbst und handeln interdisziplinär
+- ganzes Team für Testaspekte verantwortlich
+- z.B. Entwickler auch verantwortlich das Klassen Unit-Tests haben
+- Personen mit Testwissen sollen in SCRUM-Teams eingebettet werden
+
 ## Wo beginnt das Testen?
 - bereits bei Abnahme der Anforderungen
-- Testteam überprüft, ob gewünschter Endzustand klar, vollständig und widerspruchsfrei beschrieben, messbar und somit testbar
+- Testteam überprüft, ob gewünschter Endzustand klar, vollständig und widerspruchsfrei beschrieben, messbar und somit testbar ist
+- Testteam stellt Testbarkeit der Anforderungen sicher
 
 ## Testing und die Wasserfall-Methode
 - Testplanung
@@ -58,6 +79,7 @@
     - Hat Raum und Zeit
 
 ## Testing und die RUP-Methode
+- Rational Unified Process
 - Testplanung
     - Eigene Disziplin
 - Entwicklung vs. Testteam
@@ -84,4 +106,20 @@
 - Testkonzept
     - Kommt öfters zu kurz
 
+## Strategie und Testkonzept
+- Strategie bestimmt, wie stark Risiko durch Testen minimiert werden soll
+- Folgendes ergibt sich aus Strategie
+    - WAS soll getestet werden
+    - WIE muss getestet werden
+    - WIE intensiv muss getestet werden
+    - WANN sind Meilensteine angelegt
+    - WIE gross ist (Zeit-)Budget
 
+## Wozu dient die Teststrategie 
+- Sich vorgängig Gedanken zum Testvorhaben zu machen und diese verbindlich festzuhalten
+
+## Wozu dient das Testkonzept
+- Ermöglicht es, Testen risikobasiert zu Priorisieren und Gruppieren
+- Bildet Basis für erfolgreiches Testen
+
+## 
