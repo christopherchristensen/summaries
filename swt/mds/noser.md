@@ -270,6 +270,8 @@
 - Risiko Prioritäts Index (Most Critical First)
 - Weil mit wachsendem Testaufwand nicht alles getestet werden kann
 - Systematische Priorisierung zur massvollen Reduktion notwendiger Tests
+- Führungsinstrument
+- Bildet Grundlage für konsequente Bestimmung der Testtiefe, -umfangs und -reihenfolge
 
 ## Wie werden Anforderungen mit RPI bewertet?
 - Business Relevanz
@@ -277,4 +279,101 @@
 - Auffindbarkeit
     - Wie offensichtlich / schnell kann Fehler entdeckt werden
 - Komplexität
-    - Wie 
+    - Wie komplex ist die Anforderung und die dazu notwendige Umsetzung und Realisierung
+
+## Wie wird RPI berechnet?
+- Das Produkt der drei Kriterien
+
+## 4 Testphasen
+- Analysieren
+- Vorbereiten
+- Durchführen
+- Auswerten
+
+## Kennzahlen der Phase "Analysieren"
+- Anzahl erwarteter Testszenarien
+- Erwartete Testabdeckung
+
+## Kennzahlen der Phase "Vorbereiten"
+- Anzahl erwartete / erledigte TS
+- Erreichte Testabdeckung
+- Erwarteter Testaufwand
+- Erwarteter Testdurchlauf
+- Anzahl Testdaten
+
+## Kenzahlen der Phase "Durchführen"
+- Summe der Fehler
+- Anzahl
+    - offener Fehler
+    - durchgeführter Tests
+    - erfüllter Requirements
+    - nicht getesteter Requirements
+
+## Kennzahlen der Phase "Auswerten"
+- Wie beim Testen, aber mit Verlauf, Entwicklung und kurze Beurteilung
+
+## Schlüsselfragen der 4 Testphasen
+- Analysieren: Was darf es kosten?
+- Vorbereiten: Sind wir bereit?
+- Durchführen: Ist es reif?
+- Auswerten: Wagen wir es?
+
+## Vorgehen in Phase "Analysieren"
+- Anforderungen analysieren
+    - Funktional
+    - Business Prozess
+    - Use Cases
+    - Technisch
+    - NFA
+- Teststrategie erstellen
+    - Risikoanalyse
+    - Testorganisation
+    - Fahrplan
+    - Testobjekte
+    - Testwerkzeuge
+
+## Getroffene Aussagen der Phase "Analysieren"
+- Risiko- und Kostenfrage
+    - Wie viele Testszenarien zu erstellen
+    - Testumfang durch Risiko bestimmt
+- Abdeckung
+    - Welche Testabdeckung ist notwendig?
+    - Abschätzung der zu erwartenden Anzahl an Testfällen
+
+## 3 Faustregeln um zu erwartende Testfälle zu berechnen
+- Schnelle / grobe Variante
+    - Pro Anforderung min. 1 Testfall
+- Schnelle / optimistische Variante
+    - Anzahl Anforderungen * 3 = Anzahl erwartete Testszenarien
+- Vorsichtige Variante
+    - Anzahl Anforderungen * 20/RPI = Anzahl erwartete Testszenarien
+
+## Schlüsselfragen für die Führen in Phase "Analysieren"
+- Einfach: Sind alle Anforderungen durch min. 1 Testfall abgedeckt?
+- Genau: Ist Abdeckung risikogerecht?
+
+## Endergebnis der Phase "Analysieren"
+- Testkonzept
+
+## Vorgehen in Phase "Vorbereiten"
+- Testszenarien entwickeln
+    - Testszenarien
+    - Testfälle
+    - Test Script
+- Testumgebung vorbereiten
+    - Testobjekte
+    - Testdaten
+    - Testwerkzeug
+    - Testumgebung
+- Testablauf planen
+    - Testpacket 1...n
+
+## Getroffene Aussagen der Phase "Vorbereiten"
+- Sind wir bereit zum Testen?
+- Fortschritt
+    - Anzahl zu erwartende Testfälle / -szenarien
+    - Anzahl erstellte Testfälle / -szenarien
+    - Wie lange dauert Vorbereitung noch?
+    - Ist Testumgebung bereit?
+- Abdeckung
+    - 
