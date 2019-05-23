@@ -376,4 +376,8 @@
     - Wie lange dauert Vorbereitung noch?
     - Ist Testumgebung bereit?
 - Abdeckung
-    - 
+    - Für welche Anforderungen wurden bereits Tests mit Testdaten erstellt?
+    - Ist Ableitung der Tests aus Anforderungen sichergestellt (Traceability)?
+
+## Schlüsselfragen für die Führen in Phase "Vorbereiten"
+- 
