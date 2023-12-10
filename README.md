@@ -5,7 +5,7 @@ auf verschiedene Fachgebiete konzentrieren. Die Inhalte basieren dabei speziell 
 Studienfächern.
 
 ## Inhaltsverzeichnis
-- Betriebswirtschaft (bw)
+- [Betriebswirtschaft (bw)](bw)
 - Computer Graphics (cg)
 - Computer Network Fundamentals (cnf)
 - Datenbanksysteme (dbs)
