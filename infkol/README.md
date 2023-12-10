@@ -1,4 +1,4 @@
-# Computer Graphics
+# Computer Science Hot Topics
 
 Dieses Archiv umfasst eine Sammlung von Zusammenfassungen, Übungsmaterialien und ergänzenden Dokumenten, die sich auf
-das Fachgebiet der Computergrafik konzentrieren.
+aktuelle Themen der Informatik konzentrieren.
