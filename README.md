@@ -1,4 +1,4 @@
-# Summaries / Zusammenfassungen
+# Zusammenfassungen
 
 Dieses Repository beinhaltet eine Sammlung von Zusammenfassungen, Übungsmaterialien und ergänzenden Dokumenten, die sich
 auf verschiedene Fachgebiete konzentrieren. Die Inhalte basieren dabei speziell auf Unterlagen aus meinen
